@@ -1,0 +1,5067 @@
+[
+  [
+    2014, 
+    [
+      [
+        "Dupage National Bank", 
+        "West Chicago", 
+        "Illinois", 
+        "17-Jan-14", 
+        "Republic Bank of Chicago", 
+        "61.7", 
+        41.884751000000001, 
+        -88.203960999999993
+      ], 
+      [
+        "The Bank of Union", 
+        "El Reno", 
+        "Oklahoma", 
+        "24-Jan-14", 
+        "BancFirst", 
+        "331.4", 
+        35.532274000000001, 
+        -97.955049000000002
+      ], 
+      [
+        "Syringa Bank", 
+        "Boise", 
+        "Idaho", 
+        "31-Jan-14", 
+        "Sunwest Bank", 
+        "153.4", 
+        43.61871, 
+        -116.214607
+      ], 
+      [
+        "Vantage Point Bank", 
+        "Horsham", 
+        "Pennsylvania", 
+        "28-Feb-14", 
+        "First Choice Bank", 
+        "63.5", 
+        40.178441999999997, 
+        -75.128506000000002
+      ], 
+      [
+        "Millennium Bank, National Association", 
+        "Sterling", 
+        "Virginia", 
+        "28-Feb-14", 
+        "WashingtonFirst Bank", 
+        "130.3", 
+        39.006698999999998, 
+        -77.429130000000001
+      ], 
+      [
+        "Allendale County Bank", 
+        "Fairfax", 
+        "South Carolina", 
+        "25-Apr-14", 
+        "Palmetto State Bank", 
+        "54.5", 
+        32.959047999999996, 
+        -81.236494999999991
+      ], 
+      [
+        "AztecAmerica Bank En Espanol", 
+        "Berwyn", 
+        "Illinois", 
+        "16-May-14", 
+        "Republic Bank of Chicago", 
+        "66.3", 
+        41.850586999999997, 
+        -87.793668000000011
+      ], 
+      [
+        "Columbia Savings Bank", 
+        "Cincinnati", 
+        "Ohio", 
+        "23-May-14", 
+        "United Fidelity Bank, fsb", 
+        "36.5", 
+        39.103118000000002, 
+        -84.512019999999993
+      ], 
+      [
+        "Slavie Federal Savings Bank", 
+        "Bel Air", 
+        "Maryland", 
+        "30-May-14", 
+        "Bay Bank, FSB", 
+        "140.1", 
+        39.535940999999994, 
+        -76.348292999999998
+      ], 
+      [
+        "Valley Bank", 
+        "Moline", 
+        "Illinois", 
+        "20-Jun-14", 
+        "Great Southern Bank", 
+        "456.4", 
+        41.506700000000002, 
+        -90.515134000000003
+      ], 
+      [
+        "Valley Bank", 
+        "Fort Lauderdale", 
+        "Florida", 
+        "20-Jun-14", 
+        "Landmark Bank, National Association", 
+        "81.8", 
+        26.122439, 
+        -80.13731700000001
+      ], 
+      [
+        "The Freedom State Bank", 
+        "Freedom", 
+        "Oklahoma", 
+        "27-Jun-14", 
+        "Alva State Bank & Trust Company", 
+        "22.8", 
+        36.768920000000001, 
+        -99.112879000000007
+      ], 
+      [
+        "Eastside Commercial Bank", 
+        "Conyers", 
+        "Georgia", 
+        "18-Jul-14", 
+        "Community & Southern Bank", 
+        "169", 
+        33.667609999999996, 
+        -84.017690000000002
+      ], 
+      [
+        "GreenChoice Bank, fsb", 
+        "Chicago", 
+        "Illinois", 
+        "25-Jul-14", 
+        "Providence Bank, LLC", 
+        "72.9", 
+        41.878114000000004, 
+        -87.629797999999994
+      ]
+    ]
+  ], 
+  [
+    2013, 
+    [
+      [
+        "Westside Community Bank", 
+        "University Place", 
+        "Washington", 
+        "11-Jan-13", 
+        "Sunwest Bank", 
+        "97.7", 
+        47.235653999999997, 
+        -122.550404
+      ], 
+      [
+        "1st Regents Bank", 
+        "Andover", 
+        "Minnesota", 
+        "18-Jan-13", 
+        "First Minnesota Bank", 
+        "50.2", 
+        45.233297999999998, 
+        -93.291340000000005
+      ], 
+      [
+        "Covenant Bank", 
+        "Chicago", 
+        "Illinois", 
+        "15-Feb-13", 
+        "Liberty Bank and Trust Company", 
+        "58.4", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Frontier Bank", 
+        "LaGrange", 
+        "Georgia", 
+        "8-Mar-13", 
+        "HeritageBank of the South", 
+        "258.8", 
+        33.036221999999995, 
+        -85.032243999999992
+      ], 
+      [
+        "Gold Canyon Bank", 
+        "Gold Canyon", 
+        "Arizona", 
+        "5-Apr-13", 
+        "First Scottsdale Bank, NA", 
+        "45.2", 
+        33.359341000000001, 
+        -111.45003
+      ], 
+      [
+        "First Federal Bank", 
+        "Lexington", 
+        "Kentucky", 
+        "19-Apr-13", 
+        "Your Community Bank", 
+        "100.1", 
+        38.040584000000003, 
+        -84.503715999999997
+      ], 
+      [
+        "Heritage Bank of North Florida", 
+        "Orange Park", 
+        "Florida", 
+        "19-Apr-13", 
+        "FirstAtlantic Bank", 
+        "110.9", 
+        30.166073999999998, 
+        -81.706484000000003
+      ], 
+      [
+        "Chipola Community Bank", 
+        "Marianna", 
+        "Florida", 
+        "19-Apr-13", 
+        "First Federal Bank of Florida", 
+        "39.2", 
+        30.774359999999998, 
+        -85.226873999999995
+      ], 
+      [
+        "Parkway Bank", 
+        "Lenoir", 
+        "North Carolina", 
+        "26-Apr-13", 
+        "CertusBank, NA", 
+        "108.6", 
+        35.914020000000001, 
+        -81.538984999999997
+      ], 
+      [
+        "Douglas County Bank", 
+        "Douglasville", 
+        "Georgia", 
+        "26-Apr-13", 
+        "Hamilton State Bank", 
+        "316.5", 
+        33.751497000000001, 
+        -84.747714000000002
+      ], 
+      [
+        "Pisgah Community Bank", 
+        "Asheville", 
+        "North Carolina", 
+        "10-May-13", 
+        "Capital Bank, NA", 
+        "21.9", 
+        35.595058000000002, 
+        -82.551486999999995
+      ], 
+      [
+        "Sunrise Bank", 
+        "Valdosta", 
+        "Georgia", 
+        "10-May-13", 
+        "Synovus Bank", 
+        "60.8", 
+        30.832702000000001, 
+        -83.278485000000003
+      ], 
+      [
+        "Central Arizona Bank", 
+        "Scottsdale", 
+        "Arizona", 
+        "14-May-13", 
+        "Western State Bank", 
+        "31.6", 
+        33.494170000000004, 
+        -111.926052
+      ], 
+      [
+        "Banks of Wisconsin", 
+        "Kenosha", 
+        "Wisconsin", 
+        "31-May-13", 
+        "North Shore Bank, FSB", 
+        "134", 
+        42.584742999999996, 
+        -87.821185
+      ], 
+      [
+        "1st Commerce Bank", 
+        "North Las Vegas", 
+        "Nevada", 
+        "6-Jun-13", 
+        "Plaza Bank", 
+        "20.2", 
+        36.198859000000006, 
+        -115.117501
+      ], 
+      [
+        "Mountain National Bank", 
+        "Sevierville", 
+        "Tennessee", 
+        "7-Jun-13", 
+        "First Tennessee Bank, National Association", 
+        "437.3", 
+        35.868146000000003, 
+        -83.561835000000002
+      ], 
+      [
+        "First Community Bank of South Florida", 
+        "Fort Myers", 
+        "Florida", 
+        "2-Aug-13", 
+        "C1 Bank", 
+        "265.7", 
+        26.640628000000003, 
+        -81.87230799999999
+      ], 
+      [
+        "Bank of Wausau", 
+        "Wausau", 
+        "Wisconsin", 
+        "9-Aug-13", 
+        "Nicolet National Bank", 
+        "43.6", 
+        44.959134999999996, 
+        -89.630122
+      ], 
+      [
+        "Community South Bank", 
+        "Parsons", 
+        "Tennessee", 
+        "23-Aug-13", 
+        "CB&S Bank, Inc.", 
+        "386.9", 
+        35.649791, 
+        -88.126702000000009
+      ], 
+      [
+        "Sunrise Bank of Arizona", 
+        "Phoenix", 
+        "Arizona", 
+        "23-Aug-13", 
+        "First Fidelity Bank, National Association", 
+        "202.2", 
+        33.448377000000001, 
+        -112.074037
+      ], 
+      [
+        "The Community's Bank", 
+        "Bridgeport", 
+        "Connecticut", 
+        "13-Sep-13", 
+        "None (insured depositors paid directly)", 
+        "26.3", 
+        41.186547999999995, 
+        -73.195177000000001
+      ], 
+      [
+        "First National Bank, also operating as The National Bank of El Paso", 
+        "Edinburg", 
+        "Texas", 
+        "13-Sep-13", 
+        "PlainsCapital Bank", 
+        "3,100", 
+        26.301736999999999, 
+        -98.163343000000012
+      ], 
+      [
+        "Bank of Jackson County", 
+        "Graceville", 
+        "Florida", 
+        "30-Oct-13", 
+        "First Federal Bank of Florida", 
+        "25.5", 
+        30.956849999999999, 
+        -85.516598999999999
+      ], 
+      [
+        "Texas Community Bank, National Association", 
+        "The Woodlands", 
+        "Texas", 
+        "13-Dec-13", 
+        "Spirit of Texas Bank, SSB", 
+        "180.1", 
+        30.165821000000001, 
+        -95.461262000000005
+      ]
+    ]
+  ], 
+  [
+    2012, 
+    [
+      [
+        "Central Florida State Bank", 
+        "Belleview", 
+        "Florida", 
+        "20-Jan-12", 
+        "CenterState Bank of Florida", 
+        "79.1", 
+        29.055258000000002, 
+        -82.062309999999997
+      ], 
+      [
+        "The First State Bank", 
+        "Stockbridge", 
+        "Georgia", 
+        "20-Jan-12", 
+        "Hamilton State Bank", 
+        "536.9", 
+        33.544278000000006, 
+        -84.233808999999994
+      ], 
+      [
+        "American Eagle Savings Bank", 
+        "Boothwyn", 
+        "Pennsylvania", 
+        "20-Jan-12", 
+        "Capital Bank, N.A.", 
+        "19.6", 
+        39.830112999999997, 
+        -75.441583999999992
+      ], 
+      [
+        "First Guaranty Bank and Trust Company of Jacksonville", 
+        "Jacksonville", 
+        "Florida", 
+        "27-Jan-12", 
+        "CenterState Bank of Florida", 
+        "377.9", 
+        30.332184000000002, 
+        -81.655651000000006
+      ], 
+      [
+        "Tennessee Commerce Bank", 
+        "Franklin", 
+        "Tennessee", 
+        "27-Jan-12", 
+        "Republic Bank & Trust Company", 
+        "1,185", 
+        35.925063999999999, 
+        -86.868890000000007
+      ], 
+      [
+        "Patriot Bank Minnesota", 
+        "Forest Lake", 
+        "Minnesota", 
+        "27-Jan-12", 
+        "First Resource Bank", 
+        "111.3", 
+        45.278855999999998, 
+        -92.985218000000003
+      ], 
+      [
+        "BankEast", 
+        "Knoxville", 
+        "Tennessee", 
+        "27-Jan-12", 
+        "U.S. Bancorp", 
+        "272.6", 
+        35.960638000000003, 
+        -83.920738999999998
+      ], 
+      [
+        "Charter National Bank and Trust", 
+        "Hoffman Estates", 
+        "Illinois", 
+        "10-Feb-12", 
+        "Barrington Bank & Trust Company, NA", 
+        "93.9", 
+        42.062992000000001, 
+        -88.122720000000001
+      ], 
+      [
+        "SCB Bank", 
+        "Shelbyville", 
+        "Indiana", 
+        "10-Feb-12", 
+        "First Merchants Bank, NA", 
+        "182.6", 
+        39.521436999999999, 
+        -85.776923999999994
+      ], 
+      [
+        "Central Bank of Georgia", 
+        "Ellaville", 
+        "Georgia", 
+        "24-Feb-12", 
+        "Ameris Bank", 
+        "278.9", 
+        32.238213999999999, 
+        -84.309080000000009
+      ], 
+      [
+        "Home Savings of America", 
+        "Little Falls", 
+        "Minnesota", 
+        "24-Feb-12", 
+        "None (Closed permanently by the FDIC)", 
+        "434.1", 
+        45.980556, 
+        -94.369444000000001
+      ], 
+      [
+        "Global Commerce Bank", 
+        "Doraville", 
+        "Georgia", 
+        "2-Mar-12", 
+        "Metro City Bank", 
+        "143.7", 
+        33.898158000000002, 
+        -84.283256000000009
+      ], 
+      [
+        "New City Bank", 
+        "Chicago", 
+        "Illinois", 
+        "9-Mar-12", 
+        "None (Closed permanently by the FDIC)", 
+        "71.2", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Covenant Bank & Trust", 
+        "Rock Spring", 
+        "Georgia", 
+        "23-Mar-12", 
+        "Stearns Bank, NA", 
+        "95.7", 
+        34.824244, 
+        -85.24273199999999
+      ], 
+      [
+        "Premier Bank", 
+        "Wilmette", 
+        "Illinois", 
+        "23-Mar-12", 
+        "International Bank of Chicago", 
+        "268.7", 
+        42.072251000000001, 
+        -87.722837999999996
+      ], 
+      [
+        "Fidelity Bank", 
+        "Dearborn", 
+        "Michigan", 
+        "30-Mar-12", 
+        "Huntington National Bank", 
+        "818.2", 
+        42.32226, 
+        -83.176314000000005
+      ], 
+      [
+        "Fort Lee Federal Savings Bank, FSB", 
+        "Fort Lee", 
+        "New Jersey", 
+        "20-Apr-12", 
+        "Alma Bank", 
+        "51.9", 
+        40.850933000000005, 
+        -73.970138000000006
+      ], 
+      [
+        "Bank of the Eastern Shore", 
+        "Cambridge", 
+        "Maryland", 
+        "27-Apr-12", 
+        "None (Wound down by FDIC as receiver)", 
+        "166.7", 
+        38.563173999999997, 
+        -76.078828999999999
+      ], 
+      [
+        "HarVest Bank of Maryland", 
+        "Gaithersburg", 
+        "Maryland", 
+        "27-Apr-12", 
+        "Sonabank", 
+        "164.3", 
+        39.143440999999996, 
+        -77.201369999999997
+      ], 
+      [
+        "Inter Savings Bank, FSB", 
+        "Maple Grove", 
+        "Minnesota", 
+        "27-Apr-12", 
+        "Great Southern Bank", 
+        "481.6", 
+        45.072464000000004, 
+        -93.455787999999998
+      ], 
+      [
+        "Plantation Federal Bank", 
+        "Pawleys Island", 
+        "South Carolina", 
+        "27-Apr-12", 
+        "First Federal Bank", 
+        "486.4", 
+        33.433223999999996, 
+        -79.121431000000001
+      ], 
+      [
+        "Palm Desert National Bank", 
+        "Palm Desert", 
+        "California", 
+        "27-Apr-12", 
+        "Pacific Premier", 
+        "125.8", 
+        33.722245000000001, 
+        -116.37445600000001
+      ], 
+      [
+        "Security Bank, NA", 
+        "North Lauderdale", 
+        "Florida", 
+        "4-May-12", 
+        "Banesco", 
+        "101", 
+        26.217305, 
+        -80.225881000000001
+      ], 
+      [
+        "Alabama Trust Bank, NA", 
+        "Sylacauga", 
+        "Alabama", 
+        "18-May-12", 
+        "Southern States Bank", 
+        "51.6", 
+        33.173171999999994, 
+        -86.251641000000006
+      ], 
+      [
+        "First Capital Bank", 
+        "Kingfisher", 
+        "Oklahoma", 
+        "8-Jun-12", 
+        "F & M Bank", 
+        "46.1", 
+        35.861432000000001, 
+        -97.931719999999999
+      ], 
+      [
+        "Carolina Federal Savings Bank", 
+        "Charleston", 
+        "South Carolina", 
+        "8-Jun-12", 
+        "Bank of North Carolina", 
+        "54.4", 
+        32.776474999999998, 
+        -79.931050999999997
+      ], 
+      [
+        "Farmers and Traders State Bank", 
+        "Shabbona", 
+        "Illinois", 
+        "8-Jun-12", 
+        "First State Bank", 
+        "43.1", 
+        41.768084999999999, 
+        -88.877031000000002
+      ], 
+      [
+        "Waccamaw Bank", 
+        "Whiteville", 
+        "North Carolina", 
+        "8-Jun-12", 
+        "First Community Bank", 
+        "533.1", 
+        34.33878, 
+        -78.703071999999992
+      ], 
+      [
+        "Putnam State Bank", 
+        "Palatka", 
+        "Florida", 
+        "15-Jun-12", 
+        "Harbor Community Bank", 
+        "169.5", 
+        29.648579999999999, 
+        -81.637581999999995
+      ], 
+      [
+        "Security Exchange Bank", 
+        "Marietta", 
+        "Georgia", 
+        "15-Jun-12", 
+        "Fidelity Bank", 
+        "151", 
+        33.952601999999999, 
+        -84.549932999999996
+      ], 
+      [
+        "The Farmers Bank of Lynchburg", 
+        "Lynchburg", 
+        "Tennessee", 
+        "15-Jun-12", 
+        "Clayton Bank and Trust", 
+        "163.9", 
+        35.283023999999997, 
+        -86.374020999999999
+      ], 
+      [
+        "Montgomery Bank and Trust", 
+        "Ailey", 
+        "Georgia", 
+        "6-Jul-12", 
+        "Ameris", 
+        "173.6", 
+        32.187404000000001, 
+        -82.565689000000006
+      ], 
+      [
+        "Glasgow Savings Bank", 
+        "Glasgow", 
+        "Missouri", 
+        "13-Jul-12", 
+        "Regional Missouri Bank", 
+        "24.8", 
+        39.227251000000003, 
+        -92.846575999999999
+      ], 
+      [
+        "Royal Palm Bank of Florida", 
+        "Naples", 
+        "Florida", 
+        "20-Jul-12", 
+        "First National Bank of the Gulf Coast", 
+        "87", 
+        26.142035999999997, 
+        -81.794809999999998
+      ], 
+      [
+        "Georgia Trust Bank", 
+        "Buford", 
+        "Georgia", 
+        "20-Jul-12", 
+        "Community & Southern Bank", 
+        "119.8", 
+        34.120655999999997, 
+        -84.004351
+      ], 
+      [
+        "First Cherokee State Bank", 
+        "Woodstock", 
+        "Georgia", 
+        "20-Jul-12", 
+        "Community & Southern Bank", 
+        "222.7", 
+        34.101486999999999, 
+        -84.519374999999997
+      ], 
+      [
+        "Heartland Bank", 
+        "Leawood", 
+        "Kansas", 
+        "20-Jul-12", 
+        "Metcalf Bank", 
+        "110", 
+        38.966673, 
+        -94.616900999999999
+      ], 
+      [
+        "Second Federal Savings and Loan Association of Chicago", 
+        "Chicago", 
+        "Illinois", 
+        "20-Jul-12", 
+        "Hinsdale Bank & Trust Company", 
+        "199.1", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Jasper Banking Company", 
+        "Jasper", 
+        "Georgia", 
+        "27-Jul-12", 
+        "Stearns Bank, NA", 
+        "216.7", 
+        34.469552, 
+        -84.428989000000001
+      ], 
+      [
+        "Waukegan Savings Bank", 
+        "Waukegan", 
+        "Illinois", 
+        "3-Aug-12", 
+        "First Midwest Bank", 
+        "88.9", 
+        42.363633, 
+        -87.844793999999993
+      ], 
+      [
+        "First Community Bank", 
+        "Bloomington", 
+        "Minnesota", 
+        "7-Sep-12", 
+        "Republic Bank & Trust Company", 
+        "215.9", 
+        44.840797999999999, 
+        -93.298280000000005
+      ], 
+      [
+        "Truman Bank", 
+        "St. Louis", 
+        "Missouri", 
+        "14-Sep-12", 
+        "Simmons First National Bank", 
+        "282.3", 
+        38.627003000000002, 
+        -90.199404000000001
+      ], 
+      [
+        "First United Bank", 
+        "Crete", 
+        "Illinois", 
+        "28-Sep-12", 
+        "Old Plank Trail Community Bank, National Association", 
+        "328.4", 
+        41.444479000000001, 
+        -87.631431000000006
+      ], 
+      [
+        "GulfSouth Private Bank", 
+        "Destin", 
+        "Florida", 
+        "19-Oct-12", 
+        "SmartBank", 
+        "159.1", 
+        30.393534000000002, 
+        -86.495782999999989
+      ], 
+      [
+        "First East Side Savings Bank", 
+        "Tamarac", 
+        "Florida", 
+        "19-Oct-12", 
+        "Stearns Bank, N.A.", 
+        "67.2", 
+        26.212861, 
+        -80.249770999999996
+      ], 
+      [
+        "Excel Bank", 
+        "Sedalia", 
+        "Missouri", 
+        "19-Oct-12", 
+        "Simmons First National Bank", 
+        "200.6", 
+        38.704461000000002, 
+        -93.228261000000003
+      ], 
+      [
+        "NOVA Bank", 
+        "Berwyn", 
+        "Pennsylvania", 
+        "26-Oct-12", 
+        "NONE (Permanently closed by the Pennsylvania Department of Banking & Securities)", 
+        "483", 
+        40.045823999999996, 
+        -75.439593000000002
+      ], 
+      [
+        "Heritage Bank of Florida", 
+        "Lutz", 
+        "Florida", 
+        "2-Nov-12", 
+        "Centennial Bank", 
+        "225.5", 
+        28.151123999999999, 
+        -82.461483000000001
+      ], 
+      [
+        "Citizens First National Bank", 
+        "Princeton", 
+        "Illinois", 
+        "2-Nov-12", 
+        "Heartland Bank and Trust Company", 
+        "924", 
+        41.368091999999997, 
+        -89.464814000000004
+      ], 
+      [
+        "Hometown Community Bank", 
+        "Braselton", 
+        "Georgia", 
+        "16-Nov-12", 
+        "CertusBank, National Association", 
+        "124.6", 
+        34.109273999999999, 
+        -83.762672999999992
+      ], 
+      [
+        "Community Bank of the Ozarks", 
+        "Sunrise Beach", 
+        "Missouri", 
+        "14-Dec-12", 
+        "Bank of Sullivan", 
+        "42.8", 
+        38.175865000000002, 
+        -92.784355000000005
+      ]
+    ]
+  ], 
+  [
+    2011, 
+    [
+      [
+        "First Commercial Bank of Florida", 
+        "Orlando", 
+        "Florida", 
+        "7-Jan-11", 
+        "First Southern Bank", 
+        "599", 
+        28.538335999999997, 
+        -81.379235999999992
+      ], 
+      [
+        "Legacy Bank", 
+        "Scottsdale", 
+        "Arizona", 
+        "7-Jan-11", 
+        "Enterprise Bank and Trust", 
+        "151", 
+        33.494170000000004, 
+        -111.926052
+      ], 
+      [
+        "Oglethorpe Bank", 
+        "Brunswick", 
+        "Georgia", 
+        "14-Jan-11", 
+        "Bank of the Ozarks", 
+        "231", 
+        31.149953000000004, 
+        -81.491489000000001
+      ], 
+      [
+        "Enterprise Banking Company", 
+        "McDonough", 
+        "Georgia", 
+        "21-Jan-11", 
+        "None (insured depositors paid directly)", 
+        "96", 
+        33.447336, 
+        -84.146861999999999
+      ], 
+      [
+        "CommunitySouth Bank and Trust", 
+        "Easley", 
+        "South Carolina", 
+        "21-Jan-11", 
+        "CertusBank, NA", 
+        "402", 
+        34.829838000000002, 
+        -82.601520999999991
+      ], 
+      [
+        "Bank of Asheville", 
+        "Asheville", 
+        "North Carolina", 
+        "21-Jan-11", 
+        "First Bank", 
+        "188", 
+        35.595058000000002, 
+        -82.551486999999995
+      ], 
+      [
+        "United Western Bank", 
+        "Denver", 
+        "Colorado", 
+        "21-Jan-11", 
+        "First-Citizens Bank and Trust Company", 
+        "1,650", 
+        39.737566999999999, 
+        -104.98471799999999
+      ], 
+      [
+        "FirsTier Bank", 
+        "Louisville", 
+        "Colorado", 
+        "28-Jan-11", 
+        "None (insured depositors paid directly)", 
+        "782", 
+        39.977763000000003, 
+        -105.13193000000001
+      ], 
+      [
+        "First Community Bank", 
+        "Taos", 
+        "New Mexico", 
+        "28-Jan-11", 
+        "U.S. Bank, N.A.", 
+        "2,300", 
+        36.407249, 
+        -105.573066
+      ], 
+      [
+        "First State Bank", 
+        "Camargo", 
+        "Oklahoma", 
+        "28-Jan-11", 
+        "Bank 7", 
+        "44", 
+        36.017266999999997, 
+        -99.289271999999997
+      ], 
+      [
+        "Evergreen State Bank", 
+        "Stoughton", 
+        "Wisconsin", 
+        "28-Jan-11", 
+        "McFarland State Bank", 
+        "247", 
+        42.916946000000003, 
+        -89.217894000000001
+      ], 
+      [
+        "American Trust Bank", 
+        "Roswell", 
+        "Georgia", 
+        "4-Feb-11", 
+        "Renasant Bank", 
+        "238", 
+        34.023243000000001, 
+        -84.361556000000007
+      ], 
+      [
+        "North Georgia Bank", 
+        "Watkinsville", 
+        "Georgia", 
+        "4-Feb-11", 
+        "BankSouth", 
+        "153", 
+        33.862895999999999, 
+        -83.408771000000002
+      ], 
+      [
+        "Community First Bank", 
+        "Chicago", 
+        "Illinois", 
+        "4-Feb-11", 
+        "Northbrook Bank and Trust", 
+        "51", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Peoples State Bank", 
+        "Hamtramck", 
+        "Michigan", 
+        "11-Feb-11", 
+        "First Michigan Bank", 
+        "391", 
+        42.392814999999999, 
+        -83.049644000000001
+      ], 
+      [
+        "Canyon National Bank", 
+        "Palm Springs", 
+        "California", 
+        "11-Feb-11", 
+        "Pacific Premier Bank", 
+        "211", 
+        33.830296000000004, 
+        -116.54529199999999
+      ], 
+      [
+        "Sunshine State Community Bank", 
+        "Port Orange", 
+        "Florida", 
+        "11-Feb-11", 
+        "Premier American Bank, N.A.", 
+        "126", 
+        29.138316999999997, 
+        -80.995609999999999
+      ], 
+      [
+        "Badger State Bank", 
+        "Cassville", 
+        "Wisconsin", 
+        "11-Feb-11", 
+        "Royal Bank", 
+        "84", 
+        42.714436999999997, 
+        -90.990684000000002
+      ], 
+      [
+        "Habersham Bank", 
+        "Clarkesville", 
+        "Georgia", 
+        "18-Feb-11", 
+        "SCBT, NA", 
+        "387", 
+        34.612596999999994, 
+        -83.524893000000006
+      ], 
+      [
+        "Citizens Bank of Effingham", 
+        "Springfield", 
+        "Georgia", 
+        "18-Feb-11", 
+        "Heritage Bank of the South", 
+        "214", 
+        32.372413000000002, 
+        -81.311498999999998
+      ], 
+      [
+        "Charter Oak Bank", 
+        "Napa", 
+        "California", 
+        "18-Feb-11", 
+        "Bank of Marin", 
+        "121", 
+        38.297538000000003, 
+        -122.28686499999999
+      ], 
+      [
+        "San Luis Trust Bank, FSB", 
+        "San Luis Obispo", 
+        "California", 
+        "18-Feb-11", 
+        "First California Bank", 
+        "333", 
+        35.282752000000002, 
+        -120.65961599999999
+      ], 
+      [
+        "Valley Community Bank", 
+        "St. Charles", 
+        "Illinois", 
+        "25-Feb-11", 
+        "First State Bank", 
+        "123", 
+        41.914194999999999, 
+        -88.308687000000006
+      ], 
+      [
+        "First National Bank of Davis", 
+        "Davis", 
+        "Oklahoma", 
+        "11-Mar-11", 
+        "The Pauls Valley National Bank", 
+        "90", 
+        34.504531999999998, 
+        -97.119464000000008
+      ], 
+      [
+        "Legacy Bank", 
+        "Milwaukee", 
+        "Wisconsin", 
+        "11-Mar-11", 
+        "Seaway Bank and Trust Company", 
+        "190", 
+        43.038903000000005, 
+        -87.906474000000003
+      ], 
+      [
+        "Bank of Commerce", 
+        "Wood Dale", 
+        "Illinois", 
+        "25-Mar-11", 
+        "Advantage National Bank Group", 
+        "163", 
+        41.963363000000001, 
+        -87.978956000000011
+      ], 
+      [
+        "Western Springs National Bank and Trust", 
+        "Western Springs", 
+        "Illinois", 
+        "11-Apr-11", 
+        "Heartland Bank and Trust Company", 
+        "186", 
+        41.809753000000001, 
+        -87.900615999999999
+      ], 
+      [
+        "Nevada Commerce Bank", 
+        "Las Vegas", 
+        "Nevada", 
+        "11-Apr-11", 
+        "City National Bank", 
+        "144", 
+        36.169940999999994, 
+        -115.13983
+      ], 
+      [
+        "Bartow County Bank", 
+        "Cartersville", 
+        "Georgia", 
+        "15-Apr-11", 
+        "Hamilton State Bank", 
+        "330", 
+        34.165096999999996, 
+        -84.799937999999997
+      ], 
+      [
+        "New Horizons Bank", 
+        "East Ellijay", 
+        "Georgia", 
+        "15-Apr-11", 
+        "Citizens South Bank", 
+        "110", 
+        34.683974999999997, 
+        -84.472705000000005
+      ], 
+      [
+        "Nexity Bank", 
+        "Birmingham", 
+        "Alabama", 
+        "15-Apr-11", 
+        "AloStar Bank of Commerce", 
+        "793", 
+        33.520660999999997, 
+        -86.802490000000006
+      ], 
+      [
+        "Superior Bank", 
+        "Birmingham", 
+        "Alabama", 
+        "15-Apr-11", 
+        "Superior Bank, NA", 
+        "3,000", 
+        33.520660999999997, 
+        -86.802490000000006
+      ], 
+      [
+        "Rosemount National Bank", 
+        "Rosemount", 
+        "Minnesota", 
+        "15-Apr-11", 
+        "Central Bank", 
+        "37", 
+        44.739409999999999, 
+        -93.125771999999998
+      ], 
+      [
+        "Heritage Banking Group", 
+        "Carthage", 
+        "Mississippi", 
+        "15-Apr-11", 
+        "TrustMark National Bank", 
+        "224", 
+        32.732635999999999, 
+        -89.536181999999997
+      ], 
+      [
+        "Community Central Bank", 
+        "Mount Clemens", 
+        "Michigan", 
+        "29-Apr-11", 
+        "Talmer Bank and Trust", 
+        "476", 
+        42.597256000000002, 
+        -82.877975000000006
+      ], 
+      [
+        "Park Avenue Bank", 
+        "Valdosta", 
+        "Georgia", 
+        "29-Apr-11", 
+        "Bank of the Ozarks", 
+        "953", 
+        30.832702000000001, 
+        -83.278485000000003
+      ], 
+      [
+        "First Choice Community Bank", 
+        "Dallas", 
+        "Georgia", 
+        "29-Apr-11", 
+        "Bank of the Ozarks", 
+        "309", 
+        33.924453, 
+        -84.841306000000003
+      ], 
+      [
+        "Cortez Community Bank", 
+        "Brooksville", 
+        "Florida", 
+        "29-Apr-11", 
+        "Florida Community Bank", 
+        "71", 
+        28.555271999999999, 
+        -82.38787099999999
+      ], 
+      [
+        "First National Bank of Central Florida", 
+        "Winter Park", 
+        "Florida", 
+        "29-Apr-11", 
+        "Florida Community Bank", 
+        "352", 
+        28.600000000000001, 
+        -81.339235000000002
+      ], 
+      [
+        "Coastal Bank", 
+        "Cocoa Beach", 
+        "Florida", 
+        "6-May-11", 
+        "Florida Community Bank", 
+        "129", 
+        28.320007, 
+        -80.607551000000001
+      ], 
+      [
+        "Atlantic Southern Bank", 
+        "Macon", 
+        "Georgia", 
+        "20-May-11", 
+        "CertusBank, NA", 
+        "742", 
+        32.840695000000004, 
+        -83.632401999999999
+      ], 
+      [
+        "First Georgia Banking Company", 
+        "Franklin", 
+        "Georgia", 
+        "20-May-11", 
+        "CertusBank, NA", 
+        "731", 
+        33.277617999999997, 
+        -85.097996999999992
+      ], 
+      [
+        "Summit Bank", 
+        "Burlington", 
+        "Washington", 
+        "20-May-11", 
+        "Columbia State Bank", 
+        "143", 
+        48.475662, 
+        -122.32543799999999
+      ], 
+      [
+        "First Heritage Bank", 
+        "Snohomish", 
+        "Washington", 
+        "27-May-11", 
+        "Columbia State Bank", 
+        "174", 
+        47.912876000000004, 
+        -122.09818500000002
+      ], 
+      [
+        "Atlantic Bank and Trust", 
+        "Charleston", 
+        "South Carolina", 
+        "3-Jun-11", 
+        "First Citizens Bank and Trust Company", 
+        "208", 
+        32.776474999999998, 
+        -79.931050999999997
+      ], 
+      [
+        "McIntosh State Bank", 
+        "Jackson", 
+        "Georgia", 
+        "17-Jun-11", 
+        "Hamilton Bank", 
+        "339.9", 
+        33.294565000000006, 
+        -83.966020999999998
+      ], 
+      [
+        "First Commercial Bank of Tampa Bay", 
+        "Tampa", 
+        "Florida", 
+        "17-Jun-11", 
+        "Stonegate Bank", 
+        "98.6", 
+        27.950575000000001, 
+        -82.457177999999999
+      ], 
+      [
+        "Mountain Heritage Bank", 
+        "Clayton", 
+        "Georgia", 
+        "24-Jun-11", 
+        "First American Bank and Trust Company", 
+        "103.7", 
+        34.878147999999996, 
+        -83.400993
+      ], 
+      [
+        "First Chicago Bank & Trust", 
+        "Chicago", 
+        "Illinois", 
+        "8-Jul-11", 
+        "Northbrook Bank and Trust Company", 
+        "959.3", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Colorado Capital Bank", 
+        "Castle Rock", 
+        "Colorado", 
+        "8-Jul-11", 
+        "First-Citizens Bank and Trust Company", 
+        "717.5", 
+        39.372211999999998, 
+        -104.85609000000001
+      ], 
+      [
+        "Signature Bank", 
+        "Windsor", 
+        "Colorado", 
+        "8-Jul-11", 
+        "Points West Community Bank", 
+        "66.7", 
+        40.477482000000002, 
+        -104.90136200000001
+      ], 
+      [
+        "One Georgia Bank", 
+        "Atlanta", 
+        "Georgia", 
+        "15-Jul-11", 
+        "Ameris Bank", 
+        "186.3", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "High Trust Bank", 
+        "Stockbridge", 
+        "Georgia", 
+        "15-Jul-11", 
+        "Ameris Bank", 
+        "192.5", 
+        33.544278000000006, 
+        -84.233808999999994
+      ], 
+      [
+        "First Peoples Bank", 
+        "Port St. Lucie", 
+        "Florida", 
+        "15-Jul-11", 
+        "Premier American Bank, N.A.", 
+        "228.3", 
+        27.273049, 
+        -80.358226000000002
+      ], 
+      [
+        "Summit Bank", 
+        "Prescott", 
+        "Arizona", 
+        "15-Jul-11", 
+        "The Foothills Bank", 
+        "72", 
+        34.540024000000003, 
+        -112.468502
+      ], 
+      [
+        "Southshore Community Bank", 
+        "Apollo Beach", 
+        "Florida", 
+        "22-Jul-11", 
+        "American Momentum Bank", 
+        "46.3", 
+        27.773084000000004, 
+        -82.407593000000006
+      ], 
+      [
+        "LandMark Bank of Florida", 
+        "Sarasota", 
+        "Florida", 
+        "22-Jul-11", 
+        "American Momentum Bank", 
+        "275", 
+        27.336434999999998, 
+        -82.530653000000001
+      ], 
+      [
+        "Bank of Choice", 
+        "Greeley", 
+        "Colorado", 
+        "22-Jul-11", 
+        "Bank Midwest, N.A.", 
+        "1,070", 
+        40.423314000000005, 
+        -104.709132
+      ], 
+      [
+        "Virginia Business Bank", 
+        "Richmond", 
+        "Virginia", 
+        "29-Jul-11", 
+        "Xenith Bank", 
+        "95.8", 
+        37.540725000000002, 
+        -77.436048
+      ], 
+      [
+        "BankMeridian, N.A.", 
+        "Columbia", 
+        "South Carolina", 
+        "29-Jul-11", 
+        "SCBT, NA", 
+        "239.8", 
+        34.000709999999998, 
+        -81.034813999999997
+      ], 
+      [
+        "Integra Bank, NA", 
+        "Evansville", 
+        "Indiana", 
+        "29-Jul-11", 
+        "Old National Bank", 
+        "2,200", 
+        37.971558999999999, 
+        -87.571089999999998
+      ], 
+      [
+        "Bank of Shorewood", 
+        "Shorewood", 
+        "Illinois", 
+        "5-Aug-11", 
+        "Heartland Bank and Trust Company", 
+        "110.7", 
+        41.520031000000003, 
+        -88.201729
+      ], 
+      [
+        "Bank of Whitman", 
+        "Colfax", 
+        "Washington", 
+        "5-Aug-11", 
+        "Columbia State Bank", 
+        "548.6", 
+        46.880165000000005, 
+        -117.364349
+      ], 
+      [
+        "The First National Bank of Olathe", 
+        "Olathe", 
+        "Kansas", 
+        "12-Aug-11", 
+        "Enterprise Bank and Trust", 
+        "538.1", 
+        38.881396000000002, 
+        -94.819128000000006
+      ], 
+      [
+        "Public Savings Bank", 
+        "Huntingdon Valley", 
+        "Pennsylvania", 
+        "18-Aug-11", 
+        "Capital Bank, N.A.", 
+        "46.8", 
+        40.137990000000002, 
+        -75.072795999999997
+      ], 
+      [
+        "Lydian Private Bank", 
+        "Palm Beach", 
+        "Florida", 
+        "19-Aug-11", 
+        "Sabadell United Bank, N.A.", 
+        "1,700", 
+        26.705621000000001, 
+        -80.03643000000001
+      ], 
+      [
+        "First Southern National Bank", 
+        "Statesboro", 
+        "Georgia", 
+        "19-Aug-11", 
+        "Heritage Bank of the South", 
+        "164.6", 
+        32.448788, 
+        -81.783167000000006
+      ], 
+      [
+        "First Choice Bank", 
+        "Geneva", 
+        "Illinois", 
+        "19-Aug-11", 
+        "Inland Bank and Trust", 
+        "141", 
+        41.887528000000003, 
+        -88.305352999999997
+      ], 
+      [
+        "Patriot Bank of Georgia", 
+        "Cumming", 
+        "Georgia", 
+        "2-Sep-11", 
+        "Georgia Commerce Bank", 
+        "150.8", 
+        34.207320000000003, 
+        -84.140193000000011
+      ], 
+      [
+        "CreekSide Bank", 
+        "Woodstock", 
+        "Georgia", 
+        "2-Sep-11", 
+        "Georgia Community Bank", 
+        "102.3", 
+        34.101486999999999, 
+        -84.519374999999997
+      ], 
+      [
+        "First National Bank of Florida", 
+        "Milton", 
+        "Florida", 
+        "9-Sep-11", 
+        "Charter Bank", 
+        "296.8", 
+        30.632415000000002, 
+        -87.039687999999998
+      ], 
+      [
+        "Bank of the Commonwealth", 
+        "Norfolk", 
+        "Virginia", 
+        "23-Sep-11", 
+        "Southern Bank and Trust Company", 
+        "985.1", 
+        36.850769, 
+        -76.285872999999995
+      ], 
+      [
+        "Citizens Bank of Northern California", 
+        "Nevada City", 
+        "California", 
+        "23-Sep-11", 
+        "Tri Counties Bank", 
+        "288.8", 
+        39.261561, 
+        -121.01605900000001
+      ], 
+      [
+        "First International Bank", 
+        "Plano", 
+        "Texas", 
+        "30-Sep-11", 
+        "American First National Bank", 
+        "239.9", 
+        33.019843000000002, 
+        -96.698886000000002
+      ], 
+      [
+        "The RiverBank", 
+        "Wyoming", 
+        "Minnesota", 
+        "7-Oct-11", 
+        "Central Bank", 
+        "417.4", 
+        45.337499999999999, 
+        -92.998056000000005
+      ], 
+      [
+        "Sun Security Bank", 
+        "Ellington", 
+        "Missouri", 
+        "7-Oct-11", 
+        "Great Southern Bank", 
+        "355.9", 
+        37.241714999999999, 
+        -90.968735999999993
+      ], 
+      [
+        "Piedmont Community Bank", 
+        "Gray", 
+        "Georgia", 
+        "14-Oct-11", 
+        "State Bank and Trust Company", 
+        "201.7", 
+        33.00958, 
+        -83.533781999999988
+      ], 
+      [
+        "Blue Ridge Savings Bank", 
+        "Asheville", 
+        "North Carolina", 
+        "14-Oct-11", 
+        "Bank of North Carolina", 
+        "161", 
+        35.595058000000002, 
+        -82.551486999999995
+      ], 
+      [
+        "First State Bank", 
+        "Cranford", 
+        "New Jersey", 
+        "14-Oct-11", 
+        "Northfield Bank (Staten Island, NY)", 
+        "204.4", 
+        40.658421000000004, 
+        -74.299593000000002
+      ], 
+      [
+        "Country Bank", 
+        "Aledo", 
+        "Illinois", 
+        "14-Oct-11", 
+        "Blackhawk Bank & Trust", 
+        "190.6", 
+        41.199756999999998, 
+        -90.749306000000004
+      ], 
+      [
+        "Old Harbor Bank", 
+        "Clearwater", 
+        "Florida", 
+        "21-Oct-11", 
+        "1st United Bank", 
+        "215.9", 
+        27.965853000000003, 
+        -82.800103000000007
+      ], 
+      [
+        "Decatur First Bank", 
+        "Decatur", 
+        "Georgia", 
+        "21-Oct-11", 
+        "Fidelity Bank", 
+        "191.5", 
+        33.774827999999999, 
+        -84.296312
+      ], 
+      [
+        "Community Capital Bank", 
+        "Jonesboro", 
+        "Georgia", 
+        "21-Oct-11", 
+        "State Bank and Trust Company", 
+        "181.2", 
+        33.521501000000001, 
+        -84.353813000000002
+      ], 
+      [
+        "Community Banks of Colorado", 
+        "Greenwood Village", 
+        "Colorado", 
+        "21-Oct-11", 
+        "Bank Midwest, N.A.", 
+        "1,380", 
+        39.61721, 
+        -104.95081399999999
+      ], 
+      [
+        "All American Bank", 
+        "Des Plaines", 
+        "Illinois", 
+        "28-Oct-11", 
+        "International Bank of Chicago", 
+        "37.8", 
+        42.033361999999997, 
+        -87.883398999999997
+      ], 
+      [
+        "Mid City Bank, Inc.", 
+        "Omaha", 
+        "Nebraska", 
+        "4-Nov-11", 
+        "Premier Bank", 
+        "106.1", 
+        41.252363000000003, 
+        -95.997988000000007
+      ], 
+      [
+        "SunFirst Bank", 
+        "Saint George", 
+        "Utah", 
+        "4-Nov-11", 
+        "Cache Valley Bank", 
+        "376.2", 
+        37.096527999999999, 
+        -113.56841599999998
+      ], 
+      [
+        "Community Bank of Rockmart", 
+        "Rockmart", 
+        "Georgia", 
+        "10-Nov-11", 
+        "Century Bank of Georgia", 
+        "62.4", 
+        34.002600999999999, 
+        -85.041612999999998
+      ], 
+      [
+        "Polk County Bank", 
+        "Johnston", 
+        "Iowa", 
+        "18-Nov-11", 
+        "Grinnell State Bank", 
+        "91.6", 
+        41.671389000000005, 
+        -93.705832999999998
+      ], 
+      [
+        "Central Progressive Bank", 
+        "Lacombe", 
+        "Louisiana", 
+        "18-Nov-11", 
+        "First NBC Bank", 
+        "383.1", 
+        30.313528999999999, 
+        -89.943126000000007
+      ], 
+      [
+        "Premier Community Bank of the Emerald Coast", 
+        "Crestview", 
+        "Florida", 
+        "16-Dec-11", 
+        "Summit Bank", 
+        "126", 
+        30.754180999999999, 
+        -86.572799000000003
+      ], 
+      [
+        "Western National Bank", 
+        "Phoenix", 
+        "Arizona", 
+        "16-Dec-11", 
+        "Washington Federal", 
+        "162.9", 
+        33.448377000000001, 
+        -112.074037
+      ]
+    ]
+  ], 
+  [
+    2010, 
+    [
+      [
+        "Horizon Bank", 
+        "Bellingham", 
+        "Washington", 
+        "8-Jan-10", 
+        "Washington Federal Savings and Loan Association", 
+        "1,300", 
+        48.749079999999999, 
+        -122.47814699999999
+      ], 
+      [
+        "Town Community Bank & Trust", 
+        "Antioch", 
+        "Illinois", 
+        "15-Jan-10", 
+        "First American Bank", 
+        "70", 
+        42.477241999999997, 
+        -88.095640000000003
+      ], 
+      [
+        "St. Stephen State Bank", 
+        "St. Stephen", 
+        "Minnesota", 
+        "15-Jan-10", 
+        "First State Bank of St. Joseph", 
+        "25", 
+        45.702742999999998, 
+        -94.274439999999998
+      ], 
+      [
+        "Barnes Banking Company", 
+        "Kaysville", 
+        "Utah", 
+        "15-Jan-10", 
+        "None (insured depositors paid directly)", 
+        "828", 
+        41.035221999999997, 
+        -111.938552
+      ], 
+      [
+        "Premier American Bank", 
+        "Miami", 
+        "Florida", 
+        "22-Jan-10", 
+        "Premier American Bank, N.A.", 
+        "351", 
+        25.789097000000002, 
+        -80.204043999999996
+      ], 
+      [
+        "Bank of Leeton", 
+        "Leeton", 
+        "Missouri", 
+        "22-Jan-10", 
+        "Sunflower Bank, N.A.", 
+        "20", 
+        38.583071999999994, 
+        -93.69465799999999
+      ], 
+      [
+        "Charter Bank", 
+        "Sante Fe", 
+        "New Mexico", 
+        "22-Jan-10", 
+        "Charter Bank", 
+        "1,200", 
+        35.686974999999997, 
+        -105.937799
+      ], 
+      [
+        "Evergreen Bank", 
+        "Seattle", 
+        "Washington", 
+        "22-Jan-10", 
+        "Umpqua Bank", 
+        "489", 
+        47.606209999999997, 
+        -122.332071
+      ], 
+      [
+        "Columbia River Bank", 
+        "The Dalles", 
+        "Oregon", 
+        "22-Jan-10", 
+        "Columbia State Bank", 
+        "1,100", 
+        45.594565000000003, 
+        -121.17868200000001
+      ], 
+      [
+        "First National Bank of Georgia", 
+        "Carrollton", 
+        "Georgia", 
+        "29-Jan-10", 
+        "Community and Southern Bank", 
+        "833", 
+        33.580109999999998, 
+        -85.076611
+      ], 
+      [
+        "Florida Community Bank", 
+        "Immokalee", 
+        "Florida", 
+        "29-Jan-10", 
+        "Premier American Bank, N.A.", 
+        "876", 
+        26.418524999999999, 
+        -81.417406
+      ], 
+      [
+        "Marshall Bank, N.A.", 
+        "Hallock", 
+        "Minnesota", 
+        "29-Jan-10", 
+        "United Valley Bank", 
+        "60", 
+        48.774425999999998, 
+        -96.946446999999992
+      ], 
+      [
+        "Community Bank and Trust", 
+        "Cornelia", 
+        "Georgia", 
+        "29-Jan-10", 
+        "SCBT, NA", 
+        "1,210", 
+        34.511488, 
+        -83.527117000000004
+      ], 
+      [
+        "First Regional Bank", 
+        "Los Angeles", 
+        "California", 
+        "29-Jan-10", 
+        "First-Citizens Bank and Trust Company", 
+        "2,180", 
+        34.052234000000006, 
+        -118.24368500000001
+      ], 
+      [
+        "American Marine Bank", 
+        "Bainbridge Island", 
+        "Washington", 
+        "29-Jan-10", 
+        "Columbia State Bank", 
+        "373", 
+        47.626207999999998, 
+        -122.52124499999999
+      ], 
+      [
+        "1st American State Bank of Minnesota", 
+        "Hancock", 
+        "Minnesota", 
+        "5-Feb-10", 
+        "Community Development Bank, FSB", 
+        "18", 
+        45.496666999999995, 
+        -95.796666999999999
+      ], 
+      [
+        "La Jolla Bank", 
+        "La Jolla", 
+        "California", 
+        "19-Feb-10", 
+        "OneWest Bank, FSB", 
+        "3,600", 
+        32.832811, 
+        -117.271272
+      ], 
+      [
+        "George Washington Savings Bank", 
+        "Orland Park", 
+        "Illinois", 
+        "19-Feb-10", 
+        "FirstMerit Bank, N.A.", 
+        "413", 
+        41.630309999999994, 
+        -87.853943000000001
+      ], 
+      [
+        "The La Coste National Bank", 
+        "La Coste", 
+        "Texas", 
+        "19-Feb-10", 
+        "Community National Bank", 
+        "54", 
+        29.310791999999999, 
+        -98.810024999999996
+      ], 
+      [
+        "Marco Community Bank", 
+        "Marco Island", 
+        "Florida", 
+        "19-Feb-10", 
+        "Mutual of Omaha Bank", 
+        "120", 
+        25.939741000000001, 
+        -81.707534999999993
+      ], 
+      [
+        "Carson River Community Bank", 
+        "Carson City", 
+        "Nevada", 
+        "26-Feb-10", 
+        "Heritage Bank of Nevada", 
+        "51", 
+        39.163798, 
+        -119.767403
+      ], 
+      [
+        "Rainier Pacific Bank", 
+        "Tacoma", 
+        "Washington", 
+        "26-Feb-10", 
+        "Umpqua Bank", 
+        "718", 
+        47.252877000000005, 
+        -122.44429099999999
+      ], 
+      [
+        "Centennial Bank", 
+        "Ogden", 
+        "Utah", 
+        "5-Mar-10", 
+        "None (insured depositors paid directly)", 
+        "215", 
+        41.222999999999999, 
+        -111.97383000000001
+      ], 
+      [
+        "Waterfield Bank", 
+        "Germantown", 
+        "Maryland", 
+        "5-Mar-10", 
+        "None (insured depositors paid directly)", 
+        "156", 
+        39.173161999999998, 
+        -77.271649999999994
+      ], 
+      [
+        "Bank of Illinois", 
+        "Normal", 
+        "Illinois", 
+        "5-Mar-10", 
+        "Heartland Bank and Trust Company", 
+        "212", 
+        40.514203000000002, 
+        -88.990631000000008
+      ], 
+      [
+        "Sun American Bank", 
+        "Boca Raton", 
+        "Florida", 
+        "5-Mar-10", 
+        "First-Citizens Bank and Trust Company", 
+        "536", 
+        26.368306, 
+        -80.128931999999992
+      ], 
+      [
+        "LibertyPointe Bank", 
+        "New York", 
+        "New York", 
+        "12-Mar-10", 
+        "Valley National Bank", 
+        "210", 
+        40.712783999999999, 
+        -74.005941000000007
+      ], 
+      [
+        "The Park Avenue Bank", 
+        "New York", 
+        "New York", 
+        "12-Mar-10", 
+        "Valley National Bank", 
+        "520", 
+        40.712783999999999, 
+        -74.005941000000007
+      ], 
+      [
+        "Statewide Bank", 
+        "Covington", 
+        "Louisiana", 
+        "12-Mar-10", 
+        "Home Bank", 
+        "243", 
+        30.475470000000001, 
+        -90.100910999999996
+      ], 
+      [
+        "Old Southern Bank", 
+        "Orlando", 
+        "Florida", 
+        "12-Mar-10", 
+        "Centennial Bank", 
+        "316", 
+        28.538335999999997, 
+        -81.379235999999992
+      ], 
+      [
+        "American National Bank", 
+        "Parma", 
+        "Ohio", 
+        "19-Mar-10", 
+        "The National Bank and Trust Company", 
+        "70", 
+        41.404773999999996, 
+        -81.722909000000001
+      ], 
+      [
+        "Advanta Bank Corp", 
+        "Draper", 
+        "Utah", 
+        "19-Mar-10", 
+        "None (insured depositors paid directly)", 
+        "1,600", 
+        40.524671000000005, 
+        -111.863823
+      ], 
+      [
+        "Century Security Bank", 
+        "Duluth", 
+        "Georgia", 
+        "19-Mar-10", 
+        "Bank of Upson", 
+        "97", 
+        34.002879, 
+        -84.144638
+      ], 
+      [
+        "Bank of Hiawassee", 
+        "Hiawassee", 
+        "Georgia", 
+        "19-Mar-10", 
+        "Citizens South Bank", 
+        "378", 
+        34.949259000000005, 
+        -83.757394999999988
+      ], 
+      [
+        "Appalachian Community Bank", 
+        "Ellijay", 
+        "Georgia", 
+        "19-Mar-10", 
+        "Community and Southern Bank", 
+        "1,010", 
+        34.694808000000002, 
+        -84.482150000000004
+      ], 
+      [
+        "First Lowndes Bank", 
+        "Luverne", 
+        "Alabama", 
+        "19-Mar-10", 
+        "First Citizens Bank", 
+        "137", 
+        31.716546000000001, 
+        -86.263848999999993
+      ], 
+      [
+        "State Bank of Aurora", 
+        "Aurora", 
+        "Minnesota", 
+        "19-Mar-10", 
+        "Northern State Bank", 
+        "28", 
+        47.529924999999999, 
+        -92.237121000000002
+      ], 
+      [
+        "Desert Hills Bank", 
+        "Phoenix", 
+        "Arizona", 
+        "26-Mar-10", 
+        "New York Community Bank", 
+        "497", 
+        33.448377000000001, 
+        -112.074037
+      ], 
+      [
+        "Unity National Bank", 
+        "Cartersville", 
+        "Georgia", 
+        "26-Mar-10", 
+        "Bank of the Ozarks", 
+        "292", 
+        34.165096999999996, 
+        -84.799937999999997
+      ], 
+      [
+        "Key West Bank", 
+        "Key West", 
+        "Florida", 
+        "26-Mar-10", 
+        "Centennial Bank", 
+        "88", 
+        24.555059, 
+        -81.779987000000006
+      ], 
+      [
+        "McIntosh Commercial Bank", 
+        "Carrollton", 
+        "Georgia", 
+        "26-Mar-10", 
+        "Hamilton State Bank", 
+        "363", 
+        33.580109999999998, 
+        -85.076611
+      ], 
+      [
+        "Beach First National Bank", 
+        "Myrtle Beach", 
+        "South Carolina", 
+        "9-Apr-10", 
+        "Bank of North Carolina", 
+        "585", 
+        33.689059999999998, 
+        -78.886693999999991
+      ], 
+      [
+        "City Bank", 
+        "Lynnwood", 
+        "Washington", 
+        "16-Apr-10", 
+        "Whidbey Island Bank", 
+        "1,130", 
+        47.820929999999997, 
+        -122.31513100000001
+      ], 
+      [
+        "Tamalpais Bank", 
+        "San Rafael", 
+        "California", 
+        "16-Apr-10", 
+        "Union Bank, N.A.", 
+        "629", 
+        37.973534999999998, 
+        -122.53108700000001
+      ], 
+      [
+        "Innovative Bank", 
+        "Oakland", 
+        "California", 
+        "16-Apr-10", 
+        "Center Bank", 
+        "269", 
+        37.804364, 
+        -122.27111399999998
+      ], 
+      [
+        "Butler Bank", 
+        "Lowell", 
+        "Massachusetts", 
+        "16-Apr-10", 
+        "People's United Bank", 
+        "268", 
+        42.633425000000003, 
+        -71.316171999999995
+      ], 
+      [
+        "Riverside National Bank of Florida", 
+        "Fort Pierce", 
+        "Florida", 
+        "16-Apr-10", 
+        "TD Bank, N.A.", 
+        "3,420", 
+        27.446705999999999, 
+        -80.325606000000008
+      ], 
+      [
+        "AmericanFirst Bank", 
+        "Clermont", 
+        "Florida", 
+        "16-Apr-10", 
+        "TD Bank, N.A.", 
+        "91", 
+        28.549445000000002, 
+        -81.772854000000009
+      ], 
+      [
+        "First Federal Bank of North Florida", 
+        "Palatka", 
+        "Florida", 
+        "16-Apr-10", 
+        "TD Bank, N.A.", 
+        "393", 
+        29.648579999999999, 
+        -81.637581999999995
+      ], 
+      [
+        "Lakeside Community Bank", 
+        "Sterling Heights", 
+        "Michigan", 
+        "16-Apr-10", 
+        "None (insured depositors paid directly)", 
+        "53", 
+        42.580311999999999, 
+        -83.030203
+      ], 
+      [
+        "Amcore Bank", 
+        "Rockford", 
+        "Illinois", 
+        "23-Apr-10", 
+        "Harris, N.A.", 
+        "3,400", 
+        42.271130999999997, 
+        -89.093994999999993
+      ], 
+      [
+        "Broadway Bank", 
+        "Chicago", 
+        "Illinois", 
+        "23-Apr-10", 
+        "MB Financial, N.A.", 
+        "1,200", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Citizens Bank and Trust Company of Chicago", 
+        "Chicago", 
+        "Illinois", 
+        "23-Apr-10", 
+        "Republic Bank of Chicago", 
+        "77", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Lincoln Park Saving Bank", 
+        "Chicago", 
+        "Illinois", 
+        "23-Apr-10", 
+        "Northbrook Bank and Trust Company", 
+        "200", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "New Century Bank", 
+        "Chicago", 
+        "Illinois", 
+        "23-Apr-10", 
+        "MB Financial, N.A.", 
+        "486", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Peotone Bank and Trust Company", 
+        "Peotone", 
+        "Illinois", 
+        "23-Apr-10", 
+        "First Midwest Bank", 
+        "130", 
+        41.332254999999996, 
+        -87.785321999999994
+      ], 
+      [
+        "Wheatland Bank", 
+        "Naperville", 
+        "Illinois", 
+        "23-Apr-10", 
+        "Wheaton Bank and Trust", 
+        "437", 
+        41.746070000000003, 
+        -88.161882999999989
+      ], 
+      [
+        "BC National Banks", 
+        "Butler", 
+        "Missouri", 
+        "30-Apr-10", 
+        "Community First Bank", 
+        "67", 
+        38.258634999999998, 
+        -94.330506
+      ], 
+      [
+        "CF Bancorp", 
+        "Port Huron", 
+        "Michigan", 
+        "30-Apr-10", 
+        "First Michigan Bank", 
+        "1,650", 
+        42.970863000000001, 
+        -82.424914000000001
+      ], 
+      [
+        "Champion Bank", 
+        "Creve Coeur", 
+        "Missouri", 
+        "30-Apr-10", 
+        "BankLiberty", 
+        "187", 
+        38.660885999999998, 
+        -90.422618
+      ], 
+      [
+        "Eurobank", 
+        "San Juan", 
+        "Puerto Rico", 
+        "30-Apr-10", 
+        "Orient Bank and Trust", 
+        "2,560", 
+        18.466334, 
+        -66.105722
+      ], 
+      [
+        "Frontier Bank", 
+        "Everett", 
+        "Washington", 
+        "30-Apr-10", 
+        "Union Bank[8]", 
+        "3,500", 
+        47.978984999999994, 
+        -122.202079
+      ], 
+      [
+        "R-G Premier Bank of Puerto Rico", 
+        "Hato Rey", 
+        "Puerto Rico", 
+        "30-Apr-10", 
+        "Scotiabank de Puerto Rico", 
+        "5,920", 
+        18.419167000000002, 
+        -66.056667000000004
+      ], 
+      [
+        "Westernbank Puerto Rico", 
+        "Mayaguez", 
+        "Puerto Rico", 
+        "30-Apr-10", 
+        "Banco Popular de Puerto Rico", 
+        "11,940", 
+        18.201346000000001, 
+        -67.145151999999996
+      ], 
+      [
+        "1st Pacific Bank of California", 
+        "San Diego", 
+        "California", 
+        "7-May-10", 
+        "City National Bank", 
+        "336", 
+        32.715738000000002, 
+        -117.161084
+      ], 
+      [
+        "Towne Bank of Arizona", 
+        "Mesa", 
+        "Arizona", 
+        "7-May-10", 
+        "Commerce Bank of Arizona", 
+        "120", 
+        33.415184000000004, 
+        -111.83147199999999
+      ], 
+      [
+        "Access Bank", 
+        "Champlin", 
+        "Minnesota", 
+        "7-May-10", 
+        "PrinsBank", 
+        "32", 
+        45.188853999999999, 
+        -93.39745400000001
+      ], 
+      [
+        "The Bank of Bonifay", 
+        "Bonifay", 
+        "Florida", 
+        "7-May-10", 
+        "First Federal Bank of Florida", 
+        "243", 
+        30.791855999999999, 
+        -85.679653000000002
+      ], 
+      [
+        "Midwest Bank and Trust Company", 
+        "Elmwood Park", 
+        "Illinois", 
+        "14-May-10", 
+        "FirstMerit Bank, N.A.", 
+        "3,170", 
+        41.921141999999996, 
+        -87.809227000000007
+      ], 
+      [
+        "New Liberty Bank", 
+        "Plymouth", 
+        "Michigan", 
+        "14-May-10", 
+        "Bank of Ann Arbor", 
+        "109", 
+        42.373533000000002, 
+        -83.509038000000004
+      ], 
+      [
+        "Satilla Community Bank", 
+        "St. Marys", 
+        "Georgia", 
+        "14-May-10", 
+        "Ameris Bank", 
+        "136", 
+        30.756389000000002, 
+        -81.571388999999996
+      ], 
+      [
+        "Southwest Community Bank", 
+        "Springfield", 
+        "Missouri", 
+        "14-May-10", 
+        "Simmons First National Bank", 
+        "97", 
+        37.208956999999998, 
+        -93.292299
+      ], 
+      [
+        "Pinehurst Bank", 
+        "St. Paul", 
+        "Minnesota", 
+        "21-May-10", 
+        "Coulee Bank", 
+        "61", 
+        44.953703000000004, 
+        -93.089957999999996
+      ], 
+      [
+        "Bank of Florida-Southeast", 
+        "Fort Lauderdale", 
+        "Florida", 
+        "28-May-10", 
+        "EverBank", 
+        "595", 
+        26.122439, 
+        -80.13731700000001
+      ], 
+      [
+        "Bank of Florida-Southwest", 
+        "Naples", 
+        "Florida", 
+        "28-May-10", 
+        "EverBank", 
+        "641", 
+        26.142035999999997, 
+        -81.794809999999998
+      ], 
+      [
+        "Bank of Florida-Tampa Bay", 
+        "Tampa", 
+        "Florida", 
+        "28-May-10", 
+        "EverBank", 
+        "245", 
+        27.950575000000001, 
+        -82.457177999999999
+      ], 
+      [
+        "Sun West Bank", 
+        "Las Vegas", 
+        "Nevada", 
+        "28-May-10", 
+        "City National Bank", 
+        "361", 
+        36.169940999999994, 
+        -115.13983
+      ], 
+      [
+        "Granite Community Bank", 
+        "Granite Bay", 
+        "California", 
+        "28-May-10", 
+        "Tri Counties Bank", 
+        "103", 
+        38.763234999999995, 
+        -121.163836
+      ], 
+      [
+        "TierOne Bank", 
+        "Lincoln", 
+        "Nebraska", 
+        "4-Jun-10", 
+        "Great Western Bank", 
+        "2,800", 
+        40.809722000000001, 
+        -96.675278000000006
+      ], 
+      [
+        "First National Bank", 
+        "Rosedale", 
+        "Mississippi", 
+        "4-Jun-10", 
+        "The Jefferson Bank", 
+        "60", 
+        33.853442000000001, 
+        -91.027885999999995
+      ], 
+      [
+        "Arcola Homestead Savings Bank", 
+        "Arcola", 
+        "Illinois", 
+        "4-Jun-10", 
+        "None (insured depositors paid directly)", 
+        "17", 
+        39.684754999999996, 
+        -88.306437000000003
+      ], 
+      [
+        "Washington First International Bank", 
+        "Seattle", 
+        "Washington", 
+        "11-Jun-10", 
+        "East West Bank", 
+        "521", 
+        47.606209999999997, 
+        -122.332071
+      ], 
+      [
+        "Nevada Security Bank", 
+        "Reno", 
+        "Nevada", 
+        "18-Jun-10", 
+        "Umpqua Bank", 
+        "480", 
+        39.529633000000004, 
+        -119.81380300000001
+      ], 
+      [
+        "Peninsula Bank", 
+        "Englewood", 
+        "Florida", 
+        "25-Jun-10", 
+        "Premier American Bank, N.A.", 
+        "644", 
+        26.962004999999998, 
+        -82.352594999999994
+      ], 
+      [
+        "First National Bank", 
+        "Savannah", 
+        "Georgia", 
+        "25-Jun-10", 
+        "The Savannah Bank", 
+        "253", 
+        32.083540999999997, 
+        -81.099834000000001
+      ], 
+      [
+        "High Desert State Bank", 
+        "Albuquerque", 
+        "New Mexico", 
+        "25-Jun-10", 
+        "First American Bank", 
+        "81", 
+        35.110703000000001, 
+        -106.60999099999999
+      ], 
+      [
+        "Bay National Bank", 
+        "Baltimore", 
+        "Maryland", 
+        "9-Jul-10", 
+        "Bay Bank, FSB", 
+        "282", 
+        39.290385000000001, 
+        -76.612189000000001
+      ], 
+      [
+        "Ideal Federal Savings Bank", 
+        "Baltimore", 
+        "Maryland", 
+        "9-Jul-10", 
+        "None (insured depositors paid directly)", 
+        "6", 
+        39.290385000000001, 
+        -76.612189000000001
+      ], 
+      [
+        "USA Bank", 
+        "Port Chester", 
+        "New York", 
+        "9-Jul-10", 
+        "New Century Bank", 
+        "190", 
+        41.001764000000001, 
+        -73.665683000000001
+      ], 
+      [
+        "Home National Bank", 
+        "Blackwell", 
+        "Oklahoma", 
+        "9-Jul-10", 
+        "RCB Bank", 
+        "561", 
+        36.804476999999999, 
+        -97.282820999999998
+      ], 
+      [
+        "Woodlands Bank", 
+        "Bluffton", 
+        "South Carolina", 
+        "16-Jul-10", 
+        "Bank of the Ozarks", 
+        "376", 
+        32.237147, 
+        -80.860387000000003
+      ], 
+      [
+        "First National Bank of the South", 
+        "Spartanburg", 
+        "South Carolina", 
+        "16-Jul-10", 
+        "NAFH National Bank", 
+        "682", 
+        34.949567000000002, 
+        -81.932047999999995
+      ], 
+      [
+        "Mainstreet Savings Bank", 
+        "Hastings", 
+        "Michigan", 
+        "16-Jul-10", 
+        "Commercial Bank", 
+        "97", 
+        42.645868, 
+        -85.290840000000003
+      ], 
+      [
+        "Metro Bank of Dade County", 
+        "Miami", 
+        "Florida", 
+        "16-Jul-10", 
+        "NAFH National Bank", 
+        "442", 
+        25.789097000000002, 
+        -80.204043999999996
+      ], 
+      [
+        "Turnberry Bank", 
+        "Aventura", 
+        "Florida", 
+        "16-Jul-10", 
+        "NAFH National Bank", 
+        "264", 
+        25.956481, 
+        -80.139212000000001
+      ], 
+      [
+        "Olde Cypress Community Bank", 
+        "Clewiston", 
+        "Florida", 
+        "16-Jul-10", 
+        "CenterState Bank of Florida", 
+        "169", 
+        26.754231000000001, 
+        -80.933674999999994
+      ], 
+      [
+        "Community Security Bank", 
+        "New Prague", 
+        "Minnesota", 
+        "23-Jul-10", 
+        "Roundbank", 
+        "108", 
+        44.543296999999995, 
+        -93.576065
+      ], 
+      [
+        "Crescent Bank and Trust Co", 
+        "Jasper", 
+        "Georgia", 
+        "23-Jul-10", 
+        "Renasant Bank", 
+        "1,000", 
+        34.469552, 
+        -84.428989000000001
+      ], 
+      [
+        "Sterling Bank", 
+        "Lantana", 
+        "Florida", 
+        "23-Jul-10", 
+        "IBERIABANK", 
+        "408", 
+        26.586735999999998, 
+        -80.051985999999999
+      ], 
+      [
+        "Williamsburg First National Bank", 
+        "Kingstree", 
+        "South Carolina", 
+        "23-Jul-10", 
+        "First Citizens Bank and Trust Company", 
+        "139", 
+        33.667664000000002, 
+        -79.830625999999995
+      ], 
+      [
+        "Thunder Bank", 
+        "Sylvan Grove", 
+        "Kansas", 
+        "23-Jul-10", 
+        "The Bennington State Bank", 
+        "33", 
+        39.009453999999998, 
+        -98.394227999999998
+      ], 
+      [
+        "SouthwestUSA Bank", 
+        "Las Vegas", 
+        "Nevada", 
+        "23-Jul-10", 
+        "Plaza Bank", 
+        "214", 
+        36.169940999999994, 
+        -115.13983
+      ], 
+      [
+        "Home Valley Bank", 
+        "Cave Junction", 
+        "Oregon", 
+        "23-Jul-10", 
+        "South Valley Bank and Trust", 
+        "252", 
+        42.162890999999995, 
+        -123.648123
+      ], 
+      [
+        "Bayside Savings Bank", 
+        "Port Saint Joe", 
+        "Florida", 
+        "30-Jul-10", 
+        "Centennial Bank", 
+        "66", 
+        29.811876000000002, 
+        -85.302974000000006
+      ], 
+      [
+        "Coastal Community Bank", 
+        "Panama City", 
+        "Florida", 
+        "30-Jul-10", 
+        "Centennial Bank", 
+        "373", 
+        30.158813000000002, 
+        -85.660206000000002
+      ], 
+      [
+        "NorthWest Bank and Trust", 
+        "Acworth", 
+        "Georgia", 
+        "30-Jul-10", 
+        "State Bank and Trust Company", 
+        "168", 
+        34.065933000000001, 
+        -84.676880000000011
+      ], 
+      [
+        "The Cowlitz Bank", 
+        "Longview", 
+        "Washington", 
+        "30-Jul-10", 
+        "Heritage Bank", 
+        "529", 
+        46.138168, 
+        -122.93816699999999
+      ], 
+      [
+        "LibertyBank", 
+        "Eugene", 
+        "Oregon", 
+        "30-Jul-10", 
+        "Home Federal Bank", 
+        "768", 
+        44.052069000000003, 
+        -123.086754
+      ], 
+      [
+        "Ravenswood Bank", 
+        "Chicago", 
+        "Illinois", 
+        "6-Aug-10", 
+        "Northbrook Bank and Trust Company", 
+        "265", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Palos Bank and Trust", 
+        "Palos Heights", 
+        "Illinois", 
+        "13-Aug-10", 
+        "First Midwest Bank", 
+        "493", 
+        41.668089000000002, 
+        -87.796441999999999
+      ], 
+      [
+        "ShoreBank", 
+        "Chicago", 
+        "Illinois", 
+        "20-Aug-10", 
+        "Urban Partnership Bank", 
+        "2,160", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Community National Bank at Bartow", 
+        "Bartow", 
+        "Florida", 
+        "20-Aug-10", 
+        "CenterState Bank of Florida", 
+        "68", 
+        27.896415000000001, 
+        -81.843136999999999
+      ], 
+      [
+        "Independent National Bank", 
+        "Ocala", 
+        "Florida", 
+        "20-Aug-10", 
+        "CenterState Bank of Florida", 
+        "156", 
+        29.187199, 
+        -82.14009200000001
+      ], 
+      [
+        "Imperial Savings & Loan", 
+        "Martinsville", 
+        "Virginia", 
+        "20-Aug-10", 
+        "River Community Bank, N.A.", 
+        "9", 
+        36.691526000000003, 
+        -79.872539000000003
+      ], 
+      [
+        "Butte Community Bank", 
+        "Chico", 
+        "California", 
+        "20-Aug-10", 
+        "Rabobank, N.A.", 
+        "499", 
+        39.728493999999998, 
+        -121.837478
+      ], 
+      [
+        "Pacific State Bank", 
+        "Stockton", 
+        "California", 
+        "20-Aug-10", 
+        "Rabobank, N.A.", 
+        "312", 
+        37.957702000000005, 
+        -121.29078
+      ], 
+      [
+        "Los Padres Bank", 
+        "Solvang", 
+        "California", 
+        "20-Aug-10", 
+        "Pacific Western Bank", 
+        "870", 
+        34.595820000000003, 
+        -120.137648
+      ], 
+      [
+        "Sonoma Valley Bank", 
+        "Sonoma", 
+        "California", 
+        "20-Aug-10", 
+        "Westamerica Bank", 
+        "337", 
+        38.291859000000002, 
+        -122.45803600000001
+      ], 
+      [
+        "Horizon Bank", 
+        "Bradenton", 
+        "Florida", 
+        "10-Sep-10", 
+        "Bank of the Ozarks", 
+        "188", 
+        27.498928000000003, 
+        -82.574818999999991
+      ], 
+      [
+        "Bank of Ellijay", 
+        "Ellijay", 
+        "Georgia", 
+        "17-Sep-10", 
+        "Community and Southern Bank", 
+        "169", 
+        34.694808000000002, 
+        -84.482150000000004
+      ], 
+      [
+        "First Commerce Community Bank", 
+        "Douglasville", 
+        "Georgia", 
+        "17-Sep-10", 
+        "Community and Southern Bank", 
+        "248", 
+        33.751497000000001, 
+        -84.747714000000002
+      ], 
+      [
+        "Peoples Bank", 
+        "Winder", 
+        "Georgia", 
+        "17-Sep-10", 
+        "Community and Southern Bank", 
+        "447", 
+        33.992609999999999, 
+        -83.720170999999993
+      ], 
+      [
+        "ISN Bank", 
+        "Cherry Hill", 
+        "New Jersey", 
+        "17-Sep-10", 
+        "Customers Bank", 
+        "82", 
+        39.926813000000003, 
+        -75.024630999999999
+      ], 
+      [
+        "Bramble Savings Bank", 
+        "Milford", 
+        "Ohio", 
+        "17-Sep-10", 
+        "Foundation Bank", 
+        "48", 
+        39.175338000000004, 
+        -84.294381999999999
+      ], 
+      [
+        "Maritime Savings Bank", 
+        "West Allis", 
+        "Wisconsin", 
+        "17-Sep-10", 
+        "North Shore Bank, FSB", 
+        "351", 
+        43.016680999999998, 
+        -88.007031000000012
+      ], 
+      [
+        "Haven Trust Bank Florida", 
+        "Ponte Vedra Beach", 
+        "Florida", 
+        "24-Sep-10", 
+        "First Southern Bank", 
+        "149", 
+        30.239687, 
+        -81.385638
+      ], 
+      [
+        "North County Bank", 
+        "Arlington", 
+        "Washington", 
+        "24-Sep-10", 
+        "Whidbey Island Bank", 
+        "289", 
+        48.198712, 
+        -122.125142
+      ], 
+      [
+        "Wakulla Bank", 
+        "Crawfordville", 
+        "Florida", 
+        "1-Oct-10", 
+        "Centennial Bank", 
+        "424", 
+        30.194484000000003, 
+        -84.371121000000002
+      ], 
+      [
+        "Shoreline Bank", 
+        "Shoreline", 
+        "Washington", 
+        "1-Oct-10", 
+        "GBC International Bank", 
+        "104", 
+        47.755653000000002, 
+        -122.34151799999999
+      ], 
+      [
+        "Security Savings Bank, FSB", 
+        "Olathe", 
+        "Kansas", 
+        "15-Oct-10", 
+        "Simmons First National Bank", 
+        "508", 
+        38.881396000000002, 
+        -94.819128000000006
+      ], 
+      [
+        "WestBridge Bank and Trust Company", 
+        "Chesterfield", 
+        "Missouri", 
+        "15-Oct-10", 
+        "Midland State Bank", 
+        "92", 
+        38.663108000000001, 
+        -90.577067
+      ], 
+      [
+        "Premier Bank", 
+        "Jefferson City", 
+        "Missouri", 
+        "15-Oct-10", 
+        "Providence Bank", 
+        "1,200", 
+        38.576702000000004, 
+        -92.173516000000006
+      ], 
+      [
+        "Hillcrest Bank", 
+        "Overland Park", 
+        "Kansas", 
+        "22-Oct-10", 
+        "Hillcrest Bank, N.A.", 
+        "1,600", 
+        38.982228000000006, 
+        -94.670792000000006
+      ], 
+      [
+        "First Bank of Jacksonville", 
+        "Jacksonville", 
+        "Florida", 
+        "22-Oct-10", 
+        "Ameris Bank", 
+        "81", 
+        30.332184000000002, 
+        -81.655651000000006
+      ], 
+      [
+        "Progress Bank of Florida", 
+        "Tampa", 
+        "Florida", 
+        "22-Oct-10", 
+        "Bay Cities Bank", 
+        "111", 
+        27.950575000000001, 
+        -82.457177999999999
+      ], 
+      [
+        "First National Bank of Barnesville", 
+        "Barnesville", 
+        "Georgia", 
+        "22-Oct-10", 
+        "United Bank", 
+        "131", 
+        33.054571000000003, 
+        -84.155749999999998
+      ], 
+      [
+        "Gordon Bank", 
+        "Gordon", 
+        "Georgia", 
+        "22-Oct-10", 
+        "Morris Bank", 
+        "29", 
+        32.882086999999999, 
+        -83.332385000000002
+      ], 
+      [
+        "First Suburban National Bank", 
+        "Maywood", 
+        "Illinois", 
+        "22-Oct-10", 
+        "Seaway Bank and Trust Company", 
+        "149", 
+        41.879197999999995, 
+        -87.843116000000009
+      ], 
+      [
+        "First Arizona Savings", 
+        "Scottsdale", 
+        "Arizona", 
+        "22-Oct-10", 
+        "None (insured depositors paid directly)", 
+        "272", 
+        33.494170000000004, 
+        -111.926052
+      ], 
+      [
+        "K Bank", 
+        "Randallstown", 
+        "Maryland", 
+        "5-Nov-10", 
+        "Manufacturers and Traders Trust Company", 
+        "538", 
+        39.367328000000001, 
+        -76.795252000000005
+      ], 
+      [
+        "Western Commercial Bank", 
+        "Woodland Hills", 
+        "California", 
+        "5-Nov-10", 
+        "First California Bank", 
+        "99", 
+        34.165357, 
+        -118.608975
+      ], 
+      [
+        "First Vietnamese American Bank", 
+        "Westminster", 
+        "California", 
+        "5-Nov-10", 
+        "Grandpoint Bank", 
+        "48", 
+        33.751342000000001, 
+        -117.99399199999999
+      ], 
+      [
+        "Pierce Commercial Bank", 
+        "Tacoma", 
+        "Washington", 
+        "5-Nov-10", 
+        "Heritage Bank", 
+        "221", 
+        47.252877000000005, 
+        -122.44429099999999
+      ], 
+      [
+        "Tifton Banking Company", 
+        "Tifton", 
+        "Georgia", 
+        "12-Nov-10", 
+        "Ameris Bank", 
+        "144", 
+        31.450462999999999, 
+        -83.508496999999991
+      ], 
+      [
+        "Darby Bank & Trust", 
+        "Vidalia", 
+        "Georgia", 
+        "12-Nov-10", 
+        "Ameris Bank", 
+        "655", 
+        32.217686, 
+        -82.413460999999998
+      ], 
+      [
+        "Copper Star Bank", 
+        "Scottsdale", 
+        "Arizona", 
+        "12-Nov-10", 
+        "Stearns Bank, N.A.", 
+        "204", 
+        33.494170000000004, 
+        -111.926052
+      ], 
+      [
+        "Gulf State Community Bank", 
+        "Carrabelle", 
+        "Florida", 
+        "19-Nov-10", 
+        "Centennial Bank", 
+        "112", 
+        29.853264000000003, 
+        -84.664348000000004
+      ], 
+      [
+        "Allegiance Bank of North America", 
+        "Bala Cynwyd", 
+        "Pennsylvania", 
+        "19-Nov-10", 
+        "VIST Bank", 
+        "106", 
+        40.013141999999995, 
+        -75.230404000000007
+      ], 
+      [
+        "First Banking Center", 
+        "Burlington", 
+        "Wisconsin", 
+        "19-Nov-10", 
+        "First Michigan Bank", 
+        "821", 
+        42.678072999999998, 
+        -88.27620300000001
+      ], 
+      [
+        "Paramount Bank", 
+        "Farmington Hills", 
+        "Michigan", 
+        "10-Dec-10", 
+        "Level One Bank", 
+        "253", 
+        42.498994000000003, 
+        -83.367716999999999
+      ], 
+      [
+        "Earthstar Bank", 
+        "Southampton", 
+        "Pennsylvania", 
+        "10-Dec-10", 
+        "Polonia Bank", 
+        "113", 
+        40.174275999999999, 
+        -75.04378100000001
+      ], 
+      [
+        "Chestatee State Bank", 
+        "Dawsonville", 
+        "Georgia", 
+        "17-Dec-10", 
+        "Bank of the Ozarks", 
+        "244", 
+        34.421205, 
+        -84.119080000000011
+      ], 
+      [
+        "First Southern Bank", 
+        "Batesville", 
+        "Arkansas", 
+        "17-Dec-10", 
+        "Southern Bank", 
+        "156", 
+        35.769798999999999, 
+        -91.640971999999991
+      ], 
+      [
+        "Community National Bank", 
+        "Lino Lakes", 
+        "Minnesota", 
+        "17-Dec-10", 
+        "Farmers & Merchants Savings Bank", 
+        "29", 
+        45.160243999999999, 
+        -93.088831999999996
+      ], 
+      [
+        "United Americas Bank", 
+        "Atlanta", 
+        "Georgia", 
+        "17-Dec-10", 
+        "State Bank and Trust Company", 
+        "194", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "Appalachian Community Bank", 
+        "McCaysville", 
+        "Georgia", 
+        "17-Dec-10", 
+        "Peoples Bank of East Tennessee", 
+        "68", 
+        34.986190999999998, 
+        -84.371312000000003
+      ], 
+      [
+        "The Bank of Miami, N.A.", 
+        "Coral Gables", 
+        "Florida", 
+        "17-Dec-10", 
+        "1st United Bank", 
+        "448", 
+        25.721489999999999, 
+        -80.268383999999998
+      ]
+    ]
+  ], 
+  [
+    2009, 
+    [
+      [
+        "National Bank of Commerce", 
+        "Berkeley", 
+        "Illinois", 
+        "16-Jan-09", 
+        "Republic Bank of Chicago", 
+        "430.9", 
+        41.888919000000001, 
+        -87.903396000000001
+      ], 
+      [
+        "Bank of Clark County", 
+        "Vancouver", 
+        "Washington", 
+        "16-Jan-09", 
+        "Umpqua Bank", 
+        "446.5", 
+        45.638728, 
+        -122.66148600000001
+      ], 
+      [
+        "1st Centennial Bank", 
+        "Redlands", 
+        "California", 
+        "23-Jan-09", 
+        "First California Bank", 
+        "803.3", 
+        34.055568999999998, 
+        -117.18253799999999
+      ], 
+      [
+        "MagnetBank", 
+        "Salt Lake City", 
+        "Utah", 
+        "30-Jan-09", 
+        "None (insured depositors paid directly)", 
+        "292.9", 
+        40.760778999999999, 
+        -111.891047
+      ], 
+      [
+        "Suburban FSB", 
+        "Crofton", 
+        "Maryland", 
+        "30-Jan-09", 
+        "Bank of Essex", 
+        "360", 
+        39.001777000000004, 
+        -76.687466999999998
+      ], 
+      [
+        "Ocala National Bank", 
+        "Ocala", 
+        "Florida", 
+        "30-Jan-09", 
+        "CenterState Bank of Florida, N.A.", 
+        "223.5", 
+        29.187199, 
+        -82.14009200000001
+      ], 
+      [
+        "FirstBank Financial Service", 
+        "McDonough", 
+        "Georgia", 
+        "6-Feb-09", 
+        "Regions Bank", 
+        "337", 
+        33.447336, 
+        -84.146861999999999
+      ], 
+      [
+        "Alliance Bank", 
+        "Culver City", 
+        "California", 
+        "6-Feb-09", 
+        "California Bank and Trust", 
+        "1,140", 
+        34.021121999999998, 
+        -118.39646599999999
+      ], 
+      [
+        "County Bank", 
+        "Merced", 
+        "California", 
+        "6-Feb-09", 
+        "Westamerica Bank", 
+        "1,700", 
+        37.302163, 
+        -120.482968
+      ], 
+      [
+        "Sherman County Bank", 
+        "Loup City", 
+        "Nebraska", 
+        "13-Feb-09", 
+        "Heritage Bank", 
+        "129.8", 
+        41.275565, 
+        -98.966752999999997
+      ], 
+      [
+        "Riverside Bank of the Gulf Coast", 
+        "Cape Coral", 
+        "Florida", 
+        "13-Feb-09", 
+        "TIB Bank", 
+        "539", 
+        26.562853999999998, 
+        -81.949533000000002
+      ], 
+      [
+        "Corn Belt Bank & Trust Co.", 
+        "Pittsfield", 
+        "Illinois", 
+        "13-Feb-09", 
+        "The Carlinville National Bank", 
+        "271.8", 
+        39.607824999999998, 
+        -90.805129000000008
+      ], 
+      [
+        "Pinnacle Bank of Oregon", 
+        "Beaverton", 
+        "Oregon", 
+        "13-Feb-09", 
+        "Washington Trust Bank of Spokane", 
+        "73", 
+        45.487062000000002, 
+        -122.80371000000001
+      ], 
+      [
+        "Silver Falls Bank", 
+        "Silverton", 
+        "Oregon", 
+        "20-Feb-09", 
+        "Citizens Bank", 
+        "131.4", 
+        45.005121000000003, 
+        -122.78314499999999
+      ], 
+      [
+        "Heritage Community Bank", 
+        "Glenwood", 
+        "Illinois", 
+        "27-Feb-09", 
+        "MB Financial Bank, N.A.", 
+        "232.9", 
+        41.542535000000001, 
+        -87.602266
+      ], 
+      [
+        "Security Savings Bank", 
+        "Henderson", 
+        "Nevada", 
+        "27-Feb-09", 
+        "Bank of Nevada", 
+        "238.3", 
+        36.039524999999998, 
+        -114.98172099999999
+      ], 
+      [
+        "Freedom Bank of Georgia", 
+        "Commerce", 
+        "Georgia", 
+        "6-Mar-09", 
+        "Northeast Georgia Bank", 
+        "173", 
+        34.203996999999994, 
+        -83.45710600000001
+      ], 
+      [
+        "FirstCity Bank", 
+        "Stockbridge", 
+        "Georgia", 
+        "20-Mar-09", 
+        "None (insured depositors paid directly)", 
+        "297", 
+        33.544278000000006, 
+        -84.233808999999994
+      ], 
+      [
+        "Colorado National Bank", 
+        "Colorado Springs", 
+        "Colorado", 
+        "20-Mar-09", 
+        "Herring Bank", 
+        "123.9", 
+        38.833882000000003, 
+        -104.82136300000001
+      ], 
+      [
+        "TeamBank, NA", 
+        "Paola", 
+        "Kansas", 
+        "20-Mar-09", 
+        "Great Southern Bank", 
+        "669.8", 
+        38.572234999999999, 
+        -94.879129000000006
+      ], 
+      [
+        "Omni National Bank", 
+        "Atlanta", 
+        "Georgia", 
+        "27-Mar-09", 
+        "SunTrust Bank", 
+        "956", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "Cape Fear Bank", 
+        "Wilmington", 
+        "North Carolina", 
+        "10-Apr-09", 
+        "First Federal Savings and Loan Association", 
+        "492", 
+        34.225726000000002, 
+        -77.944710000000001
+      ], 
+      [
+        "New Frontier Bank", 
+        "Greeley", 
+        "Colorado", 
+        "10-Apr-09", 
+        "None (Wound down by FDIC as receiver)", 
+        "2,000", 
+        40.423314000000005, 
+        -104.709132
+      ], 
+      [
+        "American Sterling Bank", 
+        "Sugar Creek", 
+        "Missouri", 
+        "17-Apr-09", 
+        "Metcalf Bank", 
+        "181", 
+        39.109726999999999, 
+        -94.444673999999992
+      ], 
+      [
+        "Great Basin Bank of Nevada", 
+        "Elko", 
+        "Nevada", 
+        "17-Apr-09", 
+        "Nevada State Bank", 
+        "271", 
+        40.832421000000004, 
+        -115.76312299999999
+      ], 
+      [
+        "American Southern Bank", 
+        "Kennesaw", 
+        "Georgia", 
+        "24-Apr-09", 
+        "Bank of North Georgia", 
+        "112.3", 
+        34.023434000000002, 
+        -84.615490000000008
+      ], 
+      [
+        "Michigan Heritage Bank", 
+        "Farmington Hills", 
+        "Michigan", 
+        "24-Apr-09", 
+        "Level One Bank", 
+        "184.6", 
+        42.498994000000003, 
+        -83.367716999999999
+      ], 
+      [
+        "First Bank of Beverly Hills", 
+        "Calabasas", 
+        "California", 
+        "24-Apr-09", 
+        "None (insured depositors paid directly)", 
+        "1,500", 
+        34.138333000000003, 
+        -118.66083300000001
+      ], 
+      [
+        "First Bank of Idaho", 
+        "Ketchum", 
+        "Idaho", 
+        "24-Apr-09", 
+        "U.S. Bank, N.A.", 
+        "488.9", 
+        43.68074, 
+        -114.36366200000001
+      ], 
+      [
+        "Silverton Bank, NA", 
+        "Atlanta", 
+        "Georgia", 
+        "1-May-09", 
+        "None (insured depositors paid directly)", 
+        "4,100", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "Citizens Community Bank", 
+        "Ridgewood", 
+        "New Jersey", 
+        "1-May-09", 
+        "North Jersey Community Bank", 
+        "45.1", 
+        40.979265000000005, 
+        -74.116531000000009
+      ], 
+      [
+        "America West Bank", 
+        "Layton", 
+        "Utah", 
+        "1-May-09", 
+        "Cache Valley Bank", 
+        "299.4", 
+        41.060221999999996, 
+        -111.971053
+      ], 
+      [
+        "Westsound Bank", 
+        "Bremerton", 
+        "Washington", 
+        "8-May-09", 
+        "Kitsap Bank", 
+        "334.6", 
+        47.567320000000002, 
+        -122.63293600000002
+      ], 
+      [
+        "BankUnited FSB", 
+        "Coral Gables", 
+        "Florida", 
+        "21-May-09", 
+        "BankUnited", 
+        "12,800", 
+        25.721489999999999, 
+        -80.268383999999998
+      ], 
+      [
+        "Strategic Capital Bank", 
+        "Champaign", 
+        "Illinois", 
+        "22-May-09", 
+        "Midland States Bank", 
+        "537", 
+        40.116419999999998, 
+        -88.243382999999994
+      ], 
+      [
+        "Citizens National Bank", 
+        "Macomb", 
+        "Illinois", 
+        "22-May-09", 
+        "Morton Community Bank", 
+        "437", 
+        40.459208000000004, 
+        -90.671796999999998
+      ], 
+      [
+        "Bank of Lincolnwood", 
+        "Lincolnwood", 
+        "Illinois", 
+        "5-Jun-09", 
+        "Republic Bank of Chicago", 
+        "214", 
+        42.004476000000004, 
+        -87.730058999999997
+      ], 
+      [
+        "Southern Community Bank", 
+        "Fayetteville", 
+        "Georgia", 
+        "19-Jun-09", 
+        "United Community Bank", 
+        "377", 
+        33.448726000000001, 
+        -84.454926
+      ], 
+      [
+        "Cooperative Bank", 
+        "Wilmington", 
+        "North Carolina", 
+        "19-Jun-09", 
+        "First Bank", 
+        "970", 
+        34.225726000000002, 
+        -77.944710000000001
+      ], 
+      [
+        "First National Bank of Anthony", 
+        "Anthony", 
+        "Kansas", 
+        "19-Jun-09", 
+        "Bank of Kansas", 
+        "156.9", 
+        37.153354999999998, 
+        -98.031172999999995
+      ], 
+      [
+        "Community Bank of West Georgia", 
+        "Villa Rica", 
+        "Georgia", 
+        "26-Jun-09", 
+        "None (insured depositors paid directly)", 
+        "199.4", 
+        33.732052000000003, 
+        -84.919107999999994
+      ], 
+      [
+        "Neighborhood Community Bank", 
+        "Newnan", 
+        "Georgia", 
+        "26-Jun-09", 
+        "Charterbank", 
+        "221.6", 
+        33.380671999999997, 
+        -84.799656999999996
+      ], 
+      [
+        "Horizon Bank", 
+        "Pine City", 
+        "Minnesota", 
+        "26-Jun-09", 
+        "Stearns Bank, N.A.", 
+        "87.6", 
+        45.822910999999998, 
+        -92.970343999999997
+      ], 
+      [
+        "MetroPacific Bank", 
+        "Irvine", 
+        "California", 
+        "26-Jun-09", 
+        "Sunwest Bank", 
+        "80", 
+        33.683946999999996, 
+        -117.79469399999999
+      ], 
+      [
+        "Mirae Bank", 
+        "Los Angeles", 
+        "California", 
+        "26-Jun-09", 
+        "Wilshire State Bank", 
+        "456", 
+        34.052234000000006, 
+        -118.24368500000001
+      ], 
+      [
+        "First National Bank of Danville", 
+        "Danville", 
+        "Illinois", 
+        "2-Jul-09", 
+        "First Financial Bank, N.A.", 
+        "166", 
+        40.124481000000003, 
+        -87.630020999999999
+      ], 
+      [
+        "Rock River Bank", 
+        "Oregon", 
+        "Illinois", 
+        "2-Jul-09", 
+        "The Harvard State Bank", 
+        "77", 
+        42.014751000000004, 
+        -89.332328000000004
+      ], 
+      [
+        "John Warner Bank", 
+        "Clinton", 
+        "Illinois", 
+        "2-Jul-09", 
+        "State Bank of Lincoln", 
+        "70", 
+        40.153647999999997, 
+        -88.964524999999995
+      ], 
+      [
+        "First State Bank of Winchester", 
+        "Winchester", 
+        "Illinois", 
+        "2-Jul-09", 
+        "The First National Bank of Beardstown", 
+        "36", 
+        39.629769000000003, 
+        -90.456234999999992
+      ], 
+      [
+        "Elizabeth State Bank", 
+        "Elizabeth", 
+        "Illinois", 
+        "2-Jul-09", 
+        "Galena State Bank and Trust Company", 
+        "56", 
+        42.317791, 
+        -90.221517000000006
+      ], 
+      [
+        "Millennium State Bank of Texas", 
+        "Dallas", 
+        "Texas", 
+        "2-Jul-09", 
+        "State Bank of Texas", 
+        "118", 
+        32.780140000000003, 
+        -96.800450999999995
+      ], 
+      [
+        "Founders Bank", 
+        "Worth", 
+        "Illinois", 
+        "2-Jul-09", 
+        "The PrivateBank and Trust Company", 
+        "963", 
+        41.689754999999998, 
+        -87.797274999999999
+      ], 
+      [
+        "Bank of Wyoming", 
+        "Thermopolis", 
+        "Wyoming", 
+        "10-Jul-09", 
+        "Central Bank and Trust", 
+        "70", 
+        43.646066999999995, 
+        -108.21204299999999
+      ], 
+      [
+        "Temecula Valley Bank", 
+        "Temecula", 
+        "California", 
+        "17-Jul-09", 
+        "First-Citizens Bank and Trust Company", 
+        "1,500", 
+        33.493639000000002, 
+        -117.14836499999998
+      ], 
+      [
+        "Vineyard Bank", 
+        "Rancho Cucamonga", 
+        "California", 
+        "17-Jul-09", 
+        "California Bank and Trust", 
+        "1,900", 
+        34.106398999999996, 
+        -117.593108
+      ], 
+      [
+        "BankFirst", 
+        "Sioux Falls", 
+        "South Dakota", 
+        "17-Jul-09", 
+        "Alerus Financial, N.A.", 
+        "275", 
+        43.544596000000006, 
+        -96.731103000000004
+      ], 
+      [
+        "First Piedmont Bank", 
+        "Winder", 
+        "Georgia", 
+        "17-Jul-09", 
+        "First American Bank and Trust Company", 
+        "115", 
+        33.992609999999999, 
+        -83.720170999999993
+      ], 
+      [
+        "Security Bank of Bibb County", 
+        "Macon", 
+        "Georgia", 
+        "24-Jul-09", 
+        "State Bank and Trust Company", 
+        "1,200", 
+        32.840695000000004, 
+        -83.632401999999999
+      ], 
+      [
+        "Security Bank of North Metro", 
+        "Woodstock", 
+        "Georgia", 
+        "24-Jul-09", 
+        "State Bank and Trust Company", 
+        "224", 
+        34.101486999999999, 
+        -84.519374999999997
+      ], 
+      [
+        "Security Bank of North Fulton", 
+        "Alpharetta", 
+        "Georgia", 
+        "24-Jul-09", 
+        "State Bank and Trust Company", 
+        "209", 
+        34.075375999999999, 
+        -84.294089999999997
+      ], 
+      [
+        "Security Bank of Gwinnett County", 
+        "Suwanee", 
+        "Georgia", 
+        "24-Jul-09", 
+        "State Bank and Trust Company", 
+        "322", 
+        34.051490000000001, 
+        -84.071299999999994
+      ], 
+      [
+        "Security Bank of Jones County", 
+        "Gray", 
+        "Georgia", 
+        "24-Jul-09", 
+        "State Bank and Trust Company", 
+        "453", 
+        33.00958, 
+        -83.533781999999988
+      ], 
+      [
+        "Security Bank of Houston County", 
+        "Perry", 
+        "Georgia", 
+        "24-Jul-09", 
+        "State Bank and Trust Company", 
+        "383", 
+        32.458207000000002, 
+        -83.731572
+      ], 
+      [
+        "Waterford Village Bank", 
+        "Williamsville", 
+        "New York", 
+        "24-Jul-09", 
+        "Evans Bank, N.A.", 
+        "61", 
+        42.963946999999997, 
+        -78.737808999999999
+      ], 
+      [
+        "Integrity Bank", 
+        "Jupiter", 
+        "Florida", 
+        "31-Jul-09", 
+        "Stonegate Bank", 
+        "119", 
+        26.934225000000001, 
+        -80.094208999999992
+      ], 
+      [
+        "First State Bank of Altus", 
+        "Altus", 
+        "Oklahoma", 
+        "31-Jul-09", 
+        "Herring Bank", 
+        "103", 
+        34.637765000000002, 
+        -99.334043999999992
+      ], 
+      [
+        "First BankAmericano", 
+        "Elizabeth", 
+        "New Jersey", 
+        "31-Jul-09", 
+        "Crown Bank", 
+        "166", 
+        40.663992, 
+        -74.210701
+      ], 
+      [
+        "Peoples Community Bank", 
+        "West Chester", 
+        "Ohio", 
+        "31-Jul-09", 
+        "First Financial Bank, N.A.", 
+        "706", 
+        39.332126000000002, 
+        -84.41726700000001
+      ], 
+      [
+        "Mutual Bank", 
+        "Harvey", 
+        "Illinois", 
+        "31-Jul-09", 
+        "United Central Bank", 
+        "1,600", 
+        41.610034000000006, 
+        -87.646713000000005
+      ], 
+      [
+        "First State Bank", 
+        "Sarasota", 
+        "Florida", 
+        "7-Aug-09", 
+        "Stearns Bank, N.A.", 
+        "463", 
+        27.336434999999998, 
+        -82.530653000000001
+      ], 
+      [
+        "Community National Bank of Sarasota County", 
+        "Venice", 
+        "Florida", 
+        "7-Aug-09", 
+        "Stearns Bank, N.A.", 
+        "97", 
+        27.099778000000004, 
+        -82.454262999999997
+      ], 
+      [
+        "Community First Bank", 
+        "Prineville", 
+        "Oregon", 
+        "7-Aug-09", 
+        "Home Federal Bank", 
+        "209", 
+        44.299849000000002, 
+        -120.83446599999999
+      ], 
+      [
+        "Union Bank, NA", 
+        "Gilbert", 
+        "Arizona", 
+        "14-Aug-09", 
+        "MidFirst Bank", 
+        "124", 
+        33.352826, 
+        -111.789027
+      ], 
+      [
+        "Dwelling House Savings and Loan Association", 
+        "Pittsburgh", 
+        "Pennsylvania", 
+        "14-Aug-09", 
+        "PNC Bank, N.A.", 
+        "13", 
+        40.440624999999997, 
+        -79.995885999999999
+      ], 
+      [
+        "Colonial Bank", 
+        "Montgomery", 
+        "Alabama", 
+        "14-Aug-09", 
+        "Branch Banking and Trust (BB&T)", 
+        "25,000", 
+        32.366804999999999, 
+        -86.29996899999999
+      ], 
+      [
+        "Community Bank of Arizona", 
+        "Phoenix", 
+        "Arizona", 
+        "14-Aug-09", 
+        "MidFirst Bank", 
+        "156", 
+        33.448377000000001, 
+        -112.074037
+      ], 
+      [
+        "Community Bank of Nevada", 
+        "Las Vegas", 
+        "Nevada", 
+        "14-Aug-09", 
+        "None (insured depositors paid directly)", 
+        "159", 
+        36.169940999999994, 
+        -115.13983
+      ], 
+      [
+        "First Coweta Bank", 
+        "Newnan", 
+        "Georgia", 
+        "21-Aug-09", 
+        "United Bank", 
+        "167", 
+        33.380671999999997, 
+        -84.799656999999996
+      ], 
+      [
+        "Guaranty Bank", 
+        "Austin", 
+        "Texas", 
+        "21-Aug-09", 
+        "BBVA Compass", 
+        "13,000", 
+        30.267153000000004, 
+        -97.743060999999997
+      ], 
+      [
+        "CapitalSouth Bank", 
+        "Birmingham", 
+        "Alabama", 
+        "21-Aug-09", 
+        "IBERIABANK", 
+        "617", 
+        33.520660999999997, 
+        -86.802490000000006
+      ], 
+      [
+        "ebank", 
+        "Atlanta", 
+        "Georgia", 
+        "21-Aug-09", 
+        "Stearns Bank, N.A.", 
+        "143", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "Bradford Bank", 
+        "Baltimore", 
+        "Maryland", 
+        "28-Aug-09", 
+        "Manufacturers & Traders Trust Company", 
+        "452", 
+        39.290385000000001, 
+        -76.612189000000001
+      ], 
+      [
+        "Mainstreet Bank", 
+        "Forest Lake", 
+        "Minnesota", 
+        "28-Aug-09", 
+        "Central Bank", 
+        "459", 
+        45.278855999999998, 
+        -92.985218000000003
+      ], 
+      [
+        "Affinity Bank", 
+        "Ventura", 
+        "California", 
+        "28-Aug-09", 
+        "Pacific Western Bank", 
+        "1,000", 
+        34.274646000000004, 
+        -119.229032
+      ], 
+      [
+        "First Bank of Kansas City", 
+        "Kansas City", 
+        "Missouri", 
+        "4-Sep-09", 
+        "Great American Bank", 
+        "16", 
+        39.099727000000001, 
+        -94.578567000000007
+      ], 
+      [
+        "InBank", 
+        "Oak Forest", 
+        "Illinois", 
+        "4-Sep-09", 
+        "MB Financial Bank, N.A.", 
+        "212", 
+        41.602812, 
+        -87.743938
+      ], 
+      [
+        "Vantus Bank", 
+        "Sioux City", 
+        "Iowa", 
+        "4-Sep-09", 
+        "Great Southern Bank", 
+        "458", 
+        42.499994000000001, 
+        -96.400306999999998
+      ], 
+      [
+        "Platinum Community Bank", 
+        "Rolling Meadows", 
+        "Illinois", 
+        "4-Sep-09", 
+        "None (insured depositors paid directly)", 
+        "346", 
+        42.084194000000004, 
+        -88.013126999999997
+      ], 
+      [
+        "First State Bank", 
+        "Flagstaff", 
+        "Arizona", 
+        "4-Sep-09", 
+        "Sunwest Bank", 
+        "105", 
+        35.198284000000001, 
+        -111.651302
+      ], 
+      [
+        "Corus Bank", 
+        "Chicago", 
+        "Illinois", 
+        "11-Sep-09", 
+        "MB Financial Bank, N.A.", 
+        "7,000", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Brickwell Community Bank", 
+        "Woodbury", 
+        "Minnesota", 
+        "11-Sep-09", 
+        "CorTrust Bank, N.A.", 
+        "72", 
+        44.923854999999996, 
+        -92.95938000000001
+      ], 
+      [
+        "Venture Bank", 
+        "Lacey", 
+        "Washington", 
+        "11-Sep-09", 
+        "First-Citizens Bank and Trust Company", 
+        "970", 
+        47.034263000000003, 
+        -122.82319099999999
+      ], 
+      [
+        "Irwin Union Bank and Trust Company", 
+        "Columbus", 
+        "Indiana", 
+        "18-Sep-09", 
+        "First Financial Bank, N.A.", 
+        "2,700", 
+        39.201440000000005, 
+        -85.921379999999999
+      ], 
+      [
+        "Irwin Union Bank, F.S.B.", 
+        "Louisville", 
+        "Kentucky", 
+        "18-Sep-09", 
+        "First Financial Bank, N.A.", 
+        "493", 
+        38.252665, 
+        -85.75845600000001
+      ], 
+      [
+        "Georgian Bank", 
+        "Atlanta", 
+        "Georgia", 
+        "25-Sep-09", 
+        "First Citizens Bank and Trust Company", 
+        "2,000", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "Warren Bank", 
+        "Warren", 
+        "Michigan", 
+        "2-Oct-09", 
+        "The Huntington National Bank", 
+        "538", 
+        42.491944000000004, 
+        -83.023888999999997
+      ], 
+      [
+        "Jennings State Bank", 
+        "Spring Grove", 
+        "Minnesota", 
+        "2-Oct-09", 
+        "Central Bank", 
+        "56", 
+        43.561079999999997, 
+        -91.635979000000006
+      ], 
+      [
+        "South Colorado National Bank", 
+        "Pueblo", 
+        "Colorado", 
+        "2-Oct-09", 
+        "Legacy Bank", 
+        "40", 
+        38.254446999999999, 
+        -104.60914100000001
+      ], 
+      [
+        "San Joaquin Bank", 
+        "Bakersfield", 
+        "California", 
+        "16-Oct-09", 
+        "Citizens Business Bank", 
+        "775", 
+        35.373291999999999, 
+        -119.01871200000001
+      ], 
+      [
+        "Partners Bank", 
+        "Naples", 
+        "Florida", 
+        "23-Oct-09", 
+        "Stonegate Bank", 
+        "66", 
+        26.142035999999997, 
+        -81.794809999999998
+      ], 
+      [
+        "American United Bank", 
+        "Lawrenceville", 
+        "Georgia", 
+        "23-Oct-09", 
+        "Ameris Bank", 
+        "111", 
+        33.956215, 
+        -83.987961999999996
+      ], 
+      [
+        "Hillcrest Bank Florida", 
+        "Naples", 
+        "Florida", 
+        "23-Oct-09", 
+        "Hillcrest Bank, N.A.", 
+        "83", 
+        26.142035999999997, 
+        -81.794809999999998
+      ], 
+      [
+        "Flagship National Bank", 
+        "Bradenton", 
+        "Florida", 
+        "23-Oct-09", 
+        "First Federal Bank of Florida", 
+        "190", 
+        27.498928000000003, 
+        -82.574818999999991
+      ], 
+      [
+        "Bank of Elmwood", 
+        "Racine", 
+        "Wisconsin", 
+        "23-Oct-09", 
+        "Tri City National Bank", 
+        "327", 
+        42.726131000000002, 
+        -87.782852000000005
+      ], 
+      [
+        "Riverview Community Bank", 
+        "Otsego", 
+        "Minnesota", 
+        "23-Oct-09", 
+        "Central Bank", 
+        "108", 
+        45.274130999999997, 
+        -93.591350000000006
+      ], 
+      [
+        "First DuPage Bank of Westmont", 
+        "Westmont", 
+        "Illinois", 
+        "23-Oct-09", 
+        "First Midwest Bank", 
+        "279", 
+        41.795864000000002, 
+        -87.975617
+      ], 
+      [
+        "Community Bank of Lemont", 
+        "Lemont", 
+        "Illinois", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "82", 
+        41.673642000000001, 
+        -88.001726000000005
+      ], 
+      [
+        "Bank USA, N.A.", 
+        "Phoenix", 
+        "Arizona", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "213", 
+        33.448377000000001, 
+        -112.074037
+      ], 
+      [
+        "California National Bank", 
+        "Los Angeles", 
+        "California", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "7,800", 
+        34.052234000000006, 
+        -118.24368500000001
+      ], 
+      [
+        "San Diego National Bank", 
+        "San Diego", 
+        "California", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "3,600", 
+        32.715738000000002, 
+        -117.161084
+      ], 
+      [
+        "Pacific National Bank", 
+        "San Francisco", 
+        "California", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "2,300", 
+        37.774929999999998, 
+        -122.419416
+      ], 
+      [
+        "Park National Bank", 
+        "Chicago", 
+        "Illinois", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "4,700", 
+        41.878114000000004, 
+        -87.629797999999994
+      ], 
+      [
+        "Citizens National Bank", 
+        "Teague", 
+        "Texas", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "118", 
+        31.627115000000003, 
+        -96.283861999999999
+      ], 
+      [
+        "Madisonville State Bank", 
+        "Madisonville", 
+        "Texas", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "257", 
+        30.949911, 
+        -95.911618999999988
+      ], 
+      [
+        "North Houston Bank", 
+        "Houston", 
+        "Texas", 
+        "30-Oct-09", 
+        "U.S. Bank, N.A.", 
+        "326", 
+        29.760193000000001, 
+        -95.369389999999996
+      ], 
+      [
+        "United Security Bank", 
+        "Sparta", 
+        "Georgia", 
+        "6-Nov-09", 
+        "Ameris Bank", 
+        "157", 
+        33.275700999999998, 
+        -82.976258999999999
+      ], 
+      [
+        "Home Federal Savings Bank", 
+        "Detroit", 
+        "Michigan", 
+        "6-Nov-09", 
+        "Liberty Bank and Trust Company", 
+        "15", 
+        42.331427000000005, 
+        -83.045754000000002
+      ], 
+      [
+        "Prosperan Bank", 
+        "Oakdale", 
+        "Minnesota", 
+        "6-Nov-09", 
+        "Alerus Financial, N.A.", 
+        "200", 
+        44.963021999999995, 
+        -92.964935999999994
+      ], 
+      [
+        "Gateway Bank of St. Louis", 
+        "St. Louis", 
+        "Missouri", 
+        "6-Nov-09", 
+        "Central Bank of Kansas City", 
+        "28", 
+        38.627003000000002, 
+        -90.199404000000001
+      ], 
+      [
+        "United Commercial Bank", 
+        "San Francisco", 
+        "California", 
+        "6-Nov-09", 
+        "East West Bank", 
+        "11,200", 
+        37.774929999999998, 
+        -122.419416
+      ], 
+      [
+        "Century Bank, F.S.B.", 
+        "Sarasota", 
+        "Florida", 
+        "13-Nov-09", 
+        "IBERIABANK", 
+        "728", 
+        27.336434999999998, 
+        -82.530653000000001
+      ], 
+      [
+        "Orion Bank", 
+        "Naples", 
+        "Florida", 
+        "13-Nov-09", 
+        "IBERIABANK", 
+        "2,700", 
+        26.142035999999997, 
+        -81.794809999999998
+      ], 
+      [
+        "Pacific Coast National Bank", 
+        "San Clemente", 
+        "California", 
+        "13-Nov-09", 
+        "Sunwest Bank", 
+        "134", 
+        33.426972999999997, 
+        -117.61199199999999
+      ], 
+      [
+        "Commerce Bank of Southwest Florida", 
+        "Fort Myers", 
+        "Florida", 
+        "20-Nov-09", 
+        "Central Bank", 
+        "80", 
+        26.640628000000003, 
+        -81.87230799999999
+      ], 
+      [
+        "The Buckhead Community Bank", 
+        "Atlanta", 
+        "Georgia", 
+        "4-Dec-09", 
+        "State Bank and Trust", 
+        "874", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "First Security National Bank", 
+        "Norcross", 
+        "Georgia", 
+        "4-Dec-09", 
+        "State Bank and Trust", 
+        "128", 
+        33.941212999999998, 
+        -84.213531000000003
+      ], 
+      [
+        "The Tattnall Bank", 
+        "Reidsville", 
+        "Georgia", 
+        "4-Dec-09", 
+        "Heritage Bank of the South", 
+        "50", 
+        32.086860999999999, 
+        -82.117897999999997
+      ], 
+      [
+        "AmTrust Bank", 
+        "Cleveland", 
+        "Ohio", 
+        "4-Dec-09", 
+        "New York Community Bank", 
+        "12,000", 
+        41.499320000000004, 
+        -81.694361000000001
+      ], 
+      [
+        "Benchmark Bank", 
+        "Aurora", 
+        "Illinois", 
+        "4-Dec-09", 
+        "MB Financial Bank, N.A.", 
+        "170", 
+        41.760584999999999, 
+        -88.320071999999996
+      ], 
+      [
+        "Greater Atlantic Bank", 
+        "Reston", 
+        "Virginia", 
+        "4-Dec-09", 
+        "Sonabank", 
+        "203", 
+        38.958630999999997, 
+        -77.357003000000006
+      ], 
+      [
+        "Republic Federal Bank, N.A.", 
+        "Miami", 
+        "Florida", 
+        "11-Dec-09", 
+        "1st United Bank", 
+        "433", 
+        25.789097000000002, 
+        -80.204043999999996
+      ], 
+      [
+        "Valley Capital Bank, N.A.", 
+        "Mesa", 
+        "Arizona", 
+        "11-Dec-09", 
+        "Enterprise Bank and Trust", 
+        "40", 
+        33.415184000000004, 
+        -111.83147199999999
+      ], 
+      [
+        "SolutionsBank", 
+        "Overland Park", 
+        "Kansas", 
+        "11-Dec-09", 
+        "Arvest Bank", 
+        "511", 
+        38.982228000000006, 
+        -94.670792000000006
+      ], 
+      [
+        "RockBridge Commercial Bank", 
+        "Atlanta", 
+        "Georgia", 
+        "18-Dec-09", 
+        "None (insured depositors paid directly)", 
+        "294", 
+        33.748995000000001, 
+        -84.387981999999994
+      ], 
+      [
+        "Peoples First Community Bank", 
+        "Panama City", 
+        "Florida", 
+        "18-Dec-09", 
+        "Hancock Bank", 
+        "1,800", 
+        30.158813000000002, 
+        -85.660206000000002
+      ], 
+      [
+        "Citizens State Bank", 
+        "New Baltimore", 
+        "Michigan", 
+        "18-Dec-09", 
+        "None (insured depositors paid directly)", 
+        "169", 
+        42.681144000000003, 
+        -82.736862000000002
+      ], 
+      [
+        "New South Federal Savings Bank", 
+        "Irondale", 
+        "Alabama", 
+        "18-Dec-09", 
+        "Beal Bank", 
+        "1,500", 
+        33.538159999999998, 
+        -86.707210000000003
+      ], 
+      [
+        "Independent Bankers' Bank", 
+        "Springfield", 
+        "Illinois", 
+        "18-Dec-09", 
+        "The Independent Bankers Bank", 
+        "586", 
+        39.781721000000005, 
+        -89.650148000000002
+      ], 
+      [
+        "Imperial Capital Bank", 
+        "La Jolla", 
+        "California", 
+        "18-Dec-09", 
+        "City National Bank", 
+        "4,000", 
+        32.832811, 
+        -117.271272
+      ], 
+      [
+        "First Federal Bank of California, F.S.B.", 
+        "Santa Monica", 
+        "California", 
+        "18-Dec-09", 
+        "OneWest Bank, FSB", 
+        "6,100", 
+        34.019453999999996, 
+        -118.49119099999999
+      ]
+    ]
+  ], 
+  [
+    2008, 
+    [
+      [
+        "Douglass National Bank", 
+        "Kansas City", 
+        "Missouri", 
+        "25-Jan-08", 
+        "Liberty Bank and Trust", 
+        "58.5", 
+        39.099727000000001, 
+        -94.578567000000007
+      ], 
+      [
+        "Hume Bank", 
+        "Hume", 
+        "Missouri", 
+        "7-Mar-08", 
+        "Security Bank", 
+        "18.7", 
+        38.090031000000003, 
+        -94.583843999999999
+      ], 
+      [
+        "ANB Financial NA", 
+        "Bentonville", 
+        "Arkansas", 
+        "9-May-08", 
+        "Pulaski Bank and Trust Company", 
+        "2,100", 
+        36.372853999999997, 
+        -94.20881700000001
+      ], 
+      [
+        "First Integrity Bank, NA", 
+        "Staples", 
+        "Minnesota", 
+        "30-May-08", 
+        "First International Bank and Trust", 
+        "54.7", 
+        46.355715999999994, 
+        -94.794843999999998
+      ], 
+      [
+        "IndyMac", 
+        "Pasadena", 
+        "California", 
+        "11-Jul-08", 
+        "OneWest Bank, FSB", 
+        "32,000", 
+        34.147784999999999, 
+        -118.144516
+      ], 
+      [
+        "First National Bank of Nevada", 
+        "Reno", 
+        "Nevada", 
+        "25-Jul-08", 
+        "Mutual of Omaha Bank", 
+        "3,400", 
+        39.529633000000004, 
+        -119.81380300000001
+      ], 
+      [
+        "First Heritage Bank, NA", 
+        "Newport Beach", 
+        "California", 
+        "25-Jul-08", 
+        "Mutual of Omaha Bank", 
+        "254", 
+        33.61891, 
+        -117.92894699999999
+      ], 
+      [
+        "First Priority Bank", 
+        "Bradenton", 
+        "Florida", 
+        "1-Aug-08", 
+        "SunTrust Bank", 
+        "259", 
+        27.498928000000003, 
+        -82.574818999999991
+      ], 
+      [
+        "The Columbian Bank and Trust Company", 
+        "Topeka", 
+        "Kansas", 
+        "22-Aug-08", 
+        "Citizens Bank and Trust", 
+        "752", 
+        39.055824000000001, 
+        -95.689018000000004
+      ], 
+      [
+        "Integrity Bank", 
+        "Alpharetta", 
+        "Georgia", 
+        "29-Aug-08", 
+        "Regions Bank", 
+        "1,100", 
+        34.075375999999999, 
+        -84.294089999999997
+      ], 
+      [
+        "Silver State Bank", 
+        "Henderson", 
+        "Nevada", 
+        "5-Sep-08", 
+        "Nevada State Bank", 
+        "2,000", 
+        36.039524999999998, 
+        -114.98172099999999
+      ], 
+      [
+        "Ameribank", 
+        "Northfork", 
+        "West Virginia", 
+        "19-Sep-08", 
+        "The Citizens Savings Bank & Pioneer Community Bank", 
+        "113", 
+        37.420947999999996, 
+        -81.440103000000008
+      ], 
+      [
+        "Main Street Bank", 
+        "Northville", 
+        "Michigan", 
+        "10-Oct-08", 
+        "Monroe Bank and Trust", 
+        "98", 
+        42.431146000000005, 
+        -83.483268999999993
+      ], 
+      [
+        "Meridian Bank", 
+        "Eldred", 
+        "Illinois", 
+        "10-Oct-08", 
+        "National Bank", 
+        "39.2", 
+        39.287548000000001, 
+        -90.552343999999991
+      ], 
+      [
+        "Alpha Bank & Trust", 
+        "Alpharetta", 
+        "Georgia", 
+        "24-Oct-08", 
+        "Stearns Bank, N.A.", 
+        "354.1", 
+        34.075375999999999, 
+        -84.294089999999997
+      ], 
+      [
+        "Freedom Bank", 
+        "Bradenton", 
+        "Florida", 
+        "31-Oct-08", 
+        "Fifth Third Bank", 
+        "287", 
+        27.498928000000003, 
+        -82.574818999999991
+      ], 
+      [
+        "Franklin Bank", 
+        "Houston", 
+        "Texas", 
+        "7-Nov-08", 
+        "Prosperity Bank", 
+        "5,100", 
+        29.760193000000001, 
+        -95.369389999999996
+      ], 
+      [
+        "Security Pacific Bank", 
+        "Los Angeles", 
+        "California", 
+        "7-Nov-08", 
+        "Pacific Western Bank", 
+        "561.1", 
+        34.052234000000006, 
+        -118.24368500000001
+      ], 
+      [
+        "The Community Bank", 
+        "Loganville", 
+        "Georgia", 
+        "21-Nov-08", 
+        "Bank of Essex", 
+        "681", 
+        33.838997999999997, 
+        -83.900738000000004
+      ], 
+      [
+        "Downey Savings and Loan", 
+        "Newport Beach", 
+        "California", 
+        "21-Nov-08", 
+        "U.S. Bank, N.A.", 
+        "12,800", 
+        33.61891, 
+        -117.92894699999999
+      ], 
+      [
+        "PFF Bank and Trust", 
+        "Pomona", 
+        "California", 
+        "21-Nov-08", 
+        "U.S. Bank, N.A.", 
+        "3,700", 
+        34.055103000000003, 
+        -117.74999099999999
+      ], 
+      [
+        "First Georgia Community Bank", 
+        "Jackson", 
+        "Georgia", 
+        "5-Dec-08", 
+        "United Bank", 
+        "237.5", 
+        33.294565000000006, 
+        -83.966020999999998
+      ], 
+      [
+        "Bank of Zhe Chen", 
+        "Lubbock", 
+        "Texas", 
+        "8-Dec-08", 
+        "Texas Tech Credit union, N.A.", 
+        "0.23", 
+        33.577863000000001, 
+        -101.855166
+      ], 
+      [
+        "Haven Trust Bank", 
+        "Duluth", 
+        "Georgia", 
+        "12-Dec-08", 
+        "Branch Banking and Trust Company (BB&T)", 
+        "572", 
+        34.002879, 
+        -84.144638
+      ], 
+      [
+        "Sanderson State Bank", 
+        "Sanderson", 
+        "Texas", 
+        "12-Dec-08", 
+        "The Pecos County State Bank", 
+        "37", 
+        30.142408000000003, 
+        -102.394032
+      ]
+    ]
+  ]
+]
