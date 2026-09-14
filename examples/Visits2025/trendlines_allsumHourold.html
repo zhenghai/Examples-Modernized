@@ -29,7 +29,7 @@ svg {
   //display: none;
 }
 
-.topics {
+.sources {
   fill: none;
   stroke: #aaa;
   stroke-linejoin: round;
@@ -37,7 +37,7 @@ svg {
   stroke-width: 1.5px;
 }
 
-.topic--hover {
+.source--hover {
   //stroke: #000;
   stroke: blue;
 }
@@ -90,7 +90,7 @@ svg {
 <div id="chart">
 </div>
 <div id="menu">
-  Topic Area<br/> </div>
+  Source<br/> </div>
 
 <label id="form" for="show-voronoi">
   Show Voronoi
@@ -110,8 +110,8 @@ svg {
 //</div>
 
 
-var years,
-    yearFormat = d3.time.format("%Y");
+var hours,
+    hourFormat = d3.time.format("%I:%M %p");
 
 var margin = {top: 50, right: 150, bottom: 30, left: 180},
     width = 960 - margin.left - margin.right,
@@ -127,13 +127,13 @@ var y = d3.scale.linear()
 var color = d3.scale.category20();
 
 var voronoi = d3.geom.voronoi()
-    .x(function(d) { return x(d.date); })
+    .x(function(d) { return x(d.hour); })
     .y(function(d) { return y(d.value); })
     .clipExtent([[-margin.left, -margin.top], [width + margin.right, height + margin.bottom]]);
 
 var line = d3.svg.line()
     .interpolate("monotone")//("cardinal")//("basis") //smooth curve
-    .x(function(d) { return x(d.date); })
+    .x(function(d) { return x(d.hour); })
     .y(function(d) { return y(d.value); });
 
 //var svg = d3.select("body").append("svg")
@@ -146,10 +146,18 @@ var svg = d3.select("#chart").append("svg")
 var data0;
 //d3.csv("../../LCEC/AllUserCompletionsPerTotByEmployeesPharmaYears.csv", type, function(error, topics) {
 //d3.csv("AllUserCompletionsYearlyTopic.csv", type, function(error, topics) {
-d3.csv("/examples/TrendLinesAllSum/AllUserCompletionsYearlyTopic010615.csv", type, function(error, topics) {
-//d3.csv("AllUserCompletionsPerByEmployeesPharmaYears.csv", type, function(error, topics) {
-  x.domain(d3.extent(years));
-  y.domain([0, d3.max(topics, function(c) { return d3.max(c.values, function(d) { return d.value; });
+d3.csv("/examples/Visits2025/visitor_hourly_pivot.csv", type, function(error, sources) {
+    //d3.csv("AllUserCompletionsPerByEmployeesPharmaYears.csv", type, function(error, topics) {
+        console.log("ERROR:", error);
+        console.log("SOURCES:", sources);
+        console.log("HOURS:", hours);
+
+        if (error) {
+            console.error(error);
+            return;
+        }    
+  x.domain(d3.extent(hours));
+  y.domain([0, d3.max(sources, function(c) { return d3.max(c.values, function(d) { return d.value; });
 })]).nice();
 
   svg.append("g")
@@ -178,9 +186,9 @@ d3.csv("/examples/TrendLinesAllSum/AllUserCompletionsYearlyTopic010615.csv", typ
       .text("Yearly User Completions");
 
   svg.append("g")
-      .attr("class", "topics")
+      .attr("class", "sources")
     .selectAll("path")
-      .data(topics)
+      .data(sources)
     .enter().append("path")
       .attr("d", function(d) { d.line = this; return line(d.values); });
 
@@ -199,9 +207,9 @@ d3.csv("/examples/TrendLinesAllSum/AllUserCompletionsYearlyTopic010615.csv", typ
 
   voronoiGroup.selectAll("path")
       .data(voronoi(d3.nest()
-          .key(function(d) { return x(d.date) + "," + y(d.value); })
+          .key(function(d) { return x(d.hour) + "," + y(d.value); })
           .rollup(function(v) { return v[0]; })
-          .entries(d3.merge(topics.map(function(d) { return d.values; })))
+          .entries(d3.merge(sources.map(function(d) { return d.values; })))
           .map(function(d) { return d.values; })))
     .enter().append("path")
       .attr("d", function(d) { return "M" + d.join("L") + "Z"; })
@@ -221,26 +229,26 @@ d3.csv("/examples/TrendLinesAllSum/AllUserCompletionsYearlyTopic010615.csv", typ
 
   function mouseover(d) {
     if (data0 !== undefined) {mouseout(data0);}
-    d3.select(d.topic.line).classed("topic--hover", true);
-    d.topic.line.parentNode.appendChild(d.topic.line);
-    focus.attr("transform", "translate(" + x(d.date) + "," + y(d.value) + ")");
-    focus.select("text").text(d.topic.name + " (" + d.date.getFullYear() + ", " + d.value + ")");
+    d3.select(d.source.line).classed("source--hover", true);
+    d.source.line.parentNode.appendChild(d.source.line);
+    focus.attr("transform", "translate(" + x(d.hour) + "," + y(d.value) + ")");
+    focus.select("text").text(d.source.name + " (" + d.hour.getFullYear() + ", " + d.value + ")");
   }
 
   function mouseout(d) {
-    d3.select(d.topic.line).classed("topic--hover", false);
+    d3.select(d.source.line).classed("source--hover", false);
     focus.attr("transform", "translate(-100,-100)");
   }
 
     nest = d3.nest()
-          //.key(function(d) { return d.topic.name; }).sortKeys(d3.ascending)
-          .key(function(d) { return d.topic.name; }).sortKeys(function(a, b) {
+          //.key(function(d) { return d.source.name; }).sortKeys(d3.ascending)
+          .key(function(d) { return d.source.name; }).sortKeys(function(a, b) {
               if (a.toLowerCase() < b.toLowerCase()) return -1;
               if (a.toLowerCase() > b.toLowerCase()) return 1;
               return 0;
             })
           .rollup(function(v) { return v[0]; })
-          .entries(d3.merge(topics.map(function(d) { return d.values; })))
+          .entries(d3.merge(sources.map(function(d) { return d.values; })))
           .map(function(d) { return d.values; });
 
       var list = d3.select("#menu").append("select").on("change", change)
@@ -251,35 +259,35 @@ d3.csv("/examples/TrendLinesAllSum/AllUserCompletionsYearlyTopic010615.csv", typ
                 .append("option")
                 .attr("value", function(d) {return d.key;})
                 .text(function(d) {
-                    return d.topic.name; });
+                    return d.source.name; });
       //data0 = nest[0]
-      data0 = nest[0].topic.values[nest[0].topic.values.length-1];
+      data0 = nest[0].source.values[nest[0].source.values.length-1];
       mouseover(data0);
   
   function change() {
      if (data0 !== undefined) {console.log("here"); mouseout(data0);}
      var selectedIndex = list.property('selectedIndex'),
      //data          = options[0][selectedIndex].__data__;
-     data          = options[0][selectedIndex].__data__.topic.values[data0.topic.values.length-1];
+     data          = options[0][selectedIndex].__data__.source.values[data0.source.values.length-1];
      mouseover(data);
      data0 = data;
   }
 });
 
 function type(d, i) {
-  if (!i) years = Object.keys(d).map(yearFormat.parse).filter(Number);
-  var topic = {
-    name: d['Topic Area'],
+  if (!i) hours = Object.keys(d).map(hourFormat.parse).filter(Number);
+  var source = {
+    name: d['Visitor Source'],
     values: null
   };
-  topic.values = years.map(function(y) {
+  source.values = hours.map(function(y) {
     return {
-      topic: topic,
-      date: y,
-      value: parseFloat(d[yearFormat(y)])
+      source: source,
+      hour: h,
+      value: parseFloat(d[hourFormat(h)])
     };
   });
-  return topic;
+  return source;
 }
 
 </script>

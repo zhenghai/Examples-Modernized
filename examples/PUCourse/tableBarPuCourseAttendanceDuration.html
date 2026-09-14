@@ -43,7 +43,10 @@ tbody tr:text {
   font: 10px sans-serif;
   text-anchor: end;
 }
-
+.large-header {
+    font-size: 13px;
+    font-weight: bold;
+}
 
 /* Legend Styling Rules */
 .color-legend {
@@ -76,11 +79,11 @@ tbody tr:text {
 <script src="https://d3js.org/d3.v2.min.js"></script>
 <script src="https://d3js.org/colorbrewer.v1.min.js"></script>
 
-<h1 id="title">Sortable Table</h1>
+<h2 id="title">Sortable Table PU Courses</h2>
 <aside>Click on the column header to sort.</aside>
-
+<br>
 <!-- Added HTML Legend Container -->
-<div class="color-legend">
+<!--div class="color-legend">
   <div class="legend-item">
     <div class="legend-swatch highly-regulated"></div>
     <span>Highly Regulated</span>
@@ -89,23 +92,20 @@ tbody tr:text {
     <div class="legend-swatch less-regulated"></div>
     <span>Less Regulated</span>
   </div>
-</div>
-
+</div-->
 <script>
 
 
-d3.csv("/examples/PEI2015/IndustryDemographicsPEI2015GE6max.csv", function(industries) {
-  len = industries.length;
-  ind = industries.slice(0,len-1);
-  max = industries.slice(len-1);
+d3.csv("/examples/PUCourse/attendance_and_duration_pivot_by_group.csv", function(groups) {
+  len = groups.length;
+  ind = groups.slice(0,len-1);
+  max = groups.slice(len-1);
 
-  demographics = d3.keys(industries[0]).filter(function(key) {
-    //return key != "Industry" && key != "Industry Category";
-    //return key != "Industry Category" && key != "# of Respondents" && key != "R" && key != "PEI";
-    return key != "# of Respondents" && key != "R" && key != "PEI";
+  utilization = d3.keys(groups[0]).filter(function(key) {
+      return key != "Duration (Minutes)"; //&& key != "R" && key != "PEI";
   });
 
-ncol = demographics.length-1
+ncol = utilization.length;
 var table = d3.select("body").append("table")
             .attr("style", "margin-left: 50px")
             //.style("border-collapse", "collapse")
@@ -116,16 +116,17 @@ tbody = table.append("tbody");
 // append the header row
 thead.append("tr")
      .selectAll("th")
-     .data(demographics.slice(0,ncol))
+     .data(utilization.slice(0,ncol))
      .enter()
      .append("th")
-     .text(function(col) { return col; });
+     .text(function(col) { return col; })
+     .attr("class", "large-header"); // Adds a custom CSS class
  // render the table
- // var table = tabulate(industries, demographics);
+ // var table = tabulate(groups, utilization);
 
-  d3.selectAll("thead th").data(demographics).on("click", function(k) {
+  d3.selectAll("thead th").data(utilization).on("click", function(k) {
     tr.sort(function(a, b) { 
-       if (k != demographics[0] && k != demographics[ncol]) return (b[k]) - (a[k]); 
+       if (k != utilization[0] && k != utilization[ncol]) return (b[k]) - (a[k]); 
        else return d3.ascending(a[k],b[k]) });
   });
 
@@ -134,24 +135,24 @@ thead.append("tr")
     .enter().append("tr");
 
   tr.append("th")
-      .text(function(d) { return d.Industry; });
+      .text(function(d) { return d.Group; });
 
   //var color = d3.scale.category10();
   color = d3.scale.ordinal()
     .domain(["Highly Regulated", "Less Regulated"])
     .range(colorbrewer.Set1[3]);
-  demo = demographics.filter(function(key) { return key != demographics[0] && key != demographics[demographics.length-1]; });
+  demo = utilization.filter(function(key) { return key != utilization[0]; });
   td = tr.selectAll("td")
       .data(function(d) { //return demo.map(function(k) { return d[k]/max[0][k]; });
-                          return demo.map(function(k) { return [d[k], max[0][k], k, d[demographics[ncol]]]; });
+                          return demo.map(function(k) { return [d[k], max[0][k], k, d[utilization[ncol]]]; });
                         })
     .enter().append("td")//.html(function(d) { return d[0]; })
       .append("svg")
       .attr("width", 160)
-      .attr("height", 14);
+      .attr("height", 18);
   td.append("rect")
       .style("fill", function(d) { return color(d[3]); })
-      .attr("height", 14)
+      .attr("height", 18)
       .attr("width", function(d) { return d[0]/d[1] * 120; });
   formatPercent = d3.format(".0%")
   formatNum = d3.format(".2f")
@@ -162,7 +163,7 @@ thead.append("tr")
       .attr("y", 9)
       //.attr("dy", ".35em")
       .text(function(d) { 
-           if (d[2] == "Ensuring ethical behaviors and alignment of decision making and conduct with core values") return formatPercent(d[0]); 
+           if (d[2] == "Actual Attendance") return d[0]; 
            else return formatNum(d[0]);
            });
 });
@@ -171,7 +172,7 @@ function tabulate(data, columns) {
 var table = d3.select("body").append("table")
             .attr("style", "margin-left: 250px")
             .style("border-collapse", "collapse")
-            .style("border", "2px black solid"),
+            .style("border", "3x black solid"),
 thead = table.append("thead"),
 tbody = table.append("tbody");
 
@@ -182,6 +183,7 @@ thead.append("tr")
      .enter()
      .append("th")
      .text(function(column) { return column; });
+
 
 // create a row for each object in the data
 var rows = tbody.selectAll("tr")

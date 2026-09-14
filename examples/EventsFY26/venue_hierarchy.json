@@ -1,0 +1,190 @@
+{
+  "name": "Venue",
+  "children": [
+    {
+      "name": "Art Museum",
+      "children": [
+        {
+          "index": 3.5,
+          "name": "Amphitheater",
+          "value": 0.003451506335979488
+        },
+        {
+          "index": 3.5,
+          "name": "Conservation Studio",
+          "value": 0.005300527587397071
+        },
+        {
+          "index": 3.5,
+          "name": "Conservation Studios",
+          "value": 0.021991026083526453
+        },
+        {
+          "index": 3.5,
+          "name": "Creativity Lab",
+          "value": 0.0032789310191805136
+        },
+        {
+          "index": 3.5,
+          "name": "Creativity Labs",
+          "value": 0.008875302006804399
+        },
+        {
+          "index": 3.5,
+          "name": "Education Commons",
+          "value": 0.0006903012671958976
+        },
+        {
+          "index": 3.5,
+          "name": "Executive conference room",
+          "value": 0.0001972289334845422
+        },
+        {
+          "index": 3.5,
+          "name": "Galleries",
+          "value": 0.00431438291997436
+        },
+        {
+          "index": 3.5,
+          "name": "Grand Hall",
+          "value": 0.13325279818549382
+        },
+        {
+          "index": 3.5,
+          "name": "Grand Hall and N/S Art Walk",
+          "value": 0.008382229673093043
+        },
+        {
+          "index": 3.5,
+          "name": "Grand Hall, Art Walks, Entrance Court, Orientation Gallery, and all Galleries",
+          "value": 0.00862876583994872
+        },
+        {
+          "index": 3.5,
+          "name": "Grand Hall, Orientation Gallery",
+          "value": 0.0029584340022681325
+        },
+        {
+          "index": 3.5,
+          "name": "Grand Hall, Tuttle, and Seminar Rooms",
+          "value": 0.0073960850056703316
+        },
+        {
+          "index": 3.5,
+          "name": "Malkin Amphitheater",
+          "value": 0.004191114836546521
+        },
+        {
+          "index": 3.5,
+          "name": "Mosaic",
+          "value": 0.00885064839011883
+        },
+        {
+          "index": 3.5,
+          "name": "Mosaic, Mosaic Terrace\nRain location is 3rd floor landing",
+          "value": 0.0006656476505103299
+        },
+        {
+          "index": 3.5,
+          "name": "Multiple Locations",
+          "value": 0.6681130121788866
+        },
+        {
+          "index": 3.5,
+          "name": "Seminar Rooms",
+          "value": 0.0002958434002268133
+        },
+        {
+          "index": 3.5,
+          "name": "Small Auditorium",
+          "value": 0.005275873970711504
+        },
+        {
+          "index": 3.5,
+          "name": "Tuttle and Education Commons",
+          "value": 0.0009861446674227108
+        },
+        {
+          "index": 3.5,
+          "name": "Tuttle, Education Commons, and Grand Hall",
+          "value": 0.0024653616685567773
+        },
+        {
+          "index": 3.5,
+          "name": "West Terrace",
+          "value": 0.01849021251417583
+        }
+      ]
+    },
+    {
+      "name": "Carl A Fields Center",
+      "children": [
+        {
+          "index": 3.5,
+          "name": "Carl A Fields Center Multipurpose Room",
+          "value": 0.0007396085005670331
+        }
+      ]
+    },
+    {
+      "name": "JRR",
+      "children": [
+        {
+          "index": 3.5,
+          "name": "JRR 399",
+          "value": 0.0013312953010206597
+        },
+        {
+          "index": 3.5,
+          "name": "JRR A17",
+          "value": 0.0006409940338247621
+        }
+      ]
+    },
+    {
+      "name": "McCosh",
+      "children": [
+        {
+          "index": 3.5,
+          "name": "McCosh 10",
+          "value": 0.00862876583994872
+        }
+      ]
+    },
+    {
+      "name": "Off Campus",
+      "children": [
+        {
+          "index": 1.5,
+          "name": "Princeton Garden Theater",
+          "value": 0.009245106257087915
+        }
+      ]
+    },
+    {
+      "name": "Outside",
+      "children": [
+        {
+          "index": 2.5,
+          "name": "Blair-Jolene Courtyard",
+          "value": 0.0021941718850155317
+        },
+        {
+          "index": 2.5,
+          "name": "Little Hall Courtyard",
+          "value": 0.01972289334845422
+        }
+      ]
+    },
+    {
+      "name": "Virtual",
+      "children": [
+        {
+          "index": 0.5,
+          "name": "Online only",
+          "value": 0.03944578669690844
+        }
+      ]
+    }
+  ]
+}

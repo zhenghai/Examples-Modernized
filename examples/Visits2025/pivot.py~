@@ -1,0 +1,35 @@
+import pandas as pd
+
+# Load data
+df = pd.read_csv("~/Downloads/AOH2025c.csv")
+
+# Extract the hour
+df["Hour"] = pd.to_datetime(
+    df["Hour of Entry"],
+    format="%I:%M %p"
+).dt.strftime("%-I:00 %p")
+
+# Sum each metric by hour
+hourly_totals = df.groupby("Hour")[
+    ["Number of Visitors", "Event", "Visitors in Art Space"]
+].sum()
+
+# Transpose so metrics are rows and hours are columns
+pivot_table = hourly_totals.T
+
+# Ensure hours appear in chronological order
+hour_order = [
+    "10:00 AM", "11:00 AM", "12:00 PM", "1:00 PM",
+    "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM",
+    "6:00 PM", "7:00 PM", "8:00 PM"
+]
+
+pivot_table = pivot_table.reindex(
+    columns=[h for h in hour_order if h in pivot_table.columns],
+    fill_value=0
+)
+
+print(pivot_table)
+
+# Save to Excel
+pivot_table.to_excel("visitor_hourly_pivot.xlsx")

@@ -1,0 +1,31 @@
+Reservation ID,Day,Date,Event Start,Event End,Duration (Hours),Duration (Minutes),Booking Event Name,1st Contact,Booking Event Type,Booking Status,Building,Location,Group,Category,Gallery Selection,Setup Count,Actual Attendance,Booking ID
+444224,Monday,12/1/2025 Mon,2:25 PM,3:15 PM,0:50,50,ART 200 / NES 205 / AFS 202 The Art and Archaeology of the Ancient Near East and Egypt,,Class,Confirmed,Art Museum,126 Object Study,Art and Archaeology,,,,17,
+461650,Monday,1/26/2026 Mon,11:15 AM,12:15 PM,1:00,60,Laura Arnold Leibman visit,"Kusserow, Karl E",Other,Confirmed,Art Museum,129 Object Study,Art Museum,Art Museum Resources,,0,2,2278471
+457454,Thursday,1/29/2026 Thu,1:30 PM,4:20 PM,2:50,170,ART 477 / FRE 477,"Perl, AnnMarie",Class,Confirmed,Art Museum,129 Object Study,Art and Archaeology,Art Museum Resources,,0,7,2259758
+449025,Friday,1/30/2026 Fri,1:30 PM,3:30 PM,2:00,120,Grad Student Workshop,"Israel, Janna",Class,Confirmed,Art Museum,130 Object Study,Art Museum,Art Museum Resources,,0,20,2195546
+460799,,2/9/2026 Mon,11:20 AM,12:00 PM,0:40,40,ART 209,"Kaufmann, Thomas D",Class,Confirmed,Art Museum,127 Object Study,Art and Archaeology,Art Museum Resources,,0,12,2274978
+458064,,2/16/2026 Mon,2:00 PM,3:30 PM,1:30,90,ARC 391/AAS 327/URB 393,"Israel, Janna",Class,Confirmed,Art Museum,129 Object Study,Art Museum,Art Museum Resources,,0,10,2262458
+460801,,2/17/2026 Tue,3:30 PM,4:20 PM,0:50,50,ART 203 / CLA 206 P02,"Sigmier, John H",Class,Confirmed,Art Museum,126 Object Study,Art and Archaeology,Art Museum Resources,,0,12,2274984
+461025,,2/17/2026 Tue,10:40 AM,12:00 PM,1:20,80,WRI 191,"Goldring, Thea",Class,Confirmed,Art Museum,130 Object Study,Princeton Writing Program,Art Museum Resources,,0,12,2275596
+461036,,2/17/2026 Tue,1:20 PM,2:40 PM,1:20,80,WRI 192,"Goldring, Thea",Class,Confirmed,Art Museum,130 Object Study,Princeton Writing Program,Art Museum Resources,,0,12,2275627
+458649,,2/24/2026 Tue,10:40 AM,11:30 AM,0:50,50,ART 100 P03,"Saunders, Rachel",Class,Confirmed,Art Museum,126 Object Study,Art and Archaeology,Art Museum Resources,,0,14,2268694
+458619,,2/26/2026 Thu,9:00 AM,10:20 AM,1:20,80,ART 242 / ECS 341,"Doherty, Brigid",Class,Cancelled,Art Museum,129 Object Study,German,Art Museum Resources,,0,15,2268611
+458628,,2/26/2026 Thu,9:00 AM,10:20 AM,1:20,80,ART 101 / VIS 101 U01,"Baudez, Basile C",Class,Confirmed,Art Museum,207E Conservation Study Room,Art and Archaeology,Art Museum Resources,,0,16,2309383
+458007,,2/27/2026 Fri,1:30 PM,3:00 PM,1:30,90,AAS 314 / COM 398 / AFS 321,"Belcher, Wendy Laura",Class,Cancelled,Art Museum,127 Object Study,Comparative Literature,Art Museum Resources,,0,14,2262074
+460803,,3/3/2026 Tue,9:00 AM,11:50 AM,2:50,170,ART 547 / ARC 552,"Yerkes, Carolyn",Class,Confirmed,Art Museum,130 Object Study,Art and Archaeology,Art Museum Resources,,0,15,2274998
+459541,,3/4/2026 Wed,1:20 PM,2:40 PM,1:20,80,FRS 118,"Israel, Janna",Class,Confirmed,Art Museum,127 Object Study,Art Museum,Art Museum Resources,,0,10,2271231
+460805,,3/5/2026 Thu,9:00 AM,10:20 AM,1:20,80,SPA 307,"Bono, Mariana",Class,Confirmed,Art Museum,129 Object Study,Spanish & Portuguese,Art Museum Resources,,0,12,2275004
+458606,,3/24/2026 Tue,3:00 PM,4:20 PM,1:20,80,HIS 558,"Glazer-Eytan, Yonatan",Class,Cancelled,Art Museum,130 Object Study,History,Art Museum Resources,,0,5,2268566
+447922,,4/7/2026 Tue,1:20 PM,2:40 PM,1:20,80,FRS 144,Veronica White,Class,Confirmed,Art Museum,127 Object Study,Art Museum,Art Museum Resources,,0,8,2193643
+458563,,4/23/2026 Thu,10:30 AM,11:50 AM,1:20,80,ART 560 / AAS 560,"Kesson, Anna A",Class,Confirmed,Art Museum,128 Object Study,African American Studies,Art Museum Resources,,0,6,2268369
+477212,,4/15/2026 Wed,5:00 PM,6:00 PM,1:00,60,MEJA in the Museum,,Student Organization Event,Confirmed,Art Museum,128 Object Study,Princeton Middle Eastern and Mediterranean Jews Alliance,,,0,15,2330270
+458058,,1/28/2026 Wed,1:15 PM,4:30 PM,3:15,195,FRS 126,"White, Veronica M",Class,Confirmed,Art Museum,University Course Gallery Visit 1,Art Museum,Art Museum Resources,,0,15,2262441
+465364,,2/6/2026 Fri,8:30 AM,9:30 AM,1:00,60,ASL102-C01-C02-C03,"Bloom, Allison M",Class,Confirmed,Art Museum,University Course Gallery Visit 1,Program in Linguistics,Art Museum Resources,,0,4,2296038
+467180,,2/11/2026 Wed,9:00 AM,10:20 AM,1:20,80,WRI 158 - Feeling in Public,Sarah Schwartz,Class,Confirmed,Art Museum,University Course Gallery Visit 3,Princeton Writing Program,Art Museum Resources,,,12,2303363
+467180.2,,2/11/2026 Wed,10:40 AM,12:00 PM,1:20,80,WRI 157 - Feeling in Public,Sarah Schwartz,Class,Confirmed,Art Museum,University Course Gallery Visit 3,Princeton Writing Program,Art Museum Resources,,,10,2303363.2
+454282,,2/16/2026 Mon,1:30 PM,3:00 PM,1:30,90,ART 481 / AMS 481 / ENV 481,Rachael DeLue,Class,Confirmed,Art Museum,University Course Gallery Visit 3,Art and Archaeology,Art Museum Resources,,,17,2207252
+470675,,2/25/2026 Wed,3:15 PM,4:30 PM,1:15,75,ART 430 / MED 430 / HLS 430,Maria Alessia Rossi,Class,Confirmed,Art Museum,University Course Gallery Visit 3,Art and Archaeology,Art Museum Resources,,,12,2314832
+468867,,4/15/2026 Wed,1:30 PM,3:00 PM,1:30,90,ART 401,John Sigmier,Class,Confirmed,Art Museum,University Course Gallery Visit 3,Art and Archaeology,Art Museum Resources,,,13,2310327
+479712,,3/11/2026 Wed,12:00 PM,2:00 PM,2:00,120,Self-Guided Academic Tour (Treptow: Mercer County Community College),PUAM Tour,Open House or Tour,Confirmed,Art Museum,Academic Tour 1,Art Museum,Art Museum Resources,,29,29,2334876
+485213,,4/30/2026 Thu,3:15 PM,4:15 PM,1:00,60,PU Adult Tour: Frist Health Center (Quinn),PUAM Tour,Open House or Tour,Confirmed,Art Museum,Academic Tour 2,Art Museum,Art Museum Resources,,50,50,2345281
+493059,,5/23/2026 Sat,11:15 AM,12:15 PM,1:00,60,Group Tour: John Diekman,PUAM Tour,Open House or Tour,Cancelled,Art Museum,Academic Tour 2,Art Museum,Art Museum Resources,,15,15,2361990

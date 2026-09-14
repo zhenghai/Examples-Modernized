@@ -1,0 +1,42 @@
+import re
+import pandas as pd
+
+# 1. Load the CSV file
+df = pd.read_csv("Events Reporting Spreadsheet_TestFY26.csv")
+
+# Column headers matching your data format
+attendance_col = "Actual Attendance"
+location_col = "Building / Location"
+
+# 2. Clean and remove blank, empty, or 'NA' entries from the attendance column
+if attendance_col in df.columns:
+    # Convert everything to string and strip spaces out of the cell
+    df[attendance_col] = df[attendance_col].astype(str).str.strip()
+
+    # Define all variations of blank or missing data strings to drop
+    invalid_entries = ["", "NA", "N/A", "NAN", "NONE", "<NA>"]
+
+    # Filter out any rows that match those invalid entries or are fundamentally null
+    df = df[
+        ~df[attendance_col].str.upper().isin(invalid_entries)
+        & df[attendance_col].notna()
+    ]
+
+
+# 3. Function to strip leading numbers, codes, spaces, and punctuation from locations
+def clean_location(val):
+    if pd.isna(val):
+        return val
+    # Regex strips digits, spaces, hashtags, and dashes from the start of the string
+    return re.sub(r"^[\d\s#\-]+", "", str(val))
+
+
+# 4. Clean up the location column
+if location_col in df.columns:
+    df[location_col] = df[location_col].apply(clean_location)
+
+# 5. Save the final cleaned data to a new CSV file
+df.to_csv("cleaned_events.csv", index=False)
+print(
+    "CSV data cleaned successfully! Rows with blank or NA attendance have been removed."
+)

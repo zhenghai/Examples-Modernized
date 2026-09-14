@@ -1,0 +1,192 @@
+{
+  "name": "Visitors by Time",
+  "children": [
+    {
+      "name": "10 AM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 235
+        },
+        {
+          "name": "Event",
+          "size": 355
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "11 AM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 531
+        },
+        {
+          "name": "Event",
+          "size": 31
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "12 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 824
+        },
+        {
+          "name": "Event",
+          "size": 45
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "1 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 1007
+        },
+        {
+          "name": "Event",
+          "size": 0
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "2 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 1177
+        },
+        {
+          "name": "Event",
+          "size": 51
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 0
+        }
+      ]
+    },
+    {
+      "name": "3 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 1157
+        },
+        {
+          "name": "Event",
+          "size": 37
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 21
+        }
+      ]
+    },
+    {
+      "name": "4 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 968
+        },
+        {
+          "name": "Event",
+          "size": 0
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 228
+        }
+      ]
+    },
+    {
+      "name": "5 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 489
+        },
+        {
+          "name": "Event",
+          "size": 385
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 415
+        }
+      ]
+    },
+    {
+      "name": "6 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 285
+        },
+        {
+          "name": "Event",
+          "size": 85
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 255
+        }
+      ]
+    },
+    {
+      "name": "7 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 196
+        },
+        {
+          "name": "Event",
+          "size": 0
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 467
+        }
+      ]
+    },
+    {
+      "name": "8 PM",
+      "children": [
+        {
+          "name": "Number of Visitors",
+          "size": 0
+        },
+        {
+          "name": "Event",
+          "size": 0
+        },
+        {
+          "name": "Visitors in Art Space",
+          "size": 0
+        }
+      ]
+    }
+  ]
+}
