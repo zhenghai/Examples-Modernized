@@ -126,7 +126,7 @@ var svg = d3.select("#chart").append("svg")
 var data0;
 //d3.csv("../../LCEC/AllUserCompletionsPerTotByEmployeesPharmaYears.csv", type, function(error, topics) {
 //d3.csv("AllUserCompletionsYearlyTopic.csv", type, function(error, topics) {
-d3.csv("/examples/TrendLinesAllSum/AllUserCompletionsYearlyTopic010615.csv", type, function(error, topics) {
+d3.csv("AllUserCompletionsYearlyTopic010615.csv", type, function(error, topics) {
 //d3.csv("AllUserCompletionsPerByEmployeesPharmaYears.csv", type, function(error, topics) {
   x.domain(d3.extent(years));
   y.domain([0, d3.max(topics, function(c) { return d3.max(c.values, function(d) { return d.value; });

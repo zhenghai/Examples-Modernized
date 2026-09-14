@@ -124,7 +124,7 @@ var svg = d3.select("body").selectAll("div")
     .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");*/
 
 // Load our data file…
-d3.csv("/examples/ChordECMetrics/Q23per_flat1.csv", function(data) {
+d3.csv("Q23per_flat1.csv", function(data) {
   var entities = {},
       array = [],
       arr = [],

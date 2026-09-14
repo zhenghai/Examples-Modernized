@@ -194,7 +194,7 @@ legend.append("text")
                                 //.attr("dy",0)
                                 .text(3);
 
-d3.json("/examples/TreeBUSplit/BU_m.json", function(root) {
+d3.json("BU_m.json", function(root) {
   initialize(root);
   accumulate(root);
   layout(root);
