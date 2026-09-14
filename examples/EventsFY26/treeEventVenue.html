@@ -194,7 +194,7 @@ legend.append("text")
                                 //.attr("dy",0)
                                 .text(3);
 
-d3.json("/examples/EventsFY26/venue_hierarchy.json", function(root) {
+d3.json("venue_hierarchy.json", function(root) {
   initialize(root);
   accumulate(root);
   layout(root);
