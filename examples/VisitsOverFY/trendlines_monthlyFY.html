@@ -304,7 +304,8 @@ d3.csv(
     // ========================================================
     // COLORS
     // ========================================================
-    var colorScale = d3.scale.category20();
+    var reversedColors = d3.scale.category20().range().slice().reverse();
+    var colorScale = d3.scale.ordinal().range(reversedColors);
 
 
     // ========================================================
@@ -698,6 +699,9 @@ function type(d, i) {
 
   }
 
+  if (!d["Fiscal Year"] || d["Fiscal Year"].trim() === "") {
+    return null; // D3 drops this row completely
+  }
 
   // ----------------------------------------------------------
   // Create FY
