@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nature Nation Survey ZIP Heat Map</title>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+
+<style>
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f6f5;
+}
+
+#map {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+.zip {
+    cursor: pointer;
+
+    stroke: #ffffff;
+
+    stroke-width: 1px;
+
+    vector-effect: non-scaling-stroke;
+}
+
+.zip:hover {
+    stroke: #111111;
+
+    stroke-width: 2px;
+}
+
+#loading {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f5f6f5;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+#tooltip {
+    position: fixed;
+
+    z-index: 1000;
+
+    display: none;
+
+    pointer-events: none;
+
+    padding: 10px 13px;
+
+    background: rgba(20,24,22,.96);
+
+    color: white;
+
+    border-radius: 7px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.25);
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    white-space: nowrap;
+}
+
+.tooltip-zip {
+    margin-bottom: 4px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.tooltip-label {
+    color: #aaa;
+}
+
+.tooltip-value {
+    color: white;
+
+    font-weight: 600;
+}
+
+#status {
+    position: absolute;
+
+    left: 15px;
+
+    bottom: 12px;
+
+    z-index: 20;
+
+    padding: 6px 9px;
+
+    background: rgba(255,255,255,.92);
+
+    color: #555;
+
+    font-size: 11px;
+
+    border-radius: 4px;
+
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+
+#reset {
+    position: absolute;
+
+    right: 15px;
+
+    top: 15px;
+
+    z-index: 20;
+
+    padding: 7px 12px;
+
+    background: white;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    color: #444;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 2px 7px rgba(0,0,0,.08);
+}
+
+#reset:hover {
+    background: #eee;
+}
+
+.map-title {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    fill: #222;
+}
+
+.map-subtitle {
+    font-size: 13px;
+
+    fill: #666;
+}
+
+.legend-title {
+    font-size: 12px;
+
+    font-weight: 600;
+
+    fill: #444;
+}
+
+.legend-axis text {
+    font-size: 11px;
+
+    fill: #555;
+}
+
+.legend-axis path,
+.legend-axis line {
+    stroke: #999;
+}
+
+#error {
+    display: none;
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 500;
+
+    width: min(750px, 90%);
+
+    max-height: 80vh;
+
+    overflow: auto;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,.2);
+
+    color: #333;
+}
+
+#error h2 {
+    margin-top: 0;
+
+    color: #b42318;
+}
+
+#error pre {
+    white-space: pre-wrap;
+
+    word-break: break-word;
+
+    background: #f4f4f4;
+
+    padding: 12px;
+
+    font-size: 11px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div id="map">
+
+    <div id="loading">
+        Loading survey data and ZIP boundaries...
+    </div>
+
+    <div id="error">
+
+        <h2>Map Error</h2>
+
+        <div id="errorText"></div>
+
+    </div>
+
+    <button id="reset">
+        Reset zoom
+    </button>
+
+    <div id="status"></div>
+
+</div>
+
+<div id="tooltip"></div>
+
+
+<script>
+
+/*
+================================================================
+CONFIGURATION
+================================================================
+*/
+
+const DATA_FILE =
+    "NatureNationSurveyZipDistance.json";
+
+
+const CENSUS_URL =
+    "https://tigerweb.geo.census.gov/arcgis/rest/services/" +
+    "Census2020/tigerWMS_Census2020/MapServer/84/query";
+
+
+/*
+================================================================
+DOM
+================================================================
+*/
+
+const mapElement =
+    document.getElementById("map");
+
+const loadingElement =
+    document.getElementById("loading");
+
+const errorElement =
+    document.getElementById("error");
+
+const errorTextElement =
+    document.getElementById("errorText");
+
+const statusElement =
+    document.getElementById("status");
+
+const tooltipElement =
+    document.getElementById("tooltip");
+
+const resetButton =
+    document.getElementById("reset");
+
+
+/*
+================================================================
+ZIP NORMALIZATION
+================================================================
+*/
+
+function normalizeZip(value) {
+
+    if (
+        value === null ||
+        value === undefined
+    ) {
+        return "";
+    }
+
+    let zip =
+        String(value)
+            .trim();
+
+    zip =
+        zip
+            .replace(
+                /^ZCTA5CE20=/i,
+                ""
+            )
+            .replace(
+                /^ZCTA5=/i,
+                ""
+            )
+            .replace(
+                /^BASENAME=/i,
+                ""
+            )
+            .trim();
+
+    zip =
+        zip.replace(
+            /\D/g,
+            ""
+        );
+
+    return zip.padStart(
+        5,
+        "0"
+    );
+}
+
+
+/*
+================================================================
+ERROR
+================================================================
+*/
+
+function showError(error) {
+
+    console.error(error);
+
+    loadingElement.style.display =
+        "none";
+
+    errorElement.style.display =
+        "block";
+
+    errorTextElement.innerHTML =
+        "<p>" +
+        String(
+            error.message ||
+            error
+        ) +
+        "</p>";
+}
+
+
+/*
+================================================================
+LOAD SURVEY DATA
+================================================================
+*/
+
+fetch(DATA_FILE)
+
+.then(function(response) {
+
+    if (!response.ok) {
+
+        throw new Error(
+            "Could not load " +
+            DATA_FILE +
+            ". HTTP " +
+            response.status
+        );
+
+    }
+
+    return response.json();
+
+})
+
+
+.then(function(rawData) {
+
+    const surveyData = {};
+
+
+    Object.entries(rawData)
+        .forEach(
+            function(entry) {
+
+                const zip =
+                    normalizeZip(
+                        entry[0]
+                    );
+
+                const value =
+                    entry[1];
+
+
+                surveyData[zip] = {
+
+                    count:
+                        Number(
+                            value.count
+                        ) || 0,
+
+                    distance:
+                        Number(
+                            value.distance
+                        ) || 0
+
+                };
+
+            }
+        );
+
+
+    const zipCodes =
+        Object.keys(
+            surveyData
+        );
+
+
+    console.log(
+        "Survey ZIP codes:",
+        zipCodes
+    );
+
+
+    console.log(
+        "Number of survey ZIPs:",
+        zipCodes.length
+    );
+
+
+    /*
+    ------------------------------------------------------------
+    CENSUS QUERY
+    ------------------------------------------------------------
+    */
+
+    const where =
+        "BASENAME IN (" +
+
+        zipCodes
+            .map(
+                function(zip) {
+
+                    return "'" +
+                        zip +
+                        "'";
+
+                }
+            )
+            .join(",") +
+
+        ")";
+
+
+    console.log(
+        "Census query:",
+        where
+    );
+
+
+    const params =
+        new URLSearchParams();
+
+
+    params.set(
+        "where",
+        where
+    );
+
+
+    params.set(
+        "outFields",
+        "BASENAME"
+    );
+
+
+    params.set(
+        "returnGeometry",
+        "true"
+    );
+
+
+    params.set(
+        "outSR",
+        "4326"
+    );
+
+
+    params.set(
+        "returnZ",
+        "false"
+    );
+
+
+    params.set(
+        "returnM",
+        "false"
+    );
+
+
+    params.set(
+        "f",
+        "geojson"
+    );
+
+
+    const url =
+        CENSUS_URL +
+        "?" +
+        params.toString();
+
+
+    console.log(
+        "Census URL:",
+        url
+    );
+
+
+    loadingElement.textContent =
+        "Loading ZIP boundaries...";
+
+
+    return fetch(url)
+
+        .then(
+            function(response) {
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Census request failed. HTTP " +
+                        response.status
+                    );
+
+                }
+
+                return response.json();
+
+            }
+        )
+
+        .then(
+            function(geojson) {
+
+                console.log(
+                    "Census response:",
+                    geojson
+                );
+
+
+                if (
+                    geojson.error
+                ) {
+
+                    throw new Error(
+                        geojson.error.message ||
+                        JSON.stringify(
+                            geojson.error
+                        )
+                    );
+
+                }
+
+
+                if (
+                    geojson.type !==
+                    "FeatureCollection"
+                ) {
+
+                    throw new Error(
+                        "Census response was not GeoJSON."
+                    );
+
+                }
+
+
+                return {
+
+                    surveyData:
+                        surveyData,
+
+                    zipCodes:
+                        zipCodes,
+
+                    geojson:
+                        geojson
+
+                };
+
+            }
+        );
+
+})
+
+
+/*
+================================================================
+JOIN DATA
+================================================================
+*/
+
+.then(function(result) {
+
+    const surveyData =
+        result.surveyData;
+
+    const zipCodes =
+        result.zipCodes;
+
+    const geojson =
+        result.geojson;
+
+
+    console.log(
+        "Returned Census boundaries:",
+        geojson.features.length
+    );
+
+
+    /*
+    ------------------------------------------------------------
+    ATTACH SURVEY INFORMATION
+    ------------------------------------------------------------
+    */
+
+    geojson.features.forEach(
+        function(feature) {
+
+            if (
+                !feature.properties
+            ) {
+
+                feature.properties = {};
+
+            }
+
+
+            const zip =
+                normalizeZip(
+                    feature
+                        .properties
+                        .BASENAME
+                );
+
+
+            feature.properties.__zip =
+                zip;
+
+
+            feature.properties.__survey =
+                surveyData[zip] ||
+                null;
+
+        }
+    );
+
+
+    /*
+    ------------------------------------------------------------
+    MATCHED FEATURES
+    ------------------------------------------------------------
+    */
+
+    const features =
+        geojson.features.filter(
+            function(feature) {
+
+                return (
+
+                    feature.geometry &&
+
+                    feature.properties
+                        .__survey !== null
+
+                );
+
+            }
+        );
+
+
+    /*
+    ------------------------------------------------------------
+    MISSING
+    ------------------------------------------------------------
+    */
+
+    const matched =
+        new Set(
+            features.map(
+                function(feature) {
+
+                    return feature
+                        .properties
+                        .__zip;
+
+                }
+            )
+        );
+
+
+    const missing =
+        zipCodes.filter(
+            function(zip) {
+
+                return !matched.has(
+                    zip
+                );
+
+            }
+        );
+
+
+    console.log(
+        "Matched ZIP boundaries:",
+        features.length
+    );
+
+
+    console.log(
+        "Missing ZIP boundaries:",
+        missing
+    );
+
+
+    renderMap(
+        features,
+        surveyData,
+        missing
+    );
+
+})
+
+
+.catch(showError);
+
+
+/*
+================================================================
+RENDER MAP
+================================================================
+*/
+
+function renderMap(
+    features,
+    surveyData,
+    missing
+) {
+
+    const width =
+        mapElement.clientWidth;
+
+    const height =
+        mapElement.clientHeight;
+
+
+    /*
+    ------------------------------------------------------------
+    SVG
+    ------------------------------------------------------------
+    */
+
+    const svg =
+        d3.select("#map")
+            .append("svg")
+            .attr(
+                "width",
+                width
+            )
+            .attr(
+                "height",
+                height
+            )
+            .attr(
+                "viewBox",
+                "0 0 " +
+                width +
+                " " +
+                height
+            );
+
+
+    /*
+    ------------------------------------------------------------
+    MAIN GROUP
+    ------------------------------------------------------------
+    */
+
+    const mapGroup =
+        svg.append("g");
+
+
+    /*
+    ============================================================
+    FIND ACTUAL LONGITUDE/LATITUDE EXTENT
+    ============================================================
+    */
+
+    let minLon =
+        Infinity;
+
+    let maxLon =
+        -Infinity;
+
+    let minLat =
+        Infinity;
+
+    let maxLat =
+        -Infinity;
+
+
+    /*
+    Recursively walk all GeoJSON coordinates.
+    */
+
+    function inspectCoordinates(
+        coordinates
+    ) {
+
+        if (
+            typeof coordinates[0] ===
+            "number"
+        ) {
+
+            const lon =
+                Number(
+                    coordinates[0]
+                );
+
+            const lat =
+                Number(
+                    coordinates[1]
+                );
+
+
+            if (
+                Number.isFinite(lon) &&
+                Number.isFinite(lat)
+            ) {
+
+                minLon =
+                    Math.min(
+                        minLon,
+                        lon
+                    );
+
+                maxLon =
+                    Math.max(
+                        maxLon,
+                        lon
+                    );
+
+                minLat =
+                    Math.min(
+                        minLat,
+                        lat
+                    );
+
+                maxLat =
+                    Math.max(
+                        maxLat,
+                        lat
+                    );
+
+            }
+
+            return;
+        }
+
+
+        coordinates.forEach(
+            inspectCoordinates
+        );
+
+    }
+
+
+    features.forEach(
+        function(feature) {
+
+            const geometry =
+                feature.geometry;
+
+
+            if (!geometry) {
+                return;
+            }
+
+
+            inspectCoordinates(
+                geometry.coordinates
+            );
+
+        }
+    );
+
+
+    console.log(
+        "Geometry coordinate extent:",
+        {
+            minLon: minLon,
+            maxLon: maxLon,
+            minLat: minLat,
+            maxLat: maxLat
+        }
+    );
+
+
+    /*
+    ============================================================
+    IMPORTANT:
+    SIMPLE MANUAL PROJECTION
+    ============================================================
+
+    We deliberately do NOT use:
+
+        geoAlbersUsa()
+        geoMercator()
+        fitExtent()
+
+    The Census data is already EPSG:4326 longitude/latitude.
+
+    We convert those coordinates directly into SVG coordinates.
+
+    This guarantees every returned polygon gets an SVG path.
+    ============================================================
+    */
+
+
+    const left =
+        30;
+
+    const right =
+        width - 30;
+
+    const top =
+        70;
+
+    const bottom =
+        height - 75;
+
+
+    const geographicWidth =
+        maxLon - minLon;
+
+    const geographicHeight =
+        maxLat - minLat;
+
+
+    /*
+    Account for latitude distortion.
+
+    Longitude degrees are physically narrower toward the poles.
+    Cosine adjustment gives a much more natural USA shape than
+    a completely flat equirectangular map.
+    */
+
+    const centerLat =
+        (
+            minLat +
+            maxLat
+        ) / 2;
+
+
+    const cosLat =
+        Math.cos(
+            centerLat *
+            Math.PI /
+            180
+        );
+
+
+    const adjustedWidth =
+        geographicWidth *
+        cosLat;
+
+
+    const adjustedHeight =
+        geographicHeight;
+
+
+    const availableWidth =
+        right - left;
+
+    const availableHeight =
+        bottom - top;
+
+
+    const scale =
+        Math.min(
+            availableWidth /
+                adjustedWidth,
+
+            availableHeight /
+                adjustedHeight
+        );
+
+
+    const actualMapWidth =
+        adjustedWidth *
+        scale;
+
+
+    const actualMapHeight =
+        adjustedHeight *
+        scale;
+
+
+    const offsetX =
+        left +
+        (
+            availableWidth -
+            actualMapWidth
+        ) / 2;
+
+
+    const offsetY =
+        top +
+        (
+            availableHeight -
+            actualMapHeight
+        ) / 2;
+
+
+    /*
+    ------------------------------------------------------------
+    PROJECT A SINGLE POINT
+    ------------------------------------------------------------
+    */
+
+    function projectPoint(
+        coordinate
+    ) {
+
+        const lon =
+            Number(
+                coordinate[0]
+            );
+
+        const lat =
+            Number(
+                coordinate[1]
+            );
+
+
+        const x =
+            offsetX +
+            (
+                (
+                    lon -
+                    minLon
+                ) *
+                cosLat *
+                scale
+            );
+
+
+        const y =
+            offsetY +
+            (
+                (
+                    maxLat -
+                    lat
+                ) *
+                scale
+            );
+
+
+        return [
+            x,
+            y
+        ];
+
+    }
+
+
+    /*
+    ------------------------------------------------------------
+    CONVERT COORDINATE ARRAY TO SVG PATH
+    ------------------------------------------------------------
+    */
+
+    function ringToPath(
+        ring
+    ) {
+
+        if (
+            !ring ||
+            ring.length === 0
+        ) {
+
+            return "";
+
+        }
+
+
+        let d = "";
+
+
+        ring.forEach(
+            function(coordinate, i) {
+
+                const point =
+                    projectPoint(
+                        coordinate
+                    );
+
+
+                if (i === 0) {
+
+                    d +=
+                        "M " +
+                        point[0] +
+                        " " +
+                        point[1];
+
+                } else {
+
+                    d +=
+                        " L " +
+                        point[0] +
+                        " " +
+                        point[1];
+
+                }
+
+            }
+        );
+
+
+        d += " Z";
+
+
+        return d;
+
+    }
+
+
+    /*
+    ------------------------------------------------------------
+    POLYGON PATH
+    ------------------------------------------------------------
+    */
+
+    function polygonToPath(
+        polygon
+    ) {
+
+        return polygon
+            .map(
+                ringToPath
+            )
+            .join(" ");
+
+    }
+
+
+    /*
+    ------------------------------------------------------------
+    GEOMETRY TO PATH
+    ------------------------------------------------------------
+    */
+
+    function geometryToPath(
+        geometry
+    ) {
+
+        if (!geometry) {
+            return "";
+        }
+
+
+        if (
+            geometry.type ===
+            "Polygon"
+        ) {
+
+            return polygonToPath(
+                geometry.coordinates
+            );
+
+        }
+
+
+        if (
+            geometry.type ===
+            "MultiPolygon"
+        ) {
+
+            return geometry.coordinates
+                .map(
+                    polygonToPath
+                )
+                .join(" ");
+
+        }
+
+
+        console.warn(
+            "Unsupported geometry type:",
+            geometry.type
+        );
+
+
+        return "";
+
+    }
+
+
+    /*
+    ============================================================
+    COLOR SCALE
+    ============================================================
+    */
+
+    const countValues =
+        Object.values(
+            surveyData
+        )
+        .map(
+            function(value) {
+
+                return Number(
+                    value.count
+                ) || 0;
+
+            }
+        );
+
+
+    const maxCount =
+        d3.max(
+            countValues
+        ) || 1;
+
+
+    const color =
+        d3.scaleSequential()
+            .domain([
+                0,
+                maxCount
+            ])
+            .interpolator(
+                d3.interpolateYlOrRd
+            );
+
+
+    /*
+    ============================================================
+    TITLE
+    ============================================================
+    */
+
+    mapGroup
+        .append("text")
+        .attr(
+            "class",
+            "map-title"
+        )
+        .attr(
+            "x",
+            20
+        )
+        .attr(
+            "y",
+            30
+        )
+        .text(
+            "Nature Nation Survey — ZIP Code Counts"
+        );
+
+
+    mapGroup
+        .append("text")
+        .attr(
+            "class",
+            "map-subtitle"
+        )
+        .attr(
+            "x",
+            20
+        )
+        .attr(
+            "y",
+            51
+        )
+        .text(
+            features.length +
+            " ZIP codes mapped"
+        );
+
+
+    /*
+    ============================================================
+    ZIP LAYER
+    ============================================================
+    */
+
+    const zipLayer =
+        mapGroup
+            .append("g")
+            .attr(
+                "class",
+                "zip-layer"
+            );
+
+
+    /*
+    ============================================================
+    DRAW POLYGONS
+    ============================================================
+    */
+
+    const zipPaths =
+        zipLayer
+            .selectAll("path")
+            .data(
+                features,
+                function(feature) {
+
+                    return feature
+                        .properties
+                        .__zip;
+
+                }
+            )
+            .join("path")
+            .attr(
+                "class",
+                "zip"
+            )
+            .attr(
+                "data-zip",
+                function(feature) {
+
+                    return feature
+                        .properties
+                        .__zip;
+
+                }
+            )
+            .attr(
+                "d",
+                function(feature) {
+
+                    return geometryToPath(
+                        feature.geometry
+                    );
+
+                }
+            )
+            .attr(
+                "fill",
+                function(feature) {
+
+                    const survey =
+                        feature
+                            .properties
+                            .__survey;
+
+
+                    return color(
+                        Number(
+                            survey.count
+                        ) || 0
+                    );
+
+                }
+            );
+
+
+    /*
+    ============================================================
+    PATH DIAGNOSTICS
+    ============================================================
+    */
+
+    let validPaths = 0;
+
+    let invalidPaths = 0;
+
+
+    zipPaths.each(
+        function(feature) {
+
+            const d =
+                this.getAttribute("d");
+
+
+            if (
+                d &&
+                d.length > 10
+            ) {
+
+                validPaths++;
+
+            } else {
+
+                invalidPaths++;
+
+                console.warn(
+                    "Invalid path:",
+                    feature
+                        .properties
+                        .__zip
+                );
+
+            }
+
+        }
+    );
+
+
+    console.log(
+        "Rendered ZIP paths:",
+        zipPaths.size()
+    );
+
+
+    console.log(
+        "Valid SVG paths:",
+        validPaths
+    );
+
+
+    console.log(
+        "Invalid SVG paths:",
+        invalidPaths
+    );
+
+
+    /*
+    ============================================================
+    TOOLTIP
+    ============================================================
+    */
+
+    zipPaths
+
+        .on(
+            "mouseenter",
+            function(event, feature) {
+
+                const zip =
+                    feature
+                        .properties
+                        .__zip;
+
+                const survey =
+                    feature
+                        .properties
+                        .__survey;
+
+
+                this.style.stroke =
+                    "#111111";
+
+
+                this.style.strokeWidth =
+                    "2px";
+
+
+                tooltipElement.innerHTML =
+
+                    '<div class="tooltip-zip">' +
+
+                    "ZIP " +
+                    zip +
+
+                    "</div>" +
+
+                    '<div>' +
+
+                    '<span class="tooltip-label">' +
+
+                    "Count: " +
+
+                    "</span>" +
+
+                    '<span class="tooltip-value">' +
+
+                    survey.count +
+
+                    "</span>" +
+
+                    "</div>" +
+
+                    '<div>' +
+
+                    '<span class="tooltip-label">' +
+
+                    "Distance: " +
+
+                    "</span>" +
+
+                    '<span class="tooltip-value">' +
+
+                    Number(
+                        survey.distance
+                    ).toFixed(2) +
+
+                    "</span>" +
+
+                    "</div>";
+
+
+                tooltipElement.style.display =
+                    "block";
+
+
+                moveTooltip(event);
+
+            }
+        )
+
+
+        .on(
+            "mousemove",
+            function(event) {
+
+                moveTooltip(event);
+
+            }
+        )
+
+
+        .on(
+            "mouseleave",
+            function() {
+
+                this.style.stroke =
+                    "#ffffff";
+
+
+                this.style.strokeWidth =
+                    "1px";
+
+
+                tooltipElement.style.display =
+                    "none";
+
+            }
+        );
+
+
+    /*
+    ------------------------------------------------------------
+    TOOLTIP POSITION
+    ------------------------------------------------------------
+    */
+
+    function moveTooltip(event) {
+
+        const margin =
+            15;
+
+
+        let x =
+            event.clientX +
+            margin;
+
+
+        let y =
+            event.clientY +
+            margin;
+
+
+        const tooltipWidth =
+            tooltipElement.offsetWidth;
+
+
+        const tooltipHeight =
+            tooltipElement.offsetHeight;
+
+
+        if (
+            x +
+            tooltipWidth >
+            window.innerWidth
+        ) {
+
+            x =
+                event.clientX -
+                tooltipWidth -
+                margin;
+
+        }
+
+
+        if (
+            y +
+            tooltipHeight >
+            window.innerHeight
+        ) {
+
+            y =
+                event.clientY -
+                tooltipHeight -
+                margin;
+
+        }
+
+
+        tooltipElement.style.left =
+            x + "px";
+
+
+        tooltipElement.style.top =
+            y + "px";
+
+    }
+
+
+    /*
+    ============================================================
+    LEGEND
+    ============================================================
+    */
+
+    const legendWidth =
+        220;
+
+    const legendHeight =
+        14;
+
+
+    const defs =
+        svg.append("defs");
+
+
+    const gradient =
+        defs
+            .append("linearGradient")
+            .attr(
+                "id",
+                "heat-gradient"
+            )
+            .attr(
+                "x1",
+                "0%"
+            )
+            .attr(
+                "x2",
+                "100%"
+            )
+            .attr(
+                "y1",
+                "0%"
+            )
+            .attr(
+                "y2",
+                "0%"
+            );
+
+
+    gradient
+        .append("stop")
+        .attr(
+            "offset",
+            "0%"
+        )
+        .attr(
+            "stop-color",
+            color(0)
+        );
+
+
+    gradient
+        .append("stop")
+        .attr(
+            "offset",
+            "100%"
+        )
+        .attr(
+            "stop-color",
+            color(maxCount)
+        );
+
+
+    const legend =
+        mapGroup
+            .append("g")
+            .attr(
+                "transform",
+                "translate(" +
+                (
+                    width -
+                    legendWidth -
+                    30
+                ) +
+                "," +
+                (
+                    height -
+                    45
+                ) +
+                ")"
+            );
+
+
+    legend
+        .append("text")
+        .attr(
+            "class",
+            "legend-title"
+        )
+        .attr(
+            "x",
+            0
+        )
+        .attr(
+            "y",
+            -8
+        )
+        .text(
+            "Survey count"
+        );
+
+
+    legend
+        .append("rect")
+        .attr(
+            "width",
+            legendWidth
+        )
+        .attr(
+            "height",
+            legendHeight
+        )
+        .attr(
+            "rx",
+            2
+        )
+        .attr(
+            "fill",
+            "url(#heat-gradient)"
+        );
+
+
+    const legendScale =
+        d3.scaleLinear()
+            .domain([
+                0,
+                maxCount
+            ])
+            .range([
+                0,
+                legendWidth
+            ]);
+
+
+    legend
+        .append("g")
+        .attr(
+            "class",
+            "legend-axis"
+        )
+        .attr(
+            "transform",
+            "translate(0," +
+            legendHeight +
+            ")"
+        )
+        .call(
+            d3.axisBottom(
+                legendScale
+            )
+            .ticks(
+                Math.min(
+                    6,
+                    maxCount
+                )
+            )
+            .tickFormat(
+                d3.format("d")
+            )
+        );
+
+
+    /*
+    ============================================================
+    ZOOM
+    ============================================================
+    */
+
+    const zoom =
+        d3.zoom()
+            .scaleExtent([
+                0.5,
+                30
+            ])
+            .on(
+                "zoom",
+                function(event) {
+
+                    mapGroup.attr(
+                        "transform",
+                        event.transform
+                    );
+
+                }
+            );
+
+
+    svg.call(
+        zoom
+    );
+
+
+    /*
+    ============================================================
+    RESET
+    ============================================================
+    */
+
+    resetButton.onclick =
+        function() {
+
+            svg
+                .transition()
+                .duration(400)
+                .call(
+                    zoom.transform,
+                    d3.zoomIdentity
+                );
+
+        };
+
+
+    /*
+    ============================================================
+    STATUS
+    ============================================================
+    */
+
+    if (
+        missing.length > 0
+    ) {
+
+        statusElement.textContent =
+            features.length +
+            " ZIPs mapped · " +
+            missing.length +
+            " ZIP without Census geometry";
+
+    } else {
+
+        statusElement.textContent =
+            features.length +
+            " ZIPs mapped";
+
+    }
+
+
+    /*
+    ============================================================
+    DONE
+    ============================================================
+    */
+
+    loadingElement.style.display =
+        "none";
+
+
+    console.log(
+        "======================================"
+    );
+
+    console.log(
+        "MAP COMPLETE"
+    );
+
+    console.log(
+        "Survey ZIPs:",
+        Object.keys(
+            surveyData
+        ).length
+    );
+
+    console.log(
+        "Census features:",
+        features.length
+    );
+
+    console.log(
+        "SVG paths:",
+        zipPaths.size()
+    );
+
+    console.log(
+        "Valid paths:",
+        validPaths
+    );
+
+    console.log(
+        "Invalid paths:",
+        invalidPaths
+    );
+
+    console.log(
+        "Missing ZIPs:",
+        missing
+    );
+
+    console.log(
+        "======================================"
+    );
+
+}
+
+
+/*
+================================================================
+RESIZE
+================================================================
+*/
+
+let resizeTimer = null;
+
+window.addEventListener(
+    "resize",
+    function() {
+
+        clearTimeout(
+            resizeTimer
+        );
+
+        resizeTimer =
+            setTimeout(
+                function() {
+
+                    location.reload();
+
+                },
+                250
+            );
+
+    }
+);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Nation Survey ZIP Heat Map</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+html,body{margin:0;width:100%;height:100%;font-family:Arial,sans-serif;background:#eef1f4;overflow:hidden}
+#app{width:100%;height:100%;display:flex;flex-direction:column}
+#header{height:72px;flex:none;background:#fff;border-bottom:1px solid #d5dbe1;display:flex;align-items:center;justify-content:space-between;padding:0 20px;box-sizing:border-box;z-index:10}
+#title{font-size:20px;font-weight:700;color:#20252b}
+#subtitle{font-size:12px;color:#68717d;margin-top:4px}
+#controls button{border:1px solid #cbd2da;background:#fff;border-radius:5px;padding:7px 12px;cursor:pointer}
+#map-container{position:relative;flex:1;min-height:0;overflow:hidden;background:#e9edf1}
+svg{width:100%;height:100%;display:block;cursor:grab}
+svg:active{cursor:grabbing}
+.background-zip{fill:#d8dde2;stroke:#fff;stroke-width:.8px;vector-effect:non-scaling-stroke}
+.background-zip:hover{fill:#c7ced5}
+.survey-zip{stroke:#fff;stroke-width:1px;vector-effect:non-scaling-stroke;cursor:pointer}
+.survey-zip:hover{stroke:#111;stroke-width:2px}
+#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#eef1f4;color:#4b5563;font-size:15px;z-index:30}
+#error{position:absolute;inset:0;display:none;align-items:center;justify-content:center;background:#fff;color:#991b1b;padding:30px;box-sizing:border-box;z-index:40}
+#error-inner{max-width:800px}
+#error pre{background:#f4f4f4;padding:12px;color:#333}
+#tooltip{position:absolute;display:none;pointer-events:none;background:rgba(20,25,30,.96);color:#fff;padding:10px 12px;border-radius:6px;font-size:13px;line-height:1.5;z-index:50;box-shadow:0 3px 15px rgba(0,0,0,.25)}
+.tooltip-zip{font-size:15px;font-weight:bold}
+#legend{position:absolute;right:18px;bottom:18px;background:rgba(255,255,255,.96);border:1px solid #d5dbe1;border-radius:7px;padding:11px 12px;box-shadow:0 2px 10px rgba(0,0,0,.12);z-index:8}
+#legend-title{font-size:12px;font-weight:bold;margin-bottom:7px}
+#legend-gradient{width:190px;height:12px;border-radius:3px;background:linear-gradient(to right,#fff5f0,#fee0d2,#fcbba1,#fc9272,#fb6a4a,#ef3b2c,#cb181d,#67000d)}
+#legend-labels{display:flex;justify-content:space-between;font-size:10px;color:#626b75;margin-top:4px}
+#stats{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.96);border:1px solid #d5dbe1;border-radius:7px;padding:9px 12px;box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:12px;color:#4b5563;z-index:8}
+#stats strong{color:#20252b}
+.north{position:absolute;right:20px;top:18px;background:rgba(255,255,255,.95);border:1px solid #d5dbe1;border-radius:5px;width:36px;height:46px;text-align:center;padding-top:4px;box-sizing:border-box;font-size:11px;font-weight:bold;z-index:8}
+.north div:last-child{font-size:22px;line-height:22px}
+</style>
+</head>
+<body>
+<div id="app">
+<div id="header">
+<div>
+<div id="title">Nature Nation Survey — ZIP Code Heat Map</div>
+<div id="subtitle">Survey response count by ZIP code</div>
+</div>
+<div id="controls"><button id="reset">Reset View</button></div>
+</div>
+<div id="map-container">
+<div id="loading">Loading survey data and ZIP boundaries...</div>
+<div id="error"><div id="error-inner"><h2>Unable to load map</h2><div id="error-message"></div></div></div>
+<svg id="map"></svg>
+<div id="tooltip"></div>
+<div class="north">N<div>↑</div></div>
+<div id="stats">Survey ZIPs: <strong id="survey-count">—</strong> &nbsp;|&nbsp; Boundary ZIPs: <strong id="boundary-count">—</strong></div>
+<div id="legend"><div id="legend-title">Survey responses</div><div id="legend-gradient"></div><div id="legend-labels"><span id="legend-min">0</span><span id="legend-max">—</span></div></div>
+</div>
+</div>
+
+<script>
+"use strict";
+
+const SURVEY_FILE="NatureNationSurveyZipDistance.json";
+const BOUNDARY_FILE="zip-boundaries.geojson";
+
+const svg=d3.select("#map");
+const container=document.getElementById("map-container");
+const tooltip=d3.select("#tooltip");
+
+let surveyData={};
+let surveyZips=new Set();
+let boundaries=null;
+let projection=null;
+let path=null;
+let layer=null;
+let width=0;
+let height=0;
+let colorScale=null;
+
+function zip5(v){
+    if(v===null||v===undefined)return "";
+    const s=String(v).replace(/\D/g,"");
+    return s?s.padStart(5,"0"):"";
+}
+
+function getZip(feature){
+    const p=feature.properties||{};
+    const fields=["ZIP","zip","ZCTA5CE20","ZCTA5CE10","BASENAME","GEOID20","GEOID"];
+    for(const f of fields){
+        if(p[f]!==undefined&&p[f]!==null&&String(p[f]).trim()!==""){
+            return zip5(p[f]);
+        }
+    }
+    return "";
+}
+
+function resize(){
+    const r=container.getBoundingClientRect();
+    width=r.width;
+    height=r.height;
+    svg.attr("viewBox",`0 0 ${width} ${height}`);
+}
+
+function fit(features){
+    const fc={type:"FeatureCollection",features};
+    projection.scale(1).translate([0,0]);
+    const b=path.bounds(fc);
+    const dx=b[1][0]-b[0][0];
+    const dy=b[1][1]-b[0][1];
+    const cx=(b[0][0]+b[1][0])/2;
+    const cy=(b[0][1]+b[1][1])/2;
+    const pad=25;
+    const scale=.94/Math.max(dx/(width-pad*2),dy/(height-pad*2));
+    projection.scale(scale).translate([width/2-scale*cx,height/2-scale*cy]);
+}
+
+function tooltipMove(event){
+    const r=container.getBoundingClientRect();
+    const n=tooltip.node();
+    if(!n)return;
+    let x=event.clientX-r.left+14;
+    let y=event.clientY-r.top+14;
+    if(x+n.offsetWidth>r.width-10)x=event.clientX-r.left-n.offsetWidth-14;
+    if(y+n.offsetHeight>r.height-10)y=event.clientY-r.top-n.offsetHeight-14;
+    tooltip.style("left",x+"px").style("top",y+"px");
+}
+
+function showTip(event,html){
+    tooltip.html(html).style("display","block");
+    tooltipMove(event);
+}
+
+function hideTip(){
+    tooltip.style("display","none");
+}
+
+async function loadSurvey(){
+    const r=await fetch(SURVEY_FILE);
+    if(!r.ok)throw new Error("Could not load "+SURVEY_FILE+" ("+r.status+")");
+    const data=await r.json();
+
+    for(const [z,v] of Object.entries(data)){
+        const zip=zip5(z);
+        if(!zip)continue;
+        surveyData[zip]={
+            count:Number(v&&v.count)||0,
+            distance:v&&v.distance!==undefined?v.distance:"—"
+        };
+    }
+
+    surveyZips=new Set(Object.keys(surveyData));
+
+    const counts=Object.values(surveyData).map(d=>d.count);
+    const min=d3.min(counts)||0;
+    const max=d3.max(counts)||0;
+
+    colorScale=d3.scaleSequential(d3.interpolateRgbBasis([
+        "#fff5f0",
+        "#fee0d2",
+        "#fcbba1",
+        "#fc9272",
+        "#fb6a4a",
+        "#ef3b2c",
+        "#cb181d",
+        "#67000d"
+    ])).domain([min,max>min?max:min+1]);
+
+    document.getElementById("survey-count").textContent=surveyZips.size;
+    document.getElementById("legend-min").textContent=min;
+    document.getElementById("legend-max").textContent=max;
+
+    console.log("Survey ZIPs:",Array.from(surveyZips));
+}
+
+async function loadBoundaries(){
+    const r=await fetch(BOUNDARY_FILE);
+    if(!r.ok)throw new Error("Could not load "+BOUNDARY_FILE+" ("+r.status+")");
+
+    const data=await r.json();
+
+    if(data.type!=="FeatureCollection"||!Array.isArray(data.features)||!data.features.length){
+        throw new Error(BOUNDARY_FILE+" is not a valid GeoJSON FeatureCollection.");
+    }
+
+    boundaries=data;
+
+    document.getElementById("boundary-count").textContent=data.features.length;
+
+    const boundaryZips=new Set(data.features.map(getZip).filter(Boolean));
+    const missing=[...surveyZips].filter(z=>!boundaryZips.has(z));
+
+    console.log("Boundary features:",data.features.length);
+    console.log("Missing survey boundaries:",missing);
+}
+
+function render(){
+    resize();
+
+    projection=d3.geoMercator();
+    path=d3.geoPath(projection);
+
+    fit(boundaries.features);
+
+    layer=svg.append("g");
+
+    /*
+     * IMPORTANT:
+     * Draw EVERY boundary first.
+     * Survey ZIPs are drawn afterward.
+     * Therefore the surrounding ZIP geography remains visible.
+     */
+    const surrounding=boundaries.features.filter(f=>!surveyZips.has(getZip(f)));
+
+    layer.selectAll(".background-zip")
+        .data(surrounding)
+        .join("path")
+        .attr("class","background-zip")
+        .attr("d",path)
+        .on("mousemove",(event,f)=>{
+            const zip=getZip(f);
+            showTip(event,
+                `<div class="tooltip-zip">${zip||"ZIP boundary"}</div>
+                 <div>No survey responses</div>`
+            );
+        })
+        .on("mouseleave",hideTip);
+
+    const survey=boundaries.features.filter(f=>surveyZips.has(getZip(f)));
+
+    layer.selectAll(".survey-zip")
+        .data(survey)
+        .join("path")
+        .attr("class","survey-zip")
+        .attr("d",path)
+        .attr("fill",f=>{
+            const z=getZip(f);
+            return colorScale(surveyData[z].count);
+        })
+        .on("mousemove",(event,f)=>{
+            const z=getZip(f);
+            const d=surveyData[z];
+            showTip(event,
+                `<div class="tooltip-zip">ZIP ${z}</div>
+                 <div>Survey responses: <strong>${d.count}</strong></div>
+                 <div>Distance: ${d.distance}</div>`
+            );
+        })
+        .on("mouseleave",hideTip);
+
+    layer.selectAll(".survey-zip").raise();
+}
+
+const zoom=d3.zoom()
+    .scaleExtent([0.5,40])
+    .on("zoom",e=>{
+        if(layer)layer.attr("transform",e.transform);
+    });
+
+svg.call(zoom);
+
+document.getElementById("reset").onclick=()=>{
+    hideTip();
+    svg.transition().duration(500).call(zoom.transform,d3.zoomIdentity);
+};
+
+window.addEventListener("resize",()=>{
+    if(!boundaries)return;
+    const t=d3.zoomTransform(svg.node());
+    svg.selectAll("g").remove();
+    render();
+    svg.call(zoom.transform,t);
+});
+
+async function start(){
+    try{
+        await Promise.all([loadSurvey(),loadBoundaries()]);
+        render();
+        document.getElementById("loading").style.display="none";
+        console.log("MAP COMPLETE");
+    }catch(e){
+        console.error(e);
+        document.getElementById("loading").style.display="none";
+        document.getElementById("error").style.display="flex";
+        document.getElementById("error-message").innerHTML=
+            `<p><strong>${e.message}</strong></p>
+             <p>Make sure these three files are together:</p>
+             <pre>heatmapsurveyZip.html
+NatureNationSurveyZipDistance.json
+zip-boundaries.geojson</pre>
+             <p>Run:</p>
+             <pre>python -m http.server 8000</pre>
+             <p>Then open:</p>
+             <pre>http://localhost:8000/heatmapsurveyZip.html</pre>`;
+    }
+}
+
+start();
+</script>
+</body>
+</html>

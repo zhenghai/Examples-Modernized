@@ -1,0 +1,257 @@
+import json
+from pathlib import Path
+
+SURVEY_FILE = Path("NatureNationSurveyZipDistance.json")
+BOUNDARY_FILE = Path("zip-boundaries.geojson")
+OUTPUT_FILE = Path("zip-cities.json")
+
+
+def zip5(value):
+    if value is None:
+        return ""
+
+    digits = "".join(
+        c for c in str(value)
+        if c.isdigit()
+    )
+
+    return digits.zfill(5) if digits else ""
+
+
+def main():
+
+    # ---------------------------------------------------------
+    # Load survey ZIP codes
+    # ---------------------------------------------------------
+
+    with SURVEY_FILE.open(
+        "r",
+        encoding="utf-8"
+    ) as f:
+        survey = json.load(f)
+
+    survey_zips = {
+        zip5(zip_code)
+        for zip_code in survey.keys()
+        if zip5(zip_code)
+    }
+
+    print(f"Survey ZIP codes: {len(survey_zips)}")
+
+
+    # ---------------------------------------------------------
+    # Load local ZIP boundaries
+    # ---------------------------------------------------------
+
+    with BOUNDARY_FILE.open(
+        "r",
+        encoding="utf-8"
+    ) as f:
+        geojson = json.load(f)
+
+    features = geojson.get(
+        "features",
+        []
+    )
+
+    print(
+        f"Boundary features: {len(features)}"
+    )
+
+
+    # ---------------------------------------------------------
+    # Examine available properties
+    # ---------------------------------------------------------
+
+    if features:
+
+        print("\nExample boundary properties:")
+
+        for key, value in features[0].get(
+            "properties",
+            {}
+        ).items():
+
+            print(
+                f"  {key}: {value}"
+            )
+
+
+    # ---------------------------------------------------------
+    # Build ZIP -> city/state lookup
+    # ---------------------------------------------------------
+
+    result = {}
+
+    for feature in features:
+
+        props = feature.get(
+            "properties",
+            {}
+        )
+
+        zip_code = ""
+
+        # Try common Census ZIP/ZCTA fields.
+        for field in [
+            "ZCTA5CE20",
+            "ZCTA5CE10",
+            "BASENAME",
+            "GEOID20",
+            "GEOID",
+            "ZIP",
+            "ZIPCODE",
+            "ZIP_CODE"
+        ]:
+
+            if field in props:
+
+                candidate = zip5(
+                    props[field]
+                )
+
+                if candidate:
+                    zip_code = candidate
+                    break
+
+
+        if not zip_code:
+            continue
+
+
+        # Only generate entries for survey ZIPs.
+        if zip_code not in survey_zips:
+            continue
+
+
+        # -----------------------------------------------------
+        # Try to find city/town
+        # -----------------------------------------------------
+
+        city = ""
+
+        for field in [
+            "CITY",
+            "City",
+            "city",
+            "PLACE",
+            "Place",
+            "place",
+            "NAME",
+            "Name",
+            "NAMELSAD",
+            "NAMELSAD20"
+        ]:
+
+            value = props.get(field)
+
+            if value:
+
+                text = str(value).strip()
+
+                if text:
+                    city = text
+                    break
+
+
+        # -----------------------------------------------------
+        # Try to find state
+        # -----------------------------------------------------
+
+        state = ""
+
+        for field in [
+            "STATE_NAME",
+            "State",
+            "STATE",
+            "STNAME",
+            "state",
+            "STUSPS"
+        ]:
+
+            value = props.get(field)
+
+            if value:
+
+                text = str(value).strip()
+
+                if text:
+                    state = text
+                    break
+
+
+        result[zip_code] = {
+            "city": city,
+            "state": state
+        }
+
+
+    # ---------------------------------------------------------
+    # Add missing survey ZIPs so we can see what's missing
+    # ---------------------------------------------------------
+
+    for zip_code in sorted(survey_zips):
+
+        if zip_code not in result:
+
+            result[zip_code] = {
+                "city": "",
+                "state": ""
+            }
+
+
+    # ---------------------------------------------------------
+    # Sort by ZIP
+    # ---------------------------------------------------------
+
+    result = dict(
+        sorted(
+            result.items()
+        )
+    )
+
+
+    # ---------------------------------------------------------
+    # Write output
+    # ---------------------------------------------------------
+
+    with OUTPUT_FILE.open(
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            result,
+            f,
+            indent=2,
+            ensure_ascii=False
+        )
+
+
+    # ---------------------------------------------------------
+    # Report
+    # ---------------------------------------------------------
+
+    print(
+        f"\nCreated: {OUTPUT_FILE}"
+    )
+
+    print(
+        f"ZIP entries: {len(result)}"
+    )
+
+    print("\nResults:")
+
+    for zip_code, info in result.items():
+
+        city = info["city"] or "UNKNOWN"
+        state = info["state"] or "UNKNOWN"
+
+        print(
+            f"  {zip_code}: "
+            f"{city}, {state}"
+        )
+
+
+if __name__ == "__main__":
+    main()

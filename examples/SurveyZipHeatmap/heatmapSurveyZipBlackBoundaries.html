@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nature Nation Survey ZIP Heat Map</title>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<style>
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef1f4;
+    overflow: hidden;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    height: 72px;
+    flex: none;
+    background: #ffffff;
+    border-bottom: 1px solid #d5dbe1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+#title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #20252b;
+}
+
+#subtitle {
+    font-size: 12px;
+    color: #68717d;
+    margin-top: 4px;
+}
+
+#controls button {
+    border: 1px solid #cbd2da;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#controls button:hover {
+    background: #f0f3f6;
+}
+
+#map-container {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    background: #e9edf1;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+}
+
+svg:active {
+    cursor: grabbing;
+}
+
+/*
+ * Surrounding ZIP boundaries.
+ * These ZIPs have no survey data.
+ */
+.background-zip {
+    fill: #d8dde2;
+    stroke: #ffffff;
+    stroke-width: 0.8px;
+    vector-effect: non-scaling-stroke;
+}
+
+.background-zip:hover {
+    fill: #c7ced5;
+}
+
+/*
+ * ZIPs containing survey data.
+ *
+ * BLACK boundary as requested.
+ */
+.survey-zip {
+    stroke: #000000;
+    stroke-width: 1.25px;
+    vector-effect: non-scaling-stroke;
+    cursor: pointer;
+}
+
+.survey-zip:hover {
+    stroke: #000000;
+    stroke-width: 2.5px;
+    vector-effect: non-scaling-stroke;
+}
+
+#loading {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef1f4;
+    color: #4b5563;
+    font-size: 15px;
+    z-index: 30;
+}
+
+#error {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #991b1b;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 40;
+}
+
+#error-inner {
+    max-width: 800px;
+}
+
+#error h2 {
+    margin-top: 0;
+}
+
+#error pre {
+    background: #f4f4f4;
+    padding: 12px;
+    color: #333333;
+    overflow-x: auto;
+}
+
+#tooltip {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    background: rgba(20, 25, 30, 0.96);
+    color: #ffffff;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+    z-index: 50;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+.tooltip-zip {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+#legend {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #d5dbe1;
+    border-radius: 7px;
+    padding: 11px 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    z-index: 8;
+}
+
+#legend-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+#legend-gradient {
+    width: 190px;
+    height: 12px;
+    border-radius: 3px;
+    background: linear-gradient(
+        to right,
+        #fff5f0,
+        #fee0d2,
+        #fcbba1,
+        #fc9272,
+        #fb6a4a,
+        #ef3b2c,
+        #cb181d,
+        #67000d
+    );
+}
+
+#legend-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #626b75;
+    margin-top: 4px;
+}
+
+#stats {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #d5dbe1;
+    border-radius: 7px;
+    padding: 9px 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    font-size: 12px;
+    color: #4b5563;
+    z-index: 8;
+}
+
+#stats strong {
+    color: #20252b;
+}
+
+.north {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #d5dbe1;
+    border-radius: 5px;
+    width: 36px;
+    height: 46px;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+    font-size: 11px;
+    font-weight: bold;
+    z-index: 8;
+}
+
+.north div {
+    font-size: 22px;
+    line-height: 22px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="app">
+
+    <div id="header">
+
+        <div>
+            <div id="title">
+                Nature Nation Survey — ZIP Code Heat Map
+            </div>
+
+            <div id="subtitle">
+                Survey response count by ZIP code
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="reset">
+                Reset View
+            </button>
+        </div>
+
+    </div>
+
+    <div id="map-container">
+
+        <div id="loading">
+            Loading survey data and ZIP boundaries...
+        </div>
+
+        <div id="error">
+            <div id="error-inner">
+
+                <h2>
+                    Unable to load map
+                </h2>
+
+                <div id="error-message"></div>
+
+            </div>
+        </div>
+
+        <svg id="map"></svg>
+
+        <div id="tooltip"></div>
+
+        <div class="north">
+            N
+            <div>↑</div>
+        </div>
+
+        <div id="stats">
+            Survey ZIPs:
+            <strong id="survey-count">—</strong>
+            &nbsp;|&nbsp;
+            Boundary ZIPs:
+            <strong id="boundary-count">—</strong>
+        </div>
+
+        <div id="legend">
+
+            <div id="legend-title">
+                Survey responses
+            </div>
+
+            <div id="legend-gradient"></div>
+
+            <div id="legend-labels">
+                <span id="legend-min">0</span>
+                <span id="legend-max">—</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+"use strict";
+
+
+/* ============================================================
+   LOCAL FILES
+   ============================================================ */
+
+const SURVEY_FILE =
+    "NatureNationSurveyZipDistance.json";
+
+const BOUNDARY_FILE =
+    "zip-boundaries.geojson";
+
+
+/* ============================================================
+   D3 / DOM
+   ============================================================ */
+
+const svg =
+    d3.select("#map");
+
+const container =
+    document.getElementById("map-container");
+
+const tooltip =
+    d3.select("#tooltip");
+
+
+/* ============================================================
+   GLOBAL VARIABLES
+   ============================================================ */
+
+let surveyData = {};
+
+let surveyZips =
+    new Set();
+
+let boundaries = null;
+
+let projection = null;
+
+let path = null;
+
+let layer = null;
+
+let width = 0;
+
+let height = 0;
+
+let colorScale = null;
+
+
+/* ============================================================
+   ZIP NORMALIZATION
+   ============================================================ */
+
+function zip5(value) {
+
+    if (
+        value === null ||
+        value === undefined
+    ) {
+        return "";
+    }
+
+    const digits =
+        String(value)
+            .replace(/\D/g, "");
+
+    if (!digits) {
+        return "";
+    }
+
+    return digits.padStart(5, "0");
+}
+
+
+/* ============================================================
+   GET ZIP FROM GEOJSON FEATURE
+   ============================================================ */
+
+function getZip(feature) {
+
+    const properties =
+        feature.properties || {};
+
+    const fields = [
+        "ZIP",
+        "zip",
+        "ZCTA5CE20",
+        "ZCTA5CE10",
+        "BASENAME",
+        "GEOID20",
+        "GEOID"
+    ];
+
+    for (
+        const field of fields
+    ) {
+
+        if (
+            properties[field] !== undefined &&
+            properties[field] !== null &&
+            String(properties[field]).trim() !== ""
+        ) {
+
+            return zip5(
+                properties[field]
+            );
+        }
+    }
+
+    return "";
+}
+
+
+/* ============================================================
+   RESIZE SVG
+   ============================================================ */
+
+function resize() {
+
+    const rect =
+        container.getBoundingClientRect();
+
+    width =
+        rect.width;
+
+    height =
+        rect.height;
+
+    svg.attr(
+        "viewBox",
+        `0 0 ${width} ${height}`
+    );
+}
+
+
+/* ============================================================
+   FIT PROJECTION
+   ============================================================ */
+
+function fit(features) {
+
+    if (
+        !features ||
+        !features.length
+    ) {
+
+        throw new Error(
+            "There are no survey ZIP geometries to fit."
+        );
+    }
+
+    const collection = {
+        type: "FeatureCollection",
+        features: features
+    };
+
+    projection
+        .scale(1)
+        .translate([0, 0]);
+
+    const bounds =
+        path.bounds(
+            collection
+        );
+
+    const dx =
+        bounds[1][0] -
+        bounds[0][0];
+
+    const dy =
+        bounds[1][1] -
+        bounds[0][1];
+
+    const cx =
+        (bounds[0][0] +
+         bounds[1][0]) / 2;
+
+    const cy =
+        (bounds[0][1] +
+         bounds[1][1]) / 2;
+
+    const padding = 45;
+
+    const scale =
+        0.92 /
+        Math.max(
+            dx / (width - padding * 2),
+            dy / (height - padding * 2)
+        );
+
+    projection
+        .scale(scale)
+        .translate([
+            width / 2 -
+            scale * cx,
+
+            height / 2 -
+            scale * cy
+        ]);
+}
+
+
+/* ============================================================
+   TOOLTIP POSITION
+   ============================================================ */
+
+function tooltipMove(event) {
+
+    const rect =
+        container.getBoundingClientRect();
+
+    const node =
+        tooltip.node();
+
+    if (!node) {
+        return;
+    }
+
+    let x =
+        event.clientX -
+        rect.left +
+        14;
+
+    let y =
+        event.clientY -
+        rect.top +
+        14;
+
+    if (
+        x + node.offsetWidth >
+        rect.width - 10
+    ) {
+
+        x =
+            event.clientX -
+            rect.left -
+            node.offsetWidth -
+            14;
+    }
+
+    if (
+        y + node.offsetHeight >
+        rect.height - 10
+    ) {
+
+        y =
+            event.clientY -
+            rect.top -
+            node.offsetHeight -
+            14;
+    }
+
+    tooltip
+        .style(
+            "left",
+            x + "px"
+        )
+        .style(
+            "top",
+            y + "px"
+        );
+}
+
+
+/* ============================================================
+   SHOW TOOLTIP
+   ============================================================ */
+
+function showTip(
+    event,
+    html
+) {
+
+    tooltip
+        .html(html)
+        .style(
+            "display",
+            "block"
+        );
+
+    tooltipMove(event);
+}
+
+
+/* ============================================================
+   HIDE TOOLTIP
+   ============================================================ */
+
+function hideTip() {
+
+    tooltip.style(
+        "display",
+        "none"
+    );
+}
+
+
+/* ============================================================
+   LOAD SURVEY JSON
+   ============================================================ */
+
+async function loadSurvey() {
+
+    const response =
+        await fetch(
+            SURVEY_FILE
+        );
+
+    if (!response.ok) {
+
+        throw new Error(
+            `Could not load ${SURVEY_FILE} ` +
+            `(${response.status} ${response.statusText})`
+        );
+    }
+
+    const data =
+        await response.json();
+
+    if (
+        !data ||
+        typeof data !== "object" ||
+        Array.isArray(data)
+    ) {
+
+        throw new Error(
+            `${SURVEY_FILE} does not contain ` +
+            `the expected ZIP-keyed JSON object.`
+        );
+    }
+
+
+    surveyData = {};
+
+
+    for (
+        const [zip, value]
+        of Object.entries(data)
+    ) {
+
+        const normalized =
+            zip5(zip);
+
+        if (!normalized) {
+            continue;
+        }
+
+        surveyData[normalized] = {
+
+            count:
+                Number(
+                    value &&
+                    value.count
+                ) || 0,
+
+            distance:
+                value &&
+                value.distance !== undefined
+                    ? value.distance
+                    : "—"
+        };
+    }
+
+
+    surveyZips =
+        new Set(
+            Object.keys(
+                surveyData
+            )
+        );
+
+
+    const counts =
+        Object.values(
+            surveyData
+        )
+        .map(
+            d => d.count
+        )
+        .filter(
+            Number.isFinite
+        );
+
+
+    const min =
+        counts.length
+            ? d3.min(counts)
+            : 0;
+
+    const max =
+        counts.length
+            ? d3.max(counts)
+            : 0;
+
+
+    colorScale =
+        d3.scaleSequential(
+            d3.interpolateRgbBasis([
+                "#fff5f0",
+                "#fee0d2",
+                "#fcbba1",
+                "#fc9272",
+                "#fb6a4a",
+                "#ef3b2c",
+                "#cb181d",
+                "#67000d"
+            ])
+        )
+        .domain([
+            min,
+            max > min
+                ? max
+                : min + 1
+        ]);
+
+
+    document
+        .getElementById(
+            "survey-count"
+        )
+        .textContent =
+            surveyZips.size;
+
+
+    document
+        .getElementById(
+            "legend-min"
+        )
+        .textContent =
+            min;
+
+
+    document
+        .getElementById(
+            "legend-max"
+        )
+        .textContent =
+            max;
+
+
+    console.log(
+        "Survey ZIPs:",
+        Array.from(
+            surveyZips
+        )
+    );
+}
+
+
+/* ============================================================
+   LOAD LOCAL GEOJSON
+   ============================================================ */
+
+async function loadBoundaries() {
+
+    const response =
+        await fetch(
+            BOUNDARY_FILE
+        );
+
+    if (!response.ok) {
+
+        throw new Error(
+            `Could not load ${BOUNDARY_FILE} ` +
+            `(${response.status} ${response.statusText})`
+        );
+    }
+
+    const data =
+        await response.json();
+
+
+    if (
+        data.type !==
+        "FeatureCollection"
+    ) {
+
+        throw new Error(
+            `${BOUNDARY_FILE} is not a GeoJSON FeatureCollection.`
+        );
+    }
+
+
+    if (
+        !Array.isArray(
+            data.features
+        ) ||
+        data.features.length === 0
+    ) {
+
+        throw new Error(
+            `${BOUNDARY_FILE} contains no ZIP boundaries.`
+        );
+    }
+
+
+    boundaries =
+        data;
+
+
+    document
+        .getElementById(
+            "boundary-count"
+        )
+        .textContent =
+            data.features.length;
+
+
+    const boundaryZips =
+        new Set(
+            data.features
+                .map(getZip)
+                .filter(Boolean)
+        );
+
+
+    const missing =
+        Array.from(
+            surveyZips
+        )
+        .filter(
+            zip =>
+                !boundaryZips.has(zip)
+        );
+
+
+    console.log(
+        "Boundary features:",
+        data.features.length
+    );
+
+    console.log(
+        "Missing survey boundaries:",
+        missing
+    );
+}
+
+
+/* ============================================================
+   RENDER MAP
+   ============================================================ */
+
+function render() {
+
+    resize();
+
+
+    projection =
+        d3.geoMercator();
+
+
+    path =
+        d3.geoPath()
+            .projection(
+                projection
+            );
+
+
+    /*
+     * IMPORTANT:
+     *
+     * The initial viewport is based ONLY on
+     * ZIPs containing survey data.
+     *
+     * All surrounding ZIPs are still drawn.
+     */
+    const surveyFeatures =
+        boundaries.features.filter(
+            feature =>
+                surveyZips.has(
+                    getZip(feature)
+                )
+        );
+
+
+    fit(
+        surveyFeatures
+    );
+
+
+    layer =
+        svg.append("g");
+
+
+    /* ========================================================
+       SURROUNDING ZIPs
+       ======================================================== */
+
+    const surrounding =
+        boundaries.features.filter(
+            feature =>
+                !surveyZips.has(
+                    getZip(feature)
+                )
+        );
+
+
+    layer
+        .selectAll(
+            ".background-zip"
+        )
+        .data(
+            surrounding,
+            getZip
+        )
+        .join("path")
+        .attr(
+            "class",
+            "background-zip"
+        )
+        .attr(
+            "d",
+            path
+        )
+        .on(
+            "mousemove",
+            function(
+                event,
+                feature
+            ) {
+
+                const zip =
+                    getZip(feature);
+
+                showTip(
+                    event,
+
+                    `
+                    <div class="tooltip-zip">
+                        ZIP ${zip || "Boundary"}
+                    </div>
+                    <div>
+                        No survey responses
+                    </div>
+                    `
+                );
+            }
+        )
+        .on(
+            "mouseleave",
+            hideTip
+        );
+
+
+    /* ========================================================
+       SURVEY ZIPs
+       ======================================================== */
+
+    const survey =
+        boundaries.features.filter(
+            feature =>
+                surveyZips.has(
+                    getZip(feature)
+                )
+        );
+
+
+    layer
+        .selectAll(
+            ".survey-zip"
+        )
+        .data(
+            survey,
+            getZip
+        )
+        .join("path")
+        .attr(
+            "class",
+            "survey-zip"
+        )
+        .attr(
+            "d",
+            path
+        )
+        .attr(
+            "fill",
+            feature => {
+
+                const zip =
+                    getZip(feature);
+
+                const record =
+                    surveyData[zip];
+
+                return colorScale(
+                    record.count
+                );
+            }
+        )
+        .on(
+            "mousemove",
+            function(
+                event,
+                feature
+            ) {
+
+                const zip =
+                    getZip(feature);
+
+                const record =
+                    surveyData[zip];
+
+
+                showTip(
+                    event,
+
+                    `
+                    <div class="tooltip-zip">
+                        ZIP ${zip}
+                    </div>
+
+                    <div>
+                        Survey responses:
+                        <strong>
+                            ${record.count}
+                        </strong>
+                    </div>
+
+                    <div>
+                        Distance:
+                        ${record.distance}
+                    </div>
+                    `
+                );
+            }
+        )
+        .on(
+            "mouseleave",
+            hideTip
+        );
+
+
+    /*
+     * Ensure survey ZIPs are above
+     * surrounding ZIPs.
+     */
+    layer
+        .selectAll(
+            ".survey-zip"
+        )
+        .raise();
+}
+
+
+/* ============================================================
+   ZOOM
+   ============================================================ */
+
+const zoom =
+    d3.zoom()
+        .scaleExtent([
+            0.5,
+            40
+        ])
+        .on(
+            "zoom",
+            event => {
+
+                if (layer) {
+
+                    layer.attr(
+                        "transform",
+                        event.transform
+                    );
+                }
+            }
+        );
+
+
+svg.call(
+    zoom
+);
+
+
+/* ============================================================
+   RESET VIEW
+   ============================================================ */
+
+document
+    .getElementById(
+        "reset"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            hideTip();
+
+            svg
+                .transition()
+                .duration(500)
+                .call(
+                    zoom.transform,
+                    d3.zoomIdentity
+                );
+        }
+    );
+
+
+/* ============================================================
+   RESIZE
+   ============================================================ */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (!boundaries) {
+            return;
+        }
+
+        const currentTransform =
+            d3.zoomTransform(
+                svg.node()
+            );
+
+
+        svg
+            .selectAll("g")
+            .remove();
+
+
+        render();
+
+
+        svg.call(
+            zoom.transform,
+            currentTransform
+        );
+    }
+);
+
+
+/* ============================================================
+   START
+   ============================================================ */
+
+async function start() {
+
+    try {
+
+        await Promise.all([
+            loadSurvey(),
+            loadBoundaries()
+        ]);
+
+
+        render();
+
+
+        document
+            .getElementById(
+                "loading"
+            )
+            .style.display =
+                "none";
+
+
+        console.log(
+            "========================================"
+        );
+
+        console.log(
+            "MAP COMPLETE"
+        );
+
+        console.log(
+            "Survey ZIPs:",
+            surveyZips.size
+        );
+
+        console.log(
+            "Boundary ZIPs:",
+            boundaries.features.length
+        );
+
+        console.log(
+            "========================================"
+        );
+
+    }
+    catch (error) {
+
+        console.error(
+            "Map error:",
+            error
+        );
+
+
+        document
+            .getElementById(
+                "loading"
+            )
+            .style.display =
+                "none";
+
+
+        document
+            .getElementById(
+                "error"
+            )
+            .style.display =
+                "flex";
+
+
+        document
+            .getElementById(
+                "error-message"
+            )
+            .innerHTML =
+
+                `
+                <p>
+                    <strong>
+                        ${error.message}
+                    </strong>
+                </p>
+
+                <p>
+                    Make sure these files are in
+                    the same folder:
+                </p>
+
+                <pre>heatmapsurveyZip.html
+NatureNationSurveyZipDistance.json
+zip-boundaries.geojson</pre>
+
+                <p>
+                    Start the local server with:
+                </p>
+
+                <pre>python -m http.server 8000</pre>
+
+                <p>
+                    Then open:
+                </p>
+
+                <pre>http://localhost:8000/heatmapsurveyZip.html</pre>
+                `;
+    }
+}
+
+
+/* ============================================================
+   RUN
+   ============================================================ */
+
+start();
+
+</script>
+
+</body>
+</html>
