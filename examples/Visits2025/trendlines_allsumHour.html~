@@ -110,7 +110,7 @@ svg {
 
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
-
+<h2 id="title">AoH Visits 2025</h2>
 <script>
 
 // ============================================================
@@ -187,7 +187,7 @@ var svg = d3.select("#chart")
 // ============================================================
 
 d3.csv(
-  "/examples/Visits2025/visitor_hourly_pivot.csv",
+  "visitor_hourly_pivot.csv",
   type,
   function(error, sources) {
 
@@ -297,13 +297,7 @@ d3.csv(
     // ========================================================
     // COLORS
     // ========================================================
-
-    var colors = {
-      "Number of Visitors": "#1f77b4",
-      "Event": "#ff7f0e",
-      "Visitors in Art Space": "#2ca02c"
-    };
-
+    var colorScale = d3.scale.category10();
 
     // ========================================================
     // DRAW TRENDLINES
@@ -325,7 +319,7 @@ d3.csv(
       })
       .style("stroke", function(d) {
 
-        return colors[d.name] || "#777";
+          return colorScale(d.name);
 
       });
 
@@ -641,7 +635,7 @@ d3.csv(
           .attr("y2", 0)
           .style(
             "stroke",
-            colors[d.name] || "#777"
+            colorScale(d.name)
           );
 
 
