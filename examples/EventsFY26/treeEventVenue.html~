@@ -194,7 +194,7 @@ legend.append("text")
                                 //.attr("dy",0)
                                 .text(3);
 
-d3.json("/examples/EventsFY26/venue_hierarchy.json", function(root) {
+d3.json("venue_hierarchy.json", function(root) {
   initialize(root);
   accumulate(root);
   layout(root);
@@ -323,7 +323,7 @@ d3.json("/examples/EventsFY26/venue_hierarchy.json", function(root) {
         .style("font-size", "12px") // initial guess
         //.style("font-size", function(d) { return d3.min([d.dx, d.dy]) /this.getComputedTextLength() * 12 + "px"; })
        .style("font-size", function(d) { //console.log(d.name, d.name.length, d.dx, d.dy, this.getComputedTextLength(), this, d3.min([d.dx, d.dy]) /this.getComputedTextLength()*12); 
-return (x(d.x + d.dx) - x(d.x)) /(d.name.length + 6) *1.5+ "px"; })
+return (x(d.x + d.dx) - x(d.x)) /(d.name.length + 6) *1.3+ "px"; })
         //.call(wrap, function(d) { console.log("here"); wr = d3.round(d.dx/this.getComputedTextLength()*14,0); console.log(wr);return d3.round(d.dx/this.getComputedTextLength()*14,0);});
 
   }
