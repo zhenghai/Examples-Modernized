@@ -99,7 +99,6 @@ svg {
 
 
 <h2 style="position: sticky; top: 0; text-align: center; background: white; z-index: 1000;" id="title">AoH Visits 2025</h2>
-
 <div id="chart"></div>
 
 <div id="menu">
@@ -248,7 +247,10 @@ d3.csv(
           .scale(x)
           .orient("bottom")
           .tickValues(hours)
-          .tickFormat(hourFormat)
+          //.tickFormat(hourFormat)
+	  .tickFormat(function(d) {
+              return hourFormat(d).replace(/^0/, "");
+	  })
           .tickSize(0)
           .tickPadding(10)
       );
@@ -521,14 +523,23 @@ d3.csv(
 
       // Display information
       focus.select("text")
+        /*
         .text(
           d.source.name +
           " — " +
           hourFormat(d.hour) +
           ": " +
           d.value
-        );
-
+         );*/
+        .text(null)
+        .append("tspan")
+        .attr("x", 0)
+        .attr("dy", "0em")
+        .text(d.source.name)
+        .append("tspan")
+        .attr("x", 0)
+        .attr("dy", "1.2em")
+        .text(hourFormat(d.hour).replace(/^0/, "") + " — " + d.value);
 
       data0 = d;
 
