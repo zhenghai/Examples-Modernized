@@ -2,1487 +2,787 @@
   "02114": {
     "city": "Boston",
     "state": "MA",
-    "places": [
-      {
-        "city": "Boston",
-        "state": "MA",
-        "census_name": "Boston city",
-        "geoid": "2507000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Suffolk County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "04901": {
     "city": "Waterville",
     "state": "ME",
-    "places": [
-      {
-        "city": "Waterville",
-        "state": "ME",
-        "census_name": "Waterville city",
-        "geoid": "2380740"
-      },
-      {
-        "city": "Winslow",
-        "state": "ME",
-        "census_name": "Winslow CDP",
-        "geoid": "2386480"
-      }
-    ]
+    "acceptable_cities": [
+      "Benton",
+      "Winslow"
+    ],
+    "unacceptable_cities": [],
+    "county": "Kennebec County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "06016": {
     "city": "Broad Brook",
     "state": "CT",
-    "places": [
-      {
-        "city": "Broad Brook",
-        "state": "CT",
-        "census_name": "Broad Brook CDP",
-        "geoid": "0908770"
-      }
-    ]
+    "acceptable_cities": [
+      "Melrose",
+      "Windsorville"
+    ],
+    "unacceptable_cities": [],
+    "county": "Hartford County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "06437": {
-    "city": "Guilford Center",
+    "city": "Guilford",
     "state": "CT",
-    "places": [
-      {
-        "city": "Guilford Center",
-        "state": "CT",
-        "census_name": "Guilford Center CDP",
-        "geoid": "0935020"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "New Haven County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07090": {
-    "city": "Mountainside",
+    "city": "Westfield",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Mountainside",
-        "state": "NJ",
-        "census_name": "Mountainside borough",
-        "geoid": "3448510"
-      },
-      {
-        "city": "Westfield",
-        "state": "NJ",
-        "census_name": "Westfield town",
-        "geoid": "3479040"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Union County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07306": {
     "city": "Jersey City",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Jersey City",
-        "state": "NJ",
-        "census_name": "Jersey City city",
-        "geoid": "3436000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Hudson County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07701": {
-    "city": "Fairview",
+    "city": "Red Bank",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Fairview",
-        "state": "NJ",
-        "census_name": "Fairview CDP",
-        "geoid": "3422740"
-      },
-      {
-        "city": "Red Bank",
-        "state": "NJ",
-        "census_name": "Red Bank borough",
-        "geoid": "3462430"
-      },
-      {
-        "city": "Tinton Falls",
-        "state": "NJ",
-        "census_name": "Tinton Falls borough",
-        "geoid": "3473020"
-      }
-    ]
+    "acceptable_cities": [
+      "Tinton Falls"
+    ],
+    "unacceptable_cities": [
+      "Westboro"
+    ],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07712": {
     "city": "Asbury Park",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Asbury Park",
-        "state": "NJ",
-        "census_name": "Asbury Park city",
-        "geoid": "3401960"
-      },
-      {
-        "city": "Interlaken",
-        "state": "NJ",
-        "census_name": "Interlaken borough",
-        "geoid": "3434200"
-      },
-      {
-        "city": "Tinton Falls",
-        "state": "NJ",
-        "census_name": "Tinton Falls borough",
-        "geoid": "3473020"
-      },
-      {
-        "city": "Wanamassa",
-        "state": "NJ",
-        "census_name": "Wanamassa CDP",
-        "geoid": "3476700"
-      }
-    ]
+    "acceptable_cities": [
+      "Interlaken",
+      "Ocean",
+      "Tinton Falls"
+    ],
+    "unacceptable_cities": [
+      "Wanamassa",
+      "Wayside"
+    ],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07722": {
-    "city": "Tinton Falls",
+    "city": "Colts Neck",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Tinton Falls",
-        "state": "NJ",
-        "census_name": "Tinton Falls borough",
-        "geoid": "3473020"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Earle Naval Weapons Station",
+      "Phalanx",
+      "Vanderburg"
+    ],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07755": {
     "city": "Oakhurst",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Oakhurst",
-        "state": "NJ",
-        "census_name": "Oakhurst CDP",
-        "geoid": "3453790"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Elberon Park"
+    ],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07840": {
-    "city": "Allamuchy",
+    "city": "Hackettstown",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Allamuchy",
-        "state": "NJ",
-        "census_name": "Allamuchy CDP",
-        "geoid": "3400640"
-      },
-      {
-        "city": "Beattystown",
-        "state": "NJ",
-        "census_name": "Beattystown CDP",
-        "geoid": "3404252"
-      },
-      {
-        "city": "Flanders",
-        "state": "NJ",
-        "census_name": "Flanders CDP",
-        "geoid": "3423640"
-      },
-      {
-        "city": "Hackettstown",
-        "state": "NJ",
-        "census_name": "Hackettstown town",
-        "geoid": "3428710"
-      },
-      {
-        "city": "Panther Valley",
-        "state": "NJ",
-        "census_name": "Panther Valley CDP",
-        "geoid": "3455895"
-      },
-      {
-        "city": "Vienna",
-        "state": "NJ",
-        "census_name": "Vienna CDP",
-        "geoid": "3475950"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Allamuchy Twp"
+    ],
+    "county": "Warren County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "07928": {
     "city": "Chatham",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Chatham",
-        "state": "NJ",
-        "census_name": "Chatham borough",
-        "geoid": "3412100"
-      },
-      {
-        "city": "Green Village",
-        "state": "NJ",
-        "census_name": "Green Village CDP",
-        "geoid": "3428020"
-      }
-    ]
+    "acceptable_cities": [
+      "Chatham Twp"
+    ],
+    "unacceptable_cities": [],
+    "county": "Morris County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08016": {
     "city": "Burlington",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Burlington",
-        "state": "NJ",
-        "census_name": "Burlington city",
-        "geoid": "3408920"
-      },
-      {
-        "city": "Florence",
-        "state": "NJ",
-        "census_name": "Florence CDP",
-        "geoid": "3423820"
-      },
-      {
-        "city": "Roebling",
-        "state": "NJ",
-        "census_name": "Roebling CDP",
-        "geoid": "3464350"
-      }
-    ]
+    "acceptable_cities": [
+      "Burlington City",
+      "Burlington Township",
+      "Burlngtn City",
+      "Burlngtn Twp"
+    ],
+    "unacceptable_cities": [],
+    "county": "Burlington County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08033": {
-    "city": "Barrington",
+    "city": "Haddonfield",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Barrington",
-        "state": "NJ",
-        "census_name": "Barrington borough",
-        "geoid": "3403250"
-      },
-      {
-        "city": "Haddon Heights",
-        "state": "NJ",
-        "census_name": "Haddon Heights borough",
-        "geoid": "3428800"
-      },
-      {
-        "city": "Haddonfield",
-        "state": "NJ",
-        "census_name": "Haddonfield borough",
-        "geoid": "3428770"
-      },
-      {
-        "city": "Tavistock",
-        "state": "NJ",
-        "census_name": "Tavistock borough",
-        "geoid": "3472240"
-      },
-      {
-        "city": "Westmont",
-        "state": "NJ",
-        "census_name": "Westmont CDP",
-        "geoid": "3479520"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "East Haddonfield",
+      "Tavistock"
+    ],
+    "county": "Camden County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08055": {
-    "city": "Medford Lakes",
+    "city": "Medford",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Medford Lakes",
-        "state": "NJ",
-        "census_name": "Medford Lakes borough",
-        "geoid": "3445210"
-      }
-    ]
+    "acceptable_cities": [
+      "Medford Lakes"
+    ],
+    "unacceptable_cities": [
+      "Medford Lakes Boro",
+      "Medford Township"
+    ],
+    "county": "Burlington County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08205": {
     "city": "Absecon",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Absecon",
-        "state": "NJ",
-        "census_name": "Absecon city",
-        "geoid": "3400100"
-      },
-      {
-        "city": "Absecon Highlands",
-        "state": "NJ",
-        "census_name": "Absecon Highlands CDP",
-        "geoid": "3400160"
-      },
-      {
-        "city": "Leeds Point",
-        "state": "NJ",
-        "census_name": "Leeds Point CDP",
-        "geoid": "3439810"
-      },
-      {
-        "city": "Oceanville",
-        "state": "NJ",
-        "census_name": "Oceanville CDP",
-        "geoid": "3454630"
-      },
-      {
-        "city": "Pomona",
-        "state": "NJ",
-        "census_name": "Pomona CDP",
-        "geoid": "3460030"
-      },
-      {
-        "city": "Smithville",
-        "state": "NJ",
-        "census_name": "Smithville CDP",
-        "geoid": "3468190"
-      }
-    ]
+    "acceptable_cities": [
+      "Galloway",
+      "Smithville"
+    ],
+    "unacceptable_cities": [
+      "Galloway Township"
+    ],
+    "county": "Atlantic County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08502": {
     "city": "Belle Mead",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Belle Mead",
-        "state": "NJ",
-        "census_name": "Belle Mead CDP",
-        "geoid": "3404630"
-      },
-      {
-        "city": "Harlingen",
-        "state": "NJ",
-        "census_name": "Harlingen CDP",
-        "geoid": "3429940"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Montgomery"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08520": {
     "city": "Hightstown",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Hightstown",
-        "state": "NJ",
-        "census_name": "Hightstown borough",
-        "geoid": "3431620"
-      },
-      {
-        "city": "Twin Rivers",
-        "state": "NJ",
-        "census_name": "Twin Rivers CDP",
-        "geoid": "3474330"
-      },
-      {
-        "city": "Windsor",
-        "state": "NJ",
-        "census_name": "Windsor CDP",
-        "geoid": "3481620"
-      }
-    ]
+    "acceptable_cities": [
+      "East Windsor"
+    ],
+    "unacceptable_cities": [
+      "E Windsor"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08525": {
     "city": "Hopewell",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Hopewell",
-        "state": "NJ",
-        "census_name": "Hopewell borough",
-        "geoid": "3433150"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Hopewell Township",
+      "Hopewell Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08536": {
-    "city": "Plainsboro Center",
+    "city": "Plainsboro",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Plainsboro Center",
-        "state": "NJ",
-        "census_name": "Plainsboro Center CDP",
-        "geoid": "3459285"
-      },
-      {
-        "city": "Princeton Meadows",
-        "state": "NJ",
-        "census_name": "Princeton Meadows CDP",
-        "geoid": "3460975"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08540": {
-    "city": "East Rocky Hill",
+    "city": "Princeton",
     "state": "NJ",
-    "places": [
-      {
-        "city": "East Rocky Hill",
-        "state": "NJ",
-        "census_name": "East Rocky Hill CDP",
-        "geoid": "3419490"
-      },
-      {
-        "city": "Griggstown",
-        "state": "NJ",
-        "census_name": "Griggstown CDP",
-        "geoid": "3428470"
-      },
-      {
-        "city": "Heathcote",
-        "state": "NJ",
-        "census_name": "Heathcote CDP",
-        "geoid": "3430738"
-      },
-      {
-        "city": "Kendall Park",
-        "state": "NJ",
-        "census_name": "Kendall Park CDP",
-        "geoid": "3436660"
-      },
-      {
-        "city": "Kingston",
-        "state": "NJ",
-        "census_name": "Kingston CDP",
-        "geoid": "3436930"
-      },
-      {
-        "city": "Monmouth Junction",
-        "state": "NJ",
-        "census_name": "Monmouth Junction CDP",
-        "geoid": "3447190"
-      },
-      {
-        "city": "Princeton",
-        "state": "NJ",
-        "census_name": "Princeton",
-        "geoid": "3460900"
-      },
-      {
-        "city": "Princeton Junction",
-        "state": "NJ",
-        "census_name": "Princeton Junction CDP",
-        "geoid": "3460960"
-      },
-      {
-        "city": "Ten Mile Run",
-        "state": "NJ",
-        "census_name": "Ten Mile Run CDP",
-        "geoid": "3472435"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Princeton Township",
+      "Princeton Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08542": {
     "city": "Princeton",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Princeton",
-        "state": "NJ",
-        "census_name": "Princeton",
-        "geoid": "3460900"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08544": {
     "city": "Princeton",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Princeton",
-        "state": "NJ",
-        "census_name": "Princeton",
-        "geoid": "3460900"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Princeton University"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "UNIQUE"
   },
   "08550": {
     "city": "Princeton Junction",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Princeton Junction",
-        "state": "NJ",
-        "census_name": "Princeton Junction CDP",
-        "geoid": "3460960"
-      }
-    ]
+    "acceptable_cities": [
+      "Princeton Jct",
+      "West Windsor"
+    ],
+    "unacceptable_cities": [
+      "W Windsor",
+      "W Windsor Township",
+      "West Win Tow"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08558": {
-    "city": "Blawenburg",
+    "city": "Skillman",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Blawenburg",
-        "state": "NJ",
-        "census_name": "Blawenburg CDP",
-        "geoid": "3406190"
-      },
-      {
-        "city": "Skillman",
-        "state": "NJ",
-        "census_name": "Skillman CDP",
-        "geoid": "3467860"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Montgomery"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08618": {
-    "city": "The College of New Jersey",
+    "city": "Trenton",
     "state": "NJ",
-    "places": [
-      {
-        "city": "The College of New Jersey",
-        "state": "NJ",
-        "census_name": "The College of New Jersey CDP",
-        "geoid": "3472580"
-      },
-      {
-        "city": "Trenton",
-        "state": "NJ",
-        "census_name": "Trenton city",
-        "geoid": "3474000"
-      }
-    ]
+    "acceptable_cities": [
+      "Ewing"
+    ],
+    "unacceptable_cities": [
+      "Ewing Township",
+      "Ewing Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08648": {
-    "city": "Lawrenceville",
+    "city": "Lawrence Township",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Lawrenceville",
-        "state": "NJ",
-        "census_name": "Lawrenceville CDP",
-        "geoid": "3439570"
-      },
-      {
-        "city": "Trenton",
-        "state": "NJ",
-        "census_name": "Trenton city",
-        "geoid": "3474000"
-      }
-    ]
+    "acceptable_cities": [
+      "Lawrence",
+      "Lawrence Twp",
+      "Lawrenceville",
+      "Trenton"
+    ],
+    "unacceptable_cities": [],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08650": {
-    "city": "",
-    "state": "",
-    "places": []
+    "city": "Trenton",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Hamilton"
+    ],
+    "unacceptable_cities": [],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "PO BOX"
   },
   "08690": {
-    "city": "Hamilton Square",
+    "city": "Trenton",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Hamilton Square",
-        "state": "NJ",
-        "census_name": "Hamilton Square CDP",
-        "geoid": "3429370"
-      },
-      {
-        "city": "Mercerville",
-        "state": "NJ",
-        "census_name": "Mercerville CDP",
-        "geoid": "3445480"
-      },
-      {
-        "city": "White Horse",
-        "state": "NJ",
-        "census_name": "White Horse CDP",
-        "geoid": "3480630"
-      }
-    ]
+    "acceptable_cities": [
+      "Hamilton",
+      "Hamilton Sq",
+      "Hamilton Square"
+    ],
+    "unacceptable_cities": [
+      "Hamilton Township",
+      "Hamilton Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08724": {
-    "city": "Allenwood",
+    "city": "Brick",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Allenwood",
-        "state": "NJ",
-        "census_name": "Allenwood CDP",
-        "geoid": "3400790"
-      }
-    ]
+    "acceptable_cities": [
+      "Wall Township"
+    ],
+    "unacceptable_cities": [
+      "Bricktown",
+      "Wall Twp"
+    ],
+    "county": "Ocean County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08732": {
     "city": "Island Heights",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Island Heights",
-        "state": "NJ",
-        "census_name": "Island Heights borough",
-        "geoid": "3434530"
-      }
-    ]
+    "acceptable_cities": [
+      "Island Hgts"
+    ],
+    "unacceptable_cities": [],
+    "county": "Ocean County",
+    "active": true,
+    "zip_code_type": "PO BOX"
   },
   "08817": {
-    "city": "Rutgers University-Livingston Campus",
+    "city": "Edison",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Rutgers University-Livingston Campus",
-        "state": "NJ",
-        "census_name": "Rutgers University-Livingston Campus CDP",
-        "geoid": "3465260"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08822": {
     "city": "Flemington",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Flemington",
-        "state": "NJ",
-        "census_name": "Flemington borough",
-        "geoid": "3423700"
-      },
-      {
-        "city": "Three Bridges",
-        "state": "NJ",
-        "census_name": "Three Bridges CDP",
-        "geoid": "3472870"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Hunterdon County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08831": {
-    "city": "Clearbrook",
+    "city": "Monroe Township",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Clearbrook",
-        "state": "NJ",
-        "census_name": "Clearbrook CDP",
-        "geoid": "3413395"
-      },
-      {
-        "city": "Concordia",
-        "state": "NJ",
-        "census_name": "Concordia CDP",
-        "geoid": "3414758"
-      },
-      {
-        "city": "Encore at Monroe",
-        "state": "NJ",
-        "census_name": "Encore at Monroe CDP",
-        "geoid": "3421473"
-      },
-      {
-        "city": "Forsgate",
-        "state": "NJ",
-        "census_name": "Forsgate CDP",
-        "geoid": "3424285"
-      },
-      {
-        "city": "Jamesburg",
-        "state": "NJ",
-        "census_name": "Jamesburg borough",
-        "geoid": "3434890"
-      },
-      {
-        "city": "Monroe Manor",
-        "state": "NJ",
-        "census_name": "Monroe Manor CDP",
-        "geoid": "3447380"
-      },
-      {
-        "city": "Regency at Monroe",
-        "state": "NJ",
-        "census_name": "Regency at Monroe CDP",
-        "geoid": "3462585"
-      },
-      {
-        "city": "Renaissance at Monroe",
-        "state": "NJ",
-        "census_name": "Renaissance at Monroe CDP",
-        "geoid": "3462605"
-      },
-      {
-        "city": "Rossmoor",
-        "state": "NJ",
-        "census_name": "Rossmoor CDP",
-        "geoid": "3464865"
-      },
-      {
-        "city": "Spotswood",
-        "state": "NJ",
-        "census_name": "Spotswood borough",
-        "geoid": "3469810"
-      },
-      {
-        "city": "Stonebridge",
-        "state": "NJ",
-        "census_name": "Stonebridge CDP",
-        "geoid": "3470987"
-      },
-      {
-        "city": "The Ponds",
-        "state": "NJ",
-        "census_name": "The Ponds CDP",
-        "geoid": "3472726"
-      },
-      {
-        "city": "Whittingham",
-        "state": "NJ",
-        "census_name": "Whittingham CDP",
-        "geoid": "3481042"
-      }
-    ]
+    "acceptable_cities": [
+      "Jamesburg",
+      "Monroe",
+      "Monroe Twp"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08844": {
-    "city": "Belle Mead",
+    "city": "Hillsborough",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Belle Mead",
-        "state": "NJ",
-        "census_name": "Belle Mead CDP",
-        "geoid": "3404630"
-      },
-      {
-        "city": "Blackwells Mills",
-        "state": "NJ",
-        "census_name": "Blackwells Mills CDP",
-        "geoid": "3406025"
-      },
-      {
-        "city": "Flagtown",
-        "state": "NJ",
-        "census_name": "Flagtown CDP",
-        "geoid": "3423610"
-      },
-      {
-        "city": "Hillsborough",
-        "state": "NJ",
-        "census_name": "Hillsborough CDP",
-        "geoid": "3431880"
-      },
-      {
-        "city": "Manville",
-        "state": "NJ",
-        "census_name": "Manville borough",
-        "geoid": "3443620"
-      },
-      {
-        "city": "Millstone",
-        "state": "NJ",
-        "census_name": "Millstone borough",
-        "geoid": "3446590"
-      },
-      {
-        "city": "Neshanic",
-        "state": "NJ",
-        "census_name": "Neshanic CDP",
-        "geoid": "3450040"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Millstone"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08846": {
     "city": "Middlesex",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Middlesex",
-        "state": "NJ",
-        "census_name": "Middlesex borough",
-        "geoid": "3445900"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08852": {
-    "city": "Deans",
+    "city": "Monmouth Junction",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Deans",
-        "state": "NJ",
-        "census_name": "Deans CDP",
-        "geoid": "3416720"
-      },
-      {
-        "city": "Heathcote",
-        "state": "NJ",
-        "census_name": "Heathcote CDP",
-        "geoid": "3430738"
-      },
-      {
-        "city": "Kendall Park",
-        "state": "NJ",
-        "census_name": "Kendall Park CDP",
-        "geoid": "3436660"
-      },
-      {
-        "city": "Monmouth Junction",
-        "state": "NJ",
-        "census_name": "Monmouth Junction CDP",
-        "geoid": "3447190"
-      }
-    ]
+    "acceptable_cities": [
+      "Monmouth Jct"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08854": {
-    "city": "Rutgers University-Busch Campus",
+    "city": "Piscataway",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Rutgers University-Busch Campus",
-        "state": "NJ",
-        "census_name": "Rutgers University-Busch Campus CDP",
-        "geoid": "3465249"
-      },
-      {
-        "city": "Rutgers University-Livingston Campus",
-        "state": "NJ",
-        "census_name": "Rutgers University-Livingston Campus CDP",
-        "geoid": "3465260"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08873": {
-    "city": "Blackwells Mills",
+    "city": "Somerset",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Blackwells Mills",
-        "state": "NJ",
-        "census_name": "Blackwells Mills CDP",
-        "geoid": "3406025"
-      },
-      {
-        "city": "Clyde",
-        "state": "NJ",
-        "census_name": "Clyde CDP",
-        "geoid": "3413990"
-      },
-      {
-        "city": "East Franklin",
-        "state": "NJ",
-        "census_name": "East Franklin CDP",
-        "geoid": "3419130"
-      },
-      {
-        "city": "East Millstone",
-        "state": "NJ",
-        "census_name": "East Millstone CDP",
-        "geoid": "3419330"
-      },
-      {
-        "city": "Franklin Center",
-        "state": "NJ",
-        "census_name": "Franklin Center CDP",
-        "geoid": "3424965"
-      },
-      {
-        "city": "Franklin Park",
-        "state": "NJ",
-        "census_name": "Franklin Park CDP",
-        "geoid": "3425020"
-      },
-      {
-        "city": "Middlebush",
-        "state": "NJ",
-        "census_name": "Middlebush CDP",
-        "geoid": "3445870"
-      },
-      {
-        "city": "Pleasant Plains",
-        "state": "NJ",
-        "census_name": "Pleasant Plains CDP",
-        "geoid": "3459500"
-      },
-      {
-        "city": "Six Mile Run",
-        "state": "NJ",
-        "census_name": "Six Mile Run CDP",
-        "geoid": "3467820"
-      },
-      {
-        "city": "Somerset",
-        "state": "NJ",
-        "census_name": "Somerset CDP",
-        "geoid": "3468370"
-      },
-      {
-        "city": "Voorhees",
-        "state": "NJ",
-        "census_name": "Voorhees CDP",
-        "geoid": "3476250"
-      },
-      {
-        "city": "Weston",
-        "state": "NJ",
-        "census_name": "Weston CDP",
-        "geoid": "3479715"
-      },
-      {
-        "city": "Zarephath",
-        "state": "NJ",
-        "census_name": "Zarephath CDP",
-        "geoid": "3483290"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "East Millstone",
+      "Franklin Twp",
+      "Middlebush",
+      "Zarepath"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08880": {
-    "city": "Franklin Center",
+    "city": "South Bound Brook",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Franklin Center",
-        "state": "NJ",
-        "census_name": "Franklin Center CDP",
-        "geoid": "3424965"
-      },
-      {
-        "city": "South Bound Brook",
-        "state": "NJ",
-        "census_name": "South Bound Brook borough",
-        "geoid": "3468730"
-      }
-    ]
+    "acceptable_cities": [
+      "S Bound Brook"
+    ],
+    "unacceptable_cities": [],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08901": {
     "city": "New Brunswick",
     "state": "NJ",
-    "places": [
-      {
-        "city": "New Brunswick",
-        "state": "NJ",
-        "census_name": "New Brunswick city",
-        "geoid": "3451210"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08902": {
-    "city": "Deans",
+    "city": "North Brunswick",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Deans",
-        "state": "NJ",
-        "census_name": "Deans CDP",
-        "geoid": "3416720"
-      }
-    ]
+    "acceptable_cities": [
+      "N Brunswick",
+      "New Brunswick"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "08904": {
     "city": "Highland Park",
     "state": "NJ",
-    "places": [
-      {
-        "city": "Highland Park",
-        "state": "NJ",
-        "census_name": "Highland Park borough",
-        "geoid": "3431470"
-      }
-    ]
+    "acceptable_cities": [
+      "New Brunswick"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "10027": {
     "city": "New York",
     "state": "NY",
-    "places": [
-      {
-        "city": "New York",
-        "state": "NY",
-        "census_name": "New York city",
-        "geoid": "3651000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Manhattan",
+      "Manhattanville",
+      "New York City",
+      "NY",
+      "Ny City",
+      "Nyc"
+    ],
+    "county": "New York County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "10306": {
-    "city": "New York",
+    "city": "Staten Island",
     "state": "NY",
-    "places": [
-      {
-        "city": "New York",
-        "state": "NY",
-        "census_name": "New York city",
-        "geoid": "3651000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Richmond County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "10573": {
-    "city": "Harrison",
+    "city": "Port Chester",
     "state": "NY",
-    "places": [
-      {
-        "city": "Harrison",
-        "state": "NY",
-        "census_name": "Harrison village",
-        "geoid": "3632402"
-      },
-      {
-        "city": "Port Chester",
-        "state": "NY",
-        "census_name": "Port Chester village",
-        "geoid": "3659223"
-      },
-      {
-        "city": "Rye",
-        "state": "NY",
-        "census_name": "Rye city",
-        "geoid": "3664309"
-      },
-      {
-        "city": "Rye Brook",
-        "state": "NY",
-        "census_name": "Rye Brook village",
-        "geoid": "3664325"
-      }
-    ]
+    "acceptable_cities": [
+      "Rye Brook"
+    ],
+    "unacceptable_cities": [
+      "Portchester"
+    ],
+    "county": "Westchester County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "11201": {
-    "city": "New York",
+    "city": "Brooklyn",
     "state": "NY",
-    "places": [
-      {
-        "city": "New York",
-        "state": "NY",
-        "census_name": "New York city",
-        "geoid": "3651000"
-      }
-    ]
+    "acceptable_cities": [
+      "Brooklyn Heights",
+      "Brooklyn Hgts"
+    ],
+    "unacceptable_cities": [],
+    "county": "Kings County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "11221": {
-    "city": "New York",
+    "city": "Brooklyn",
     "state": "NY",
-    "places": [
-      {
-        "city": "New York",
-        "state": "NY",
-        "census_name": "New York city",
-        "geoid": "3651000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Kings County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "11372": {
-    "city": "New York",
+    "city": "Jackson Heights",
     "state": "NY",
-    "places": [
-      {
-        "city": "New York",
-        "state": "NY",
-        "census_name": "New York city",
-        "geoid": "3651000"
-      }
-    ]
+    "acceptable_cities": [
+      "Flushing",
+      "Jackson Hts"
+    ],
+    "unacceptable_cities": [
+      "Queens"
+    ],
+    "county": "Queens County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "12601": {
-    "city": "Arlington",
+    "city": "Poughkeepsie",
     "state": "NY",
-    "places": [
-      {
-        "city": "Arlington",
-        "state": "NY",
-        "census_name": "Arlington CDP",
-        "geoid": "3602616"
-      },
-      {
-        "city": "Crown Heights",
-        "state": "NY",
-        "census_name": "Crown Heights CDP",
-        "geoid": "3619229"
-      },
-      {
-        "city": "Fairview",
-        "state": "NY",
-        "census_name": "Fairview CDP",
-        "geoid": "3625109"
-      },
-      {
-        "city": "Haviland",
-        "state": "NY",
-        "census_name": "Haviland CDP",
-        "geoid": "3632776"
-      },
-      {
-        "city": "Marist College",
-        "state": "NY",
-        "census_name": "Marist College CDP",
-        "geoid": "3645659"
-      },
-      {
-        "city": "Poughkeepsie",
-        "state": "NY",
-        "census_name": "Poughkeepsie city",
-        "geoid": "3659641"
-      },
-      {
-        "city": "Spackenkill",
-        "state": "NY",
-        "census_name": "Spackenkill CDP",
-        "geoid": "3670035"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Dutchess County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "14850": {
-    "city": "Cayuga Heights",
+    "city": "Ithaca",
     "state": "NY",
-    "places": [
-      {
-        "city": "Cayuga Heights",
-        "state": "NY",
-        "census_name": "Cayuga Heights village",
-        "geoid": "3613079"
-      },
-      {
-        "city": "Danby",
-        "state": "NY",
-        "census_name": "Danby CDP",
-        "geoid": "3619609"
-      },
-      {
-        "city": "East Ithaca",
-        "state": "NY",
-        "census_name": "East Ithaca CDP",
-        "geoid": "3622326"
-      },
-      {
-        "city": "Forest Home",
-        "state": "NY",
-        "census_name": "Forest Home CDP",
-        "geoid": "3626561"
-      },
-      {
-        "city": "Ithaca",
-        "state": "NY",
-        "census_name": "Ithaca city",
-        "geoid": "3638077"
-      },
-      {
-        "city": "Lansing",
-        "state": "NY",
-        "census_name": "Lansing village",
-        "geoid": "3641223"
-      },
-      {
-        "city": "Northeast Ithaca",
-        "state": "NY",
-        "census_name": "Northeast Ithaca CDP",
-        "geoid": "3651915"
-      },
-      {
-        "city": "Northwest Ithaca",
-        "state": "NY",
-        "census_name": "Northwest Ithaca CDP",
-        "geoid": "3653853"
-      },
-      {
-        "city": "South Hill",
-        "state": "NY",
-        "census_name": "South Hill CDP",
-        "geoid": "3669199"
-      },
-      {
-        "city": "Varna",
-        "state": "NY",
-        "census_name": "Varna CDP",
-        "geoid": "3676969"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Ithaca Clg",
+      "Ithaca College"
+    ],
+    "county": "Tompkins County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "18940": {
     "city": "Newtown",
     "state": "PA",
-    "places": [
-      {
-        "city": "Newtown",
-        "state": "PA",
-        "census_name": "Newtown borough",
-        "geoid": "4254184"
-      },
-      {
-        "city": "Newtown Grant",
-        "state": "PA",
-        "census_name": "Newtown Grant CDP",
-        "geoid": "4254268"
-      }
-    ]
+    "acceptable_cities": [
+      "George School",
+      "Upper Makefield",
+      "Upr Makefield"
+    ],
+    "unacceptable_cities": [
+      "Wrightstown"
+    ],
+    "county": "Bucks County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "18977": {
-    "city": "",
-    "state": "",
-    "places": []
+    "city": "Washington Crossing",
+    "state": "PA",
+    "acceptable_cities": [
+      "Washington Xing",
+      "Wshngtn Xing"
+    ],
+    "unacceptable_cities": [],
+    "county": "Bucks County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19104": {
     "city": "Philadelphia",
     "state": "PA",
-    "places": [
-      {
-        "city": "Philadelphia",
-        "state": "PA",
-        "census_name": "Philadelphia city",
-        "geoid": "4260000"
-      }
-    ]
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [
+      "30th Street"
+    ],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19131": {
     "city": "Philadelphia",
     "state": "PA",
-    "places": [
-      {
-        "city": "Philadelphia",
-        "state": "PA",
-        "census_name": "Philadelphia city",
-        "geoid": "4260000"
-      }
-    ]
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19143": {
     "city": "Philadelphia",
     "state": "PA",
-    "places": [
-      {
-        "city": "Philadelphia",
-        "state": "PA",
-        "census_name": "Philadelphia city",
-        "geoid": "4260000"
-      }
-    ]
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19146": {
     "city": "Philadelphia",
     "state": "PA",
-    "places": [
-      {
-        "city": "Philadelphia",
-        "state": "PA",
-        "census_name": "Philadelphia city",
-        "geoid": "4260000"
-      }
-    ]
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19147": {
     "city": "Philadelphia",
     "state": "PA",
-    "places": [
-      {
-        "city": "Philadelphia",
-        "state": "PA",
-        "census_name": "Philadelphia city",
-        "geoid": "4260000"
-      }
-    ]
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19348": {
-    "city": "Hamorton",
+    "city": "Kennett Square",
     "state": "PA",
-    "places": [
-      {
-        "city": "Hamorton",
-        "state": "PA",
-        "census_name": "Hamorton CDP",
-        "geoid": "4232280"
-      },
-      {
-        "city": "Kennett Square",
-        "state": "PA",
-        "census_name": "Kennett Square borough",
-        "geoid": "4239352"
-      },
-      {
-        "city": "Toughkenamon",
-        "state": "PA",
-        "census_name": "Toughkenamon CDP",
-        "geoid": "4277144"
-      },
-      {
-        "city": "Unionville",
-        "state": "PA",
-        "census_name": "Unionville CDP",
-        "geoid": "4278624"
-      }
-    ]
+    "acceptable_cities": [
+      "Kennett Sq"
+    ],
+    "unacceptable_cities": [],
+    "county": "Chester County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "19810": {
-    "city": "Arden",
+    "city": "Wilmington",
     "state": "DE",
-    "places": [
-      {
-        "city": "Arden",
-        "state": "DE",
-        "census_name": "Arden village",
-        "geoid": "1001400"
-      },
-      {
-        "city": "Ardencroft",
-        "state": "DE",
-        "census_name": "Ardencroft village",
-        "geoid": "1001530"
-      },
-      {
-        "city": "Ardentown",
-        "state": "DE",
-        "census_name": "Ardentown village",
-        "geoid": "1001660"
-      }
-    ]
+    "acceptable_cities": [
+      "Edgemoor"
+    ],
+    "unacceptable_cities": [
+      "Arden"
+    ],
+    "county": "New Castle County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "20008": {
     "city": "Washington",
     "state": "DC",
-    "places": [
-      {
-        "city": "Washington",
-        "state": "DC",
-        "census_name": "Washington city",
-        "geoid": "1150000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "District of Columbia",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "22046": {
     "city": "Falls Church",
     "state": "VA",
-    "places": [
-      {
-        "city": "Falls Church",
-        "state": "VA",
-        "census_name": "Falls Church city",
-        "geoid": "5127200"
-      },
-      {
-        "city": "Idylwood",
-        "state": "VA",
-        "census_name": "Idylwood CDP",
-        "geoid": "5139448"
-      },
-      {
-        "city": "McLean",
-        "state": "VA",
-        "census_name": "McLean CDP",
-        "geoid": "5148376"
-      },
-      {
-        "city": "West Falls Church",
-        "state": "VA",
-        "census_name": "West Falls Church CDP",
-        "geoid": "5184368"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Falls Church city",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "32789": {
-    "city": "Eatonville",
+    "city": "Winter Park",
     "state": "FL",
-    "places": [
-      {
-        "city": "Eatonville",
-        "state": "FL",
-        "census_name": "Eatonville town",
-        "geoid": "1219650"
-      },
-      {
-        "city": "Fairview Shores",
-        "state": "FL",
-        "census_name": "Fairview Shores CDP",
-        "geoid": "1221750"
-      },
-      {
-        "city": "Maitland",
-        "state": "FL",
-        "census_name": "Maitland city",
-        "geoid": "1242575"
-      },
-      {
-        "city": "Orlando",
-        "state": "FL",
-        "census_name": "Orlando city",
-        "geoid": "1253000"
-      },
-      {
-        "city": "Winter Park",
-        "state": "FL",
-        "census_name": "Winter Park city",
-        "geoid": "1278300"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Orange County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "48823": {
     "city": "East Lansing",
     "state": "MI",
-    "places": [
-      {
-        "city": "East Lansing",
-        "state": "MI",
-        "census_name": "East Lansing city",
-        "geoid": "2624120"
-      },
-      {
-        "city": "Haslett",
-        "state": "MI",
-        "census_name": "Haslett CDP",
-        "geoid": "2637100"
-      },
-      {
-        "city": "Lansing",
-        "state": "MI",
-        "census_name": "Lansing city",
-        "geoid": "2646000"
-      },
-      {
-        "city": "Okemos",
-        "state": "MI",
-        "census_name": "Okemos CDP",
-        "geoid": "2660340"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Ingham County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "50140": {
     "city": "Lamoni",
     "state": "IA",
-    "places": [
-      {
-        "city": "Lamoni",
-        "state": "IA",
-        "census_name": "Lamoni city",
-        "geoid": "1942960"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Decatur County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "76034": {
     "city": "Colleyville",
     "state": "TX",
-    "places": [
-      {
-        "city": "Colleyville",
-        "state": "TX",
-        "census_name": "Colleyville city",
-        "geoid": "4815988"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Tarrant County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "80202": {
     "city": "Denver",
     "state": "CO",
-    "places": [
-      {
-        "city": "Denver",
-        "state": "CO",
-        "census_name": "Denver city",
-        "geoid": "0820000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Denver County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "92129": {
     "city": "San Diego",
     "state": "CA",
-    "places": [
-      {
-        "city": "San Diego",
-        "state": "CA",
-        "census_name": "San Diego city",
-        "geoid": "0666000"
-      }
-    ]
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "San Diego County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   },
   "97330": {
-    "city": "Adair Village",
+    "city": "Corvallis",
     "state": "OR",
-    "places": [
-      {
-        "city": "Adair Village",
-        "state": "OR",
-        "census_name": "Adair Village city",
-        "geoid": "4100275"
-      },
-      {
-        "city": "Corvallis",
-        "state": "OR",
-        "census_name": "Corvallis city",
-        "geoid": "4115800"
-      }
-    ]
+    "acceptable_cities": [
+      "Adair Village"
+    ],
+    "unacceptable_cities": [],
+    "county": "Benton County",
+    "active": true,
+    "zip_code_type": "STANDARD"
   }
 }

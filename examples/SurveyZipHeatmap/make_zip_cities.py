@@ -1,24 +1,19 @@
-import csv
 import json
-import urllib.request
 from pathlib import Path
+
+import zipcodes
 
 
 # ============================================================
 # FILES
 # ============================================================
 
-SURVEY_FILE = Path("NatureNationSurveyZipDistance.json")
-OUTPUT_FILE = Path("zip-cities.json")
+SURVEY_FILE = Path(
+    "NatureNationSurveyZipDistance.json"
+)
 
-
-# ============================================================
-# OFFICIAL CENSUS FILE
-# ============================================================
-
-CENSUS_URL = (
-    "https://www2.census.gov/geo/docs/maps-data/data/rel2020/"
-    "zcta520/tab20_zcta520_place20_natl.txt"
+OUTPUT_FILE = Path(
+    "zip-cities.json"
 )
 
 
@@ -31,10 +26,9 @@ def normalize_zip(value):
     if value is None:
         return ""
 
-    value = str(value).strip()
-
     digits = "".join(
-        c for c in value
+        c
+        for c in str(value)
         if c.isdigit()
     )
 
@@ -45,98 +39,22 @@ def normalize_zip(value):
 
 
 # ============================================================
-# STATE FIPS -> ABBREVIATION
+# LOAD SURVEY ZIPs
 # ============================================================
 
-STATE_FIPS = {
-    "01": "AL",
-    "02": "AK",
-    "04": "AZ",
-    "05": "AR",
-    "06": "CA",
-    "08": "CO",
-    "09": "CT",
-    "10": "DE",
-    "11": "DC",
-    "12": "FL",
-    "13": "GA",
-    "15": "HI",
-    "16": "ID",
-    "17": "IL",
-    "18": "IN",
-    "19": "IA",
-    "20": "KS",
-    "21": "KY",
-    "22": "LA",
-    "23": "ME",
-    "24": "MD",
-    "25": "MA",
-    "26": "MI",
-    "27": "MN",
-    "28": "MS",
-    "29": "MO",
-    "30": "MT",
-    "31": "NE",
-    "32": "NV",
-    "33": "NH",
-    "34": "NJ",
-    "35": "NM",
-    "36": "NY",
-    "37": "NC",
-    "38": "ND",
-    "39": "OH",
-    "40": "OK",
-    "41": "OR",
-    "42": "PA",
-    "44": "RI",
-    "45": "SC",
-    "46": "SD",
-    "47": "TN",
-    "48": "TX",
-    "49": "UT",
-    "50": "VT",
-    "51": "VA",
-    "53": "WA",
-    "54": "WV",
-    "55": "WI",
-    "56": "WY",
-}
-
-
-def state_from_place_geoid(place_geoid):
-    """
-    Census Place GEOIDs begin with the two-digit
-    state FIPS code.
-
-    Example:
-        3451000 -> 34 -> NJ
-    """
-
-    place_geoid = str(place_geoid).strip()
-
-    if len(place_geoid) < 2:
-        return ""
-
-    state_fips = place_geoid[:2]
-
-    return STATE_FIPS.get(
-        state_fips,
-        ""
-    )
-
-
-# ============================================================
-# MAIN
-# ============================================================
-
-def main():
-
-    # --------------------------------------------------------
-    # Load survey JSON
-    # --------------------------------------------------------
+def load_survey_zips():
 
     print()
-    print("Loading survey data...")
+    print(
+        "Loading survey data..."
+    )
+
+    if not SURVEY_FILE.exists():
+
+        raise FileNotFoundError(
+            f"Could not find {SURVEY_FILE}"
+        )
+
 
     with SURVEY_FILE.open(
         "r",
@@ -146,343 +64,234 @@ def main():
         survey = json.load(f)
 
 
-    survey_zips = {
-        normalize_zip(zip_code)
-        for zip_code in survey.keys()
-        if normalize_zip(zip_code)
-    }
+    if not isinstance(
+        survey,
+        dict
+    ):
 
-
-    print(
-        f"Survey ZIP codes: {len(survey_zips)}"
-    )
-
-    print(
-        ", ".join(
-            sorted(survey_zips)
+        raise RuntimeError(
+            f"{SURVEY_FILE} must contain "
+            "a JSON object."
         )
-    )
 
 
-    # --------------------------------------------------------
-    # Download Census relationship file
-    # --------------------------------------------------------
+    survey_zips = set()
 
-    print()
+
+    for zip_code in survey.keys():
+
+        normalized = normalize_zip(
+            zip_code
+        )
+
+        if normalized:
+
+            survey_zips.add(
+                normalized
+            )
+
+
     print(
-        "Downloading Census ZCTA -> Place file..."
-    )
-
-    print(
-        CENSUS_URL
+        f"Survey ZIP codes: "
+        f"{len(survey_zips)}"
     )
 
 
-    request = urllib.request.Request(
-        CENSUS_URL,
-        headers={
-            "User-Agent":
-                "Mozilla/5.0"
-        }
-    )
+    return survey_zips
 
+
+# ============================================================
+# LOOK UP ZIP
+# ============================================================
+
+def lookup_zip(zip_code):
 
     try:
 
-        with urllib.request.urlopen(
-            request,
-            timeout=120
-        ) as response:
-
-            data = response.read()
-
-    except Exception as e:
-
-        print()
-        print(
-            "ERROR downloading Census file:"
+        matches = zipcodes.matching(
+            zip_code
         )
+
+    except Exception as error:
 
         print(
-            repr(e)
+            f"WARNING: could not look up "
+            f"{zip_code}: {error}"
         )
 
-        raise
+        return None
 
 
-    print(
-        f"Downloaded {len(data):,} bytes"
-    )
+    if not matches:
 
-
-    # --------------------------------------------------------
-    # Decode
-    # --------------------------------------------------------
-
-    text = data.decode(
-        "utf-8-sig"
-    )
+        return None
 
 
     # --------------------------------------------------------
-    # Parse pipe-delimited Census file
+    # The Zipcodes package normally returns the exact ZIP
+    # record. Use the first matching record.
     # --------------------------------------------------------
 
-    lines = text.splitlines()
+    record = matches[0]
 
 
-    if not lines:
-
-        raise RuntimeError(
-            "Census file is empty."
+    city = (
+        record.get(
+            "city",
+            ""
         )
+        or ""
+    ).strip()
 
 
-    reader = csv.DictReader(
-        lines,
-        delimiter="|"
+    state = (
+        record.get(
+            "state",
+            ""
+        )
+        or ""
+    ).strip()
+
+
+    if not city or not state:
+
+        return None
+
+
+    # --------------------------------------------------------
+    # Preserve the additional city information supplied by
+    # the Zipcodes database.
+    # --------------------------------------------------------
+
+    acceptable_cities = record.get(
+        "acceptable_cities",
+        []
     )
+
+
+    unacceptable_cities = record.get(
+        "unacceptable_cities",
+        []
+    )
+
+
+    if not isinstance(
+        acceptable_cities,
+        list
+    ):
+
+        acceptable_cities = []
+
+
+    if not isinstance(
+        unacceptable_cities,
+        list
+    ):
+
+        unacceptable_cities = []
+
+
+    return {
+
+        "city":
+            city,
+
+        "state":
+            state,
+
+        "acceptable_cities":
+            acceptable_cities,
+
+        "unacceptable_cities":
+            unacceptable_cities,
+
+        "county":
+            record.get(
+                "county",
+                ""
+            ),
+
+        "active":
+            record.get(
+                "active",
+                True
+            ),
+
+        "zip_code_type":
+            record.get(
+                "zip_code_type",
+                ""
+            ),
+
+    }
+
+
+# ============================================================
+# BUILD ZIP CITY DATA
+# ============================================================
+
+def build_zip_cities():
+
+    survey_zips = load_survey_zips()
+
+
+    result = {}
+
+
+    found = 0
+
+    missing = 0
 
 
     print()
     print(
-        "Census columns:"
+        "Looking up ZIP codes..."
     )
 
-    for field in reader.fieldnames or []:
 
-        print(
-            "  " + field
-        )
-
-
-    # --------------------------------------------------------
-    # Verify expected fields
-    # --------------------------------------------------------
-
-    required_fields = [
-        "GEOID_ZCTA5_20",
-        "NAMELSAD_ZCTA5_20",
-        "GEOID_PLACE_20",
-        "NAMELSAD_PLACE_20",
-    ]
-
-
-    missing_fields = [
-        field
-        for field in required_fields
-        if field not in (reader.fieldnames or [])
-    ]
-
-
-    if missing_fields:
-
-        raise RuntimeError(
-            "The Census file does not contain the expected "
-            "columns.\n\n"
-            "Missing:\n"
-            + "\n".join(
-                missing_fields
-            )
-        )
-
-
-    # --------------------------------------------------------
-    # Build ZIP -> Census places
-    # --------------------------------------------------------
-
-    places_by_zip = {
-        zip_code: []
-        for zip_code in survey_zips
-    }
-
-
-    rows_read = 0
-    rows_matched = 0
-
-
-    for row in reader:
-
-        rows_read += 1
-
-
-        zip_code = normalize_zip(
-            row.get(
-                "GEOID_ZCTA5_20",
-                ""
-            )
-        )
-
-
-        if zip_code not in survey_zips:
-
-            continue
-
-
-        rows_matched += 1
-
-
-        place_name = (
-            row.get(
-                "NAMELSAD_PLACE_20",
-                ""
-            )
-            or ""
-        ).strip()
-
-
-        place_geoid = (
-            row.get(
-                "GEOID_PLACE_20",
-                ""
-            )
-            or ""
-        ).strip()
-
-
-        # Some relationship records can have no place.
-        if not place_name:
-
-            continue
-
-
-        # ----------------------------------------------------
-        # Get state from Place GEOID
-        # ----------------------------------------------------
-
-        state = state_from_place_geoid(
-            place_geoid
-        )
-
-
-        # ----------------------------------------------------
-        # Clean Census suffixes
-        # ----------------------------------------------------
-
-        display_name = place_name
-
-
-        suffixes = [
-            " CDP",
-            " city",
-            " town",
-            " village",
-            " borough",
-            " township",
-            " municipality",
-        ]
-
-
-        for suffix in suffixes:
-
-            if display_name.lower().endswith(
-                suffix.lower()
-            ):
-
-                display_name = (
-                    display_name[
-                        : -len(suffix)
-                    ]
-                    .strip()
-                )
-
-                break
-
-
-        # ----------------------------------------------------
-        # Avoid duplicates
-        # ----------------------------------------------------
-
-        already_exists = False
-
-
-        for existing in places_by_zip[zip_code]:
-
-            if (
-                existing["city"]
-                == display_name
-                and
-                existing["state"]
-                == state
-                and
-                existing["geoid"]
-                == place_geoid
-            ):
-
-                already_exists = True
-                break
-
-
-        if already_exists:
-
-            continue
-
-
-        places_by_zip[zip_code].append({
-            "city": display_name,
-            "state": state,
-            "census_name": place_name,
-            "geoid": place_geoid,
-        })
-
-
-    # --------------------------------------------------------
-    # Build final JSON
-    # --------------------------------------------------------
-
-    result = {}
+    print(
+        "-" * 70
+    )
 
 
     for zip_code in sorted(
         survey_zips
     ):
 
-        places = places_by_zip.get(
-            zip_code,
-            []
+        record = lookup_zip(
+            zip_code
         )
 
 
-        # ----------------------------------------------------
-        # Sort places alphabetically
-        # ----------------------------------------------------
+        if record is None:
 
-        places.sort(
-            key=lambda x: (
-                x["state"].lower(),
-                x["city"].lower()
+            missing += 1
+
+
+            print(
+                f"{zip_code}: "
+                "NOT FOUND"
             )
+
+            continue
+
+
+        found += 1
+
+
+        result[zip_code] = record
+
+
+        print(
+            f'{zip_code}: '
+            f'{record["city"]}, '
+            f'{record["state"]}'
         )
 
 
-        # ----------------------------------------------------
-        # Primary city/state
-        #
-        # A ZCTA can overlap multiple Census Places.
-        # We preserve all of them.
-        # ----------------------------------------------------
-
-        if places:
-
-            primary_city = places[0]["city"]
-            primary_state = places[0]["state"]
-
-        else:
-
-            primary_city = ""
-            primary_state = ""
-
-
-        result[zip_code] = {
-            "city": primary_city,
-            "state": primary_state,
-            "places": places
-        }
-
-
-    # --------------------------------------------------------
-    # Write JSON
-    # --------------------------------------------------------
+    # ========================================================
+    # WRITE JSON
+    # ========================================================
 
     with OUTPUT_FILE.open(
         "w",
@@ -497,81 +306,105 @@ def main():
         )
 
 
-    # --------------------------------------------------------
-    # Print report
-    # --------------------------------------------------------
-
-    found = 0
-    missing = 0
-
-
-    print()
-    print("=" * 70)
-    print("RESULTS")
-    print("=" * 70)
-
-
-    for zip_code in sorted(result):
-
-        item = result[zip_code]
-
-        places = item["places"]
-
-
-        if places:
-
-            found += 1
-
-
-            names = [
-                f'{p["city"]}, {p["state"]}'
-                for p in places
-            ]
-
-
-            print(
-                f"{zip_code}: "
-                + ", ".join(names)
-            )
-
-        else:
-
-            missing += 1
-
-            print(
-                f"{zip_code}: "
-                "NO CENSUS PLACE"
-            )
-
-
-    print()
-    print("=" * 70)
-
-    print(
-        f"Census rows read: {rows_read:,}"
-    )
-
-    print(
-        f"Rows matching survey ZIPs: "
-        f"{rows_matched:,}"
-    )
-
-    print(
-        f"ZIPs with Census places: "
-        f"{found}"
-    )
-
-    print(
-        f"ZIPs without Census places: "
-        f"{missing}"
-    )
+    # ========================================================
+    # VERIFY 08540
+    # ========================================================
 
     print()
     print(
-        f"Created: {OUTPUT_FILE}"
+        "=" * 70
     )
 
-    print("=" * 70)
+    print(
+        "08540 CHECK"
+    )
+
+    print(
+        "=" * 70
+    )
+
+
+    if "08540" in result:
+
+        record = result[
+            "08540"
+        ]
+
+
+        print(
+            f'ZIP:   08540'
+        )
+
+        print(
+            f'City:  {record["city"]}'
+        )
+
+        print(
+            f'State: {record["state"]}'
+        )
+
+        print(
+            f'County: {record["county"]}'
+        )
+
+        print(
+            f'Type:  {record["zip_code_type"]}'
+        )
+
+
+    else:
+
+        print(
+            "08540 was not found."
+        )
+
+
+    # ========================================================
+    # SUMMARY
+    # ========================================================
+
+    print()
+    print(
+        "=" * 70
+    )
+
+    print(
+        "RESULTS"
+    )
+
+    print(
+        "=" * 70
+    )
+
+
+    print(
+        f"Survey ZIPs:       "
+        f"{len(survey_zips):,}"
+    )
+
+
+    print(
+        f"ZIPs found:        "
+        f"{found:,}"
+    )
+
+
+    print(
+        f"ZIPs not found:    "
+        f"{missing:,}"
+    )
+
+
+    print()
+    print(
+        f"Created: "
+        f"{OUTPUT_FILE}"
+    )
+
+
+    print(
+        "=" * 70
+    )
 
 
 # ============================================================
@@ -580,4 +413,4 @@ def main():
 
 if __name__ == "__main__":
 
-    main()
+    build_zip_cities()
