@@ -10,10 +10,12 @@ import zipcodes
 
 SURVEY_FILE = Path(
     "NatureNationSurveyZipDistance.json"
+#    "MiraclesBorderSurveyZipDistance.json"
 )
 
 OUTPUT_FILE = Path(
-    "zip-cities.json"
+    "NatureNationSurveyZip-cities.json"
+#    "MiraclesBorderSurveyZip-cities.json"
 )
 
 

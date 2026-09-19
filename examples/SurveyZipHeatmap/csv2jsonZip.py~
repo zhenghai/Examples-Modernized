@@ -26,8 +26,7 @@ def convert_csv_to_json(csv_filepath, json_filepath):
             zip_code = row[target_key].strip()
             
             # Skip invalid non-geographic or non-routable placeholder entries
-            #if zip_code == "08571" or not zip_code:
-            if not zip_code:
+            if zip_code == "08571" or not zip_code:
                 continue
                 
             # Build key index lookup object
@@ -44,5 +43,4 @@ def convert_csv_to_json(csv_filepath, json_filepath):
 # Execution Hook
 if __name__ == "__main__":
     # Assumes your data file is stored in the same folder as 'data.csv'
-    #convert_csv_to_json('NatureNationSurveyZipDistance.csv', 'NatureNationSurveyZipDistance.json')
-    convert_csv_to_json('MiraclesBorderSurveyZipDistance.csv', 'MiraclesBorderSurveyZipDistance.json')
+    convert_csv_to_json('NatureNationSurveyZipDistance.csv', 'NatureNationSurveyZipDistance.json')

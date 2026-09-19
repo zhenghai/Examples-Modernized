@@ -21,8 +21,7 @@
 <li> <a href="examples/EventsFY26/treeEventVenue.html">Tree - PUAM 2026 Event Venue/Location</a> </li>
 <li> <a href="examples/PUCourse/tableBarPuCourseAttendanceDuration.html">Sortable Table - PUAM Courses Utilization</a> </li>
 <li> <a href="examples/VisitsOverFY/trendlines_monthlyFY.html">Trendlines - PUAM Monthly Visits Over Fiscal Years</a> </li>
-<li> <a href="examples/SurveyZipHeatmap/heatmapSurveyZipTopoNatureNationSurvey.html">Heatmap - PUAM Nature's Nation ZIP Code Heatmap</a> </li>
-<li> <a href="examples/SurveyZipHeatmap/heatmapSurveyZipTopoMiraclesBorderSurvey.html">Heatmap - PUAM Miracles on the Border ZIP Code Heatmap</a> </li>
+<li> <a href="examples/SurveyZipHeatmap/heatmapSurveyZipTopo.html">Heatmap - PUAM Nature Nation Zip Code Heatmap</a> </li>
 </ul>
 <body>
 </html>

@@ -1,0 +1,875 @@
+{
+  "07054": {
+    "city": "Parsippany",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Parsippany Troy Hills",
+      "Troy Hills"
+    ],
+    "county": "Morris County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07071": {
+    "city": "Lyndhurst",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Bergen County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07083": {
+    "city": "Union",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Chestnut",
+      "Townley",
+      "Union Center"
+    ],
+    "county": "Union County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07095": {
+    "city": "Woodbridge",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07111": {
+    "city": "Irvington",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Township Of Irvington"
+    ],
+    "county": "Essex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07205": {
+    "city": "Hillside",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Ind Hillside",
+      "Industrial Hillside"
+    ],
+    "unacceptable_cities": [],
+    "county": "Union County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07305": {
+    "city": "Jersey City",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Ellis Island",
+      "Greenville"
+    ],
+    "county": "Hudson County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07506": {
+    "city": "Hawthorne",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Passaic County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07728": {
+    "city": "Freehold",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "East Freehold",
+      "Georgia",
+      "Jerseyville",
+      "Millhurst"
+    ],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07731": {
+    "city": "Howell",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Wall Township"
+    ],
+    "unacceptable_cities": [
+      "Wall Twp"
+    ],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "07752": {
+    "city": "Navesink",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "PO BOX"
+  },
+  "07756": {
+    "city": "Ocean Grove",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Monmouth County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08012": {
+    "city": "Blackwood",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Turnersville"
+    ],
+    "unacceptable_cities": [
+      "Blenheim",
+      "Chews Landing",
+      "Hilltop",
+      "Lakeland"
+    ],
+    "county": "Camden County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08054": {
+    "city": "Mount Laurel",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Masonville",
+      "Mount Laurel Township",
+      "Rancocas Woods"
+    ],
+    "county": "Burlington County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08221": {
+    "city": "Linwood",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Atlantic County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08502": {
+    "city": "Belle Mead",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Montgomery"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08512": {
+    "city": "Cranbury",
+    "state": "NJ",
+    "acceptable_cities": [
+      "East Windsor"
+    ],
+    "unacceptable_cities": [
+      "E Windsor"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08515": {
+    "city": "Chesterfield",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Crosswicks"
+    ],
+    "unacceptable_cities": [
+      "Chesterfield Township"
+    ],
+    "county": "Burlington County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08520": {
+    "city": "Hightstown",
+    "state": "NJ",
+    "acceptable_cities": [
+      "East Windsor"
+    ],
+    "unacceptable_cities": [
+      "E Windsor"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08536": {
+    "city": "Plainsboro",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08540": {
+    "city": "Princeton",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Princeton Township",
+      "Princeton Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08542": {
+    "city": "Princeton",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08550": {
+    "city": "Princeton Junction",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Princeton Jct",
+      "West Windsor"
+    ],
+    "unacceptable_cities": [
+      "W Windsor",
+      "W Windsor Township",
+      "West Win Tow"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08558": {
+    "city": "Skillman",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Montgomery"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08618": {
+    "city": "Trenton",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Ewing"
+    ],
+    "unacceptable_cities": [
+      "Ewing Township",
+      "Ewing Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08628": {
+    "city": "Trenton",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Ewing",
+      "West Trenton"
+    ],
+    "unacceptable_cities": [
+      "Ewing Township",
+      "Ewing Twp"
+    ],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08648": {
+    "city": "Lawrence Township",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Lawrence",
+      "Lawrence Twp",
+      "Lawrenceville",
+      "Trenton"
+    ],
+    "unacceptable_cities": [],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08650": {
+    "city": "Trenton",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Hamilton"
+    ],
+    "unacceptable_cities": [],
+    "county": "Mercer County",
+    "active": true,
+    "zip_code_type": "PO BOX"
+  },
+  "08809": {
+    "city": "Clinton",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Hunterdon County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08816": {
+    "city": "East Brunswick",
+    "state": "NJ",
+    "acceptable_cities": [
+      "E Brunswick"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08844": {
+    "city": "Hillsborough",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Millstone"
+    ],
+    "county": "Somerset County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08846": {
+    "city": "Middlesex",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08852": {
+    "city": "Monmouth Junction",
+    "state": "NJ",
+    "acceptable_cities": [
+      "Monmouth Jct"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08882": {
+    "city": "South River",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08886": {
+    "city": "Stewartsville",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Warren County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08901": {
+    "city": "New Brunswick",
+    "state": "NJ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "08902": {
+    "city": "North Brunswick",
+    "state": "NJ",
+    "acceptable_cities": [
+      "N Brunswick",
+      "New Brunswick"
+    ],
+    "unacceptable_cities": [],
+    "county": "Middlesex County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "10001": {
+    "city": "New York",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Empire State",
+      "Gpo",
+      "Greeley Square",
+      "Macys Finance",
+      "Manhattan",
+      "New York City",
+      "NY",
+      "Ny City",
+      "Nyc"
+    ],
+    "county": "New York County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "10009": {
+    "city": "New York",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Manhattan",
+      "New York City",
+      "NY",
+      "Ny City",
+      "Nyc",
+      "Peter Stuyvesant"
+    ],
+    "county": "New York County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "10010": {
+    "city": "New York",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Madison Square",
+      "Manhattan",
+      "New York City",
+      "NY",
+      "Ny City",
+      "Nyc"
+    ],
+    "county": "New York County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "10026": {
+    "city": "New York",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Morningside",
+      "New York City",
+      "NY",
+      "Ny City",
+      "Nyc"
+    ],
+    "county": "New York County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "10463": {
+    "city": "Bronx",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Riverdale",
+      "Spuyten Duyvil"
+    ],
+    "county": "Bronx County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "11105": {
+    "city": "Astoria",
+    "state": "NY",
+    "acceptable_cities": [
+      "Long Is City",
+      "Long Island City"
+    ],
+    "unacceptable_cities": [],
+    "county": "Queens County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "11215": {
+    "city": "Brooklyn",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Kings County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "11222": {
+    "city": "Brooklyn",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Kings County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "11362": {
+    "city": "Little Neck",
+    "state": "NY",
+    "acceptable_cities": [
+      "Douglaston",
+      "Flushing"
+    ],
+    "unacceptable_cities": [
+      "Horace Harding",
+      "Queens"
+    ],
+    "county": "Queens County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "11439": {
+    "city": "Jamaica",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Queens",
+      "Saint John University"
+    ],
+    "county": "Queens County",
+    "active": true,
+    "zip_code_type": "UNIQUE"
+  },
+  "14619": {
+    "city": "Rochester",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Monroe County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "14850": {
+    "city": "Ithaca",
+    "state": "NY",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Ithaca Clg",
+      "Ithaca College"
+    ],
+    "county": "Tompkins County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "15208": {
+    "city": "Pittsburgh",
+    "state": "PA",
+    "acceptable_cities": [
+      "Homewood"
+    ],
+    "unacceptable_cities": [
+      "Pgh",
+      "Pitt"
+    ],
+    "county": "Allegheny County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "18938": {
+    "city": "New Hope",
+    "state": "PA",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Bucks County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "18940": {
+    "city": "Newtown",
+    "state": "PA",
+    "acceptable_cities": [
+      "George School",
+      "Upper Makefield",
+      "Upr Makefield"
+    ],
+    "unacceptable_cities": [
+      "Wrightstown"
+    ],
+    "county": "Bucks County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "19128": {
+    "city": "Philadelphia",
+    "state": "PA",
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "19151": {
+    "city": "Philadelphia",
+    "state": "PA",
+    "acceptable_cities": [
+      "Overbrook Hills",
+      "Overbrook Hls",
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "19154": {
+    "city": "Philadelphia",
+    "state": "PA",
+    "acceptable_cities": [
+      "Phila"
+    ],
+    "unacceptable_cities": [],
+    "county": "Philadelphia County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "19426": {
+    "city": "Collegeville",
+    "state": "PA",
+    "acceptable_cities": [
+      "Trappe"
+    ],
+    "unacceptable_cities": [
+      "Graterford",
+      "Rahns"
+    ],
+    "county": "Montgomery County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "20012": {
+    "city": "Washington",
+    "state": "DC",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "District of Columbia",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "20871": {
+    "city": "Clarksburg",
+    "state": "MD",
+    "acceptable_cities": [
+      "Hyattstown"
+    ],
+    "unacceptable_cities": [],
+    "county": "Montgomery County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "21210": {
+    "city": "Baltimore",
+    "state": "MD",
+    "acceptable_cities": [
+      "Roland Park"
+    ],
+    "unacceptable_cities": [],
+    "county": "Baltimore city",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "24134": {
+    "city": "Pearisburg",
+    "state": "VA",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Giles County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "27705": {
+    "city": "Durham",
+    "state": "NC",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Durham County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "33707": {
+    "city": "Saint Petersburg",
+    "state": "FL",
+    "acceptable_cities": [
+      "Gulfport",
+      "S Pasadena",
+      "South Pasadena",
+      "St Pete Beach",
+      "St Petersburg"
+    ],
+    "unacceptable_cities": [
+      "Pasadena"
+    ],
+    "county": "Pinellas County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "37075": {
+    "city": "Hendersonville",
+    "state": "TN",
+    "acceptable_cities": [
+      "Hendersonvlle"
+    ],
+    "unacceptable_cities": [],
+    "county": "Sumner County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "40229": {
+    "city": "Louisville",
+    "state": "KY",
+    "acceptable_cities": [
+      "Okolona"
+    ],
+    "unacceptable_cities": [],
+    "county": "Jefferson County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "48103": {
+    "city": "Ann Arbor",
+    "state": "MI",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Delhi",
+      "Loch Alpine",
+      "Lodi Township",
+      "Scio Township"
+    ],
+    "county": "Washtenaw County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "60608": {
+    "city": "Chicago",
+    "state": "IL",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Pilsen"
+    ],
+    "county": "Cook County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "60615": {
+    "city": "Chicago",
+    "state": "IL",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Cook County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "60622": {
+    "city": "Chicago",
+    "state": "IL",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Cook County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "60660": {
+    "city": "Chicago",
+    "state": "IL",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Rogers Park"
+    ],
+    "county": "Cook County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "60804": {
+    "city": "Cicero",
+    "state": "IL",
+    "acceptable_cities": [
+      "Chicago"
+    ],
+    "unacceptable_cities": [],
+    "county": "Cook County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "75013": {
+    "city": "Allen",
+    "state": "TX",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Collin County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "77027": {
+    "city": "Houston",
+    "state": "TX",
+    "acceptable_cities": [],
+    "unacceptable_cities": [],
+    "county": "Harris County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "85749": {
+    "city": "Tucson",
+    "state": "AZ",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Fort Lowell",
+      "Ft Lowell"
+    ],
+    "county": "Pima County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "90049": {
+    "city": "Los Angeles",
+    "state": "CA",
+    "acceptable_cities": [],
+    "unacceptable_cities": [
+      "Barrington"
+    ],
+    "county": "Los Angeles County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  },
+  "97124": {
+    "city": "Hillsboro",
+    "state": "OR",
+    "acceptable_cities": [
+      "Cornelius"
+    ],
+    "unacceptable_cities": [
+      "Helvetia",
+      "Orenco",
+      "West Union"
+    ],
+    "county": "Washington County",
+    "active": true,
+    "zip_code_type": "STANDARD"
+  }
+}
