@@ -1,10 +1,25 @@
+// Disable Cesium Ion token usage
+Cesium.Ion.defaultAccessToken = null;
+
+
+// Create Cesium viewer
+
 const viewer =
     new Cesium.Viewer(
         "cesiumContainer",
         {
             animation: false,
             timeline: false,
+
             baseLayerPicker: false,
+            geocoder: false,
+            homeButton: false,
+            sceneModePicker: false,
+            navigationHelpButton: false,
+            fullscreenButton: false,
+
+            infoBox: false,
+            selectionIndicator: false,
 
             terrainProvider:
                 new Cesium.EllipsoidTerrainProvider()
@@ -12,7 +27,13 @@ const viewer =
     );
 
 
-// Add map imagery
+// Remove default imagery
+
+viewer.imageryLayers.removeAll();
+
+
+// Add OpenStreetMap imagery
+
 viewer.imageryLayers.addImageryProvider(
     new Cesium.OpenStreetMapImageryProvider({
 
@@ -23,7 +44,7 @@ viewer.imageryLayers.addImageryProvider(
 );
 
 
-// Initial camera position (USA)
+// Zoom to USA
 
 viewer.camera.flyTo({
 
@@ -43,7 +64,7 @@ const info =
 
 
 
-// Load bank failure data
+// Load bank data
 
 fetch("bank_failures.json")
 
@@ -71,21 +92,30 @@ fetch("bank_failures.json")
             const name =
                 bank[0];
 
+
             const city =
                 bank[1];
+
 
             const state =
                 bank[2];
 
+
             const date =
                 bank[3];
+
 
             const buyer =
                 bank[4];
 
 
+            // Remove commas from values like "2,700"
+
             const assets =
-                Number(bank[5]);
+                Number(
+                    String(bank[5])
+                    .replace(/,/g, "")
+                );
 
 
             const latitude =
@@ -96,8 +126,6 @@ fetch("bank_failures.json")
                 Number(bank[7]);
 
 
-
-            // Validate coordinates
 
             if (
 
@@ -120,8 +148,6 @@ fetch("bank_failures.json")
 
 
 
-            // Bar height
-
             const height =
                 Math.min(
                     assets * 10000,
@@ -132,62 +158,40 @@ fetch("bank_failures.json")
 
             viewer.entities.add({
 
-
                 name: name,
 
 
                 position:
-
                     Cesium.Cartesian3.fromDegrees(
-
                         longitude,
-
                         latitude,
-
                         0
-
                     ),
 
 
 
                 polyline: {
 
-
                     positions: [
 
-
                         Cesium.Cartesian3.fromDegrees(
-
                             longitude,
-
                             latitude,
-
                             0
-
                         ),
 
-
-
                         Cesium.Cartesian3.fromDegrees(
-
                             longitude,
-
                             latitude,
-
                             height
-
                         )
-
 
                     ],
 
-
                     width: 5,
-
 
                     material:
                         Cesium.Color.RED
-
 
                 },
 
@@ -195,27 +199,17 @@ fetch("bank_failures.json")
 
                 properties: {
 
-
                     bank: name,
-
                     city: city,
-
                     state: state,
-
                     date: date,
-
                     buyer: buyer,
-
                     assets: assets,
-
                     year: year
-
 
                 }
 
-
             });
-
 
 
         });
@@ -235,7 +229,7 @@ fetch("bank_failures.json")
 .catch(error => {
 
     console.error(
-        "Could not load bank data:",
+        "Error loading bank data:",
         error
     );
 
@@ -253,7 +247,6 @@ const handler =
     );
 
 
-
 handler.setInputAction(
 
 function(movement) {
@@ -263,7 +256,6 @@ function(movement) {
         viewer.scene.pick(
             movement.endPosition
         );
-
 
 
     if (
@@ -301,9 +293,16 @@ function(movement) {
         ${p.buyer.getValue()}<br>
 
         Assets:
-        $${p.assets.getValue()} million
+        $${p.assets.getValue().toLocaleString()} million
         `;
 
+
+    }
+
+    else {
+
+        info.innerHTML =
+            "Hover over a bar";
 
     }
 

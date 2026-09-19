@@ -12,6 +12,8 @@ const viewer =
             timeline: false,
 
             baseLayerPicker: false,
+	    baseLayer: false,
+	    
             geocoder: false,
             homeButton: false,
             sceneModePicker: false,
@@ -29,7 +31,7 @@ const viewer =
 
 // Remove default imagery
 
-viewer.imageryLayers.removeAll();
+//viewer.imageryLayers.removeAll();
 
 
 // Add OpenStreetMap imagery
@@ -150,8 +152,8 @@ fetch("bank_failures.json")
 
             const height =
                 Math.min(
-                    assets * 10000,
-                    500000
+                    assets * 1000,
+                    5000000
                 );
 
 
